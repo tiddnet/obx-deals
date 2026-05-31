@@ -67,12 +67,23 @@
       background: #f0f4f8; border-radius: 8px;
       padding: 1.3rem 1.5rem; margin: 1.5rem 0; font-size: 0.95rem;
     }
+    .submit-form { margin-top: 1rem; }
+    .form-row { margin: 0.7rem 0; display: flex; flex-direction: column; gap: 0.25rem; }
+    .form-row label { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+    .file-hint { font-weight: 400; color: var(--muted); margin-left: 0.4rem; }
+    .form-row input[type="text"],
+    .form-row input[type="email"] {
+      padding: 0.45rem 0.7rem; border: 1px solid var(--rule);
+      border-radius: 4px; font-size: 0.95rem; background: #fff; font-family: inherit;
+    }
+    .form-row input[type="file"] { font-size: 0.88rem; }
     .claim-btn {
-      display: inline-block; margin-top: 0.75rem;
+      display: inline-block; margin-top: 0.75rem; cursor: pointer; border: none;
       background: var(--accent); color: #fff; text-decoration: none;
       padding: 0.45rem 1.1rem; border-radius: 4px; font-size: 0.93rem;
     }
     .claim-btn:hover { background: #185d8f; }
+    .gps-tip { font-size: 0.82rem; color: var(--muted); margin: 0.6rem 0 0; line-height: 1.4; }
     .methodology {
       font-size: 0.87rem; color: var(--muted);
       border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.4rem;
@@ -140,7 +151,33 @@
       <div class="claim-box">
         <strong>Own this property?</strong> Add your view photo to complete your badge
         and get a shareable link you can put anywhere your listing appears.
-        <br><a class="claim-btn" href="mailto:verify@obx.deals?subject=Verified+View+Claim+%E2%80%94+airbnb-47348080&body=Hi%2C+I%27m+the+owner+of+Village+Accomodations+-+Two+Bedroom+Cottage.+I%27d+like+to+claim+my+Verified+View+badge+and+add+my+photo.">Claim this badge &rarr;</a>
+        <form class="submit-form" action="https://submit.obx.deals/submit"
+              method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="property_id" value="airbnb-47348080">
+          <input type="hidden" name="property_lat" value="35.2678">
+          <input type="hidden" name="property_lon" value="-75.51807">
+          <div class="form-row">
+            <label for="owner_name_airbnb-47348080">Your name</label>
+            <input type="text" id="owner_name_airbnb-47348080" name="owner_name"
+                   required placeholder="Jane Smith">
+          </div>
+          <div class="form-row">
+            <label for="owner_email_airbnb-47348080">Email</label>
+            <input type="email" id="owner_email_airbnb-47348080" name="owner_email"
+                   required placeholder="jane@example.com">
+          </div>
+          <div class="form-row">
+            <label for="photo_airbnb-47348080">View photo
+              <span class="file-hint">JPEG, PNG, HEIC or WebP &middot; max 10 MB</span>
+            </label>
+            <input type="file" id="photo_airbnb-47348080" name="photo"
+                   accept="image/*" required>
+          </div>
+          <p class="gps-tip">&#128205; Tip: enable location on your camera app before
+          taking the photo — GPS helps us verify the shot was taken on-site and
+          speeds up review.</p>
+          <button type="submit" class="claim-btn">Submit my photo &rarr;</button>
+        </form>
       </div>
 
   <div class="methodology">
