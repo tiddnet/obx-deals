@@ -11,6 +11,7 @@
   <meta property="og:description" content="5 short-stay openings — June 21, 2026.">
   <meta property="og:image" content="https://obx.deals/images/twiddy-wizardry.jpg">
   <link rel="canonical" href="https://obx.deals/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <style>
     :root {
       --ink: #1a1a1a;
@@ -111,6 +112,27 @@
     .signup-msg { margin-top: 0.7rem; font-size: 0.95rem; min-height: 1.3em; }
     .signup-msg.ok { color: #2a7a3b; font-weight: 600; }
     .signup-msg.err { color: var(--save); }
+    /* Hero image */
+    .hero-img {
+      width: 100%; border-radius: 8px; display: block;
+      margin: 1.5rem 0 2.5rem; max-height: 380px; object-fit: cover; object-position: center;
+    }
+    /* Our story / about section */
+    .story { margin: 0 0 2rem; }
+    .story p { margin: 0 0 0.9rem; }
+    /* Web properties grid */
+    .web-properties {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 0.5rem;
+    }
+    @media (max-width: 560px) { .web-properties { grid-template-columns: 1fr; } }
+    .web-prop {
+      border: 1px solid var(--rule); border-radius: 8px; padding: 1.1rem 1.2rem;
+      background: #fff;
+    }
+    .web-prop .wp-title { font-weight: 700; font-size: 1rem; margin: 0 0 0.2rem; }
+    .web-prop .wp-url { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.5rem; }
+    .web-prop .wp-desc { font-size: 0.93rem; color: var(--ink); margin: 0 0 0.75rem; }
+    .web-prop .wp-cta { font-size: 0.9rem; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -169,6 +191,42 @@
         <button class="signup-btn" onclick="doSignup()">Notify me</button>
       </div>
       <p class="signup-msg" id="signup-msg"></p>
+    </div>
+    <hr>
+    <h2>Our story</h2>
+    <img src="/images/hero.png" alt="OBX Deals — Find the deal. Own the beach." class="hero-img">
+    <div class="story">
+      <p>We own two vacation rentals on the Outer Banks — a soundfront cottage in Avon and a poolside house in Corolla — and for years we struggled with the same question every OBX owner faces: <em>how do I know if my rates are right?</em></p>
+      <p>The tools didn't exist. PMC market reports are opaque. Comparing your calendar to a competitor meant opening dozens of browser tabs and doing rough math in a spreadsheet. We had no reliable way to see where we sat in the market, which weeks were underpriced, or whether our property management company was doing us any favors.</p>
+      <p>So we built one. What started as a script to track a handful of competitors grew into a nightly intelligence system that monitors rates, availability, and visibility across 9,000+ vacation rentals on the Outer Banks — 25 property management companies, refreshed every morning before sunrise.</p>
+      <p>The search engine and deal alerts are the public face of that system. The owner tools are what we actually run our rentals on.</p>
+    </div>
+    <h2>Our web properties</h2>
+    <div class="web-properties">
+      <div class="web-prop">
+        <p class="wp-title">OBX Deals</p>
+        <p class="wp-url">obx.deals</p>
+        <p class="wp-desc">Daily price drops and short-stay openings across 25 OBX property management companies. Nightly rate monitoring, delivered every morning.</p>
+        <a class="wp-cta" href="https://obx.deals/">View today's deals &rarr;</a>
+      </div>
+      <div class="web-prop">
+        <p class="wp-title">OBX Search</p>
+        <p class="wp-url">search.obx.deals</p>
+        <p class="wp-desc">Search 9,000+ Outer Banks vacation rentals by dates, bedrooms, amenities, and location — with fair price ratings and availability across all major PMCs in one place.</p>
+        <a class="wp-cta" href="https://search.obx.deals/">Search rentals &rarr;</a>
+      </div>
+      <div class="web-prop">
+        <p class="wp-title">Owner Hub</p>
+        <p class="wp-url">owners.obx.deals</p>
+        <p class="wp-desc">Pricing intelligence for OBX rental owners. See how your property stacks up against comparable rentals — by bedrooms, view type, community, and week — and spot the gaps before they cost you bookings.</p>
+        <a class="wp-cta" href="https://owners.obx.deals/">Explore owner tools &rarr;</a>
+      </div>
+      <div class="web-prop">
+        <p class="wp-title">Price Drop Archive</p>
+        <p class="wp-url">search.obx.deals/price-drops/</p>
+        <p class="wp-desc">Every price drop we've detected since May 2026, archived by day. Useful for spotting patterns — which PMCs cut most often, which weeks see the most movement, and where the last-minute deals tend to cluster.</p>
+        <a class="wp-cta" href="https://search.obx.deals/price-drops/">Browse the archive &rarr;</a>
+      </div>
     </div>
     <hr>
     <footer>
