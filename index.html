@@ -228,6 +228,46 @@
 })();
   </script>
   <script>
+// Umbrella preview — activated at obx.deals/?preview=1
+// Replaces main content with the three-card brand hub. Remove ?preview=1
+// guard and make permanent at Phase 6 cut over (ADR 0147).
+(function(){
+  if (new URLSearchParams(location.search).get('preview') !== '1') return;
+  document.title = 'OBX Deals — Find the deal. Own the beach.';
+  var m = document.querySelector('meta[name="description"]');
+  if (m) m.content = 'Search OBX rentals, watch price drops, and get owner intelligence — all in one place.';
+  document.querySelector('main').innerHTML = `
+    <div style="text-align:center;padding:3rem 1rem 1rem">
+      <h1 style="font-size:2.4rem;letter-spacing:-0.02em;margin:0 0 0.3rem">OBX Deals</h1>
+      <p style="color:var(--muted);font-size:1.1rem;margin:0 0 3rem">Find the deal. Own the beach.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;max-width:780px;margin:0 auto;padding:0 1rem 4rem">
+      <a href="https://search.obx.deals/" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:1.5rem;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 3px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🔍</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 0.35rem;text-transform:none;letter-spacing:normal;color:var(--ink)">Search rentals</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin:0">7,500+ OBX vacation homes. Filter by beds, view, pool, and more.</p>
+        <p style="margin:0.75rem 0 0;font-size:0.82rem;color:var(--accent);font-weight:600">search.obx.deals →</p>
+      </a>
+      <a href="https://search.obx.deals/price-drops/" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:1.5rem;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 3px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">
+        <div style="font-size:2rem;margin-bottom:0.75rem">📉</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 0.35rem;text-transform:none;letter-spacing:normal;color:var(--ink)">Price drop alerts</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin:0">Properties with meaningful rate cuts in the last 25 days — updated nightly.</p>
+        <p style="margin:0.75rem 0 0;font-size:0.82rem;color:var(--accent);font-weight:600">Price drops →</p>
+      </a>
+      <a href="https://owners.obx.deals/" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:1.5rem;transition:box-shadow .15s" onmouseover="this.style.boxShadow='0 3px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">
+        <div style="font-size:2rem;margin-bottom:0.75rem">🏠</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 0.35rem;text-transform:none;letter-spacing:normal;color:var(--ink)">I own a property</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin:0">Competitive pricing intelligence and booking pace data for OBX owners.</p>
+        <p style="margin:0.75rem 0 0;font-size:0.82rem;color:var(--accent);font-weight:600">owners.obx.deals →</p>
+      </a>
+    </div>
+    <footer style="text-align:center;padding:0 1rem 3rem;color:var(--muted);font-size:0.82rem">
+      Independent market intelligence for the Outer Banks of North Carolina.
+    </footer>
+  `;
+})();
+  </script>
+  <script>
 function doSignup() {
   var email = document.getElementById('signup-email').value.trim();
   var msg = document.getElementById('signup-msg');
