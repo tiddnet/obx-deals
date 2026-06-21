@@ -51,6 +51,27 @@
     }
     .nav-brand:hover { color: var(--nav-gold); text-decoration: none; }
     .nav-brand .brand-obx { color: var(--nav-gold); }
+    .nav-hamburger-wrap { position: relative; margin-left: auto; flex-shrink: 0; }
+    .nav-hamburger {
+      background: none; border: none; cursor: pointer;
+      color: var(--nav-text); padding: 0.75rem 0 0.75rem 0.75rem;
+      font-size: 1.2rem; line-height: 1; display: flex; align-items: center;
+    }
+    .nav-hamburger:hover { color: var(--nav-active); }
+    .hamburger-menu {
+      display: none; position: absolute; top: calc(100% + 2px); right: 0;
+      background: #fff; border: 1px solid var(--rule);
+      border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      min-width: 170px; z-index: 200; overflow: hidden;
+    }
+    .nav-hamburger-wrap.open .hamburger-menu { display: block; }
+    .hamburger-menu a {
+      display: block; padding: 0.75rem 1.1rem;
+      color: var(--ink); font-size: 0.92rem; font-weight: 500;
+      text-decoration: none; border-bottom: 1px solid var(--rule);
+    }
+    .hamburger-menu a:last-child { border-bottom: 0; }
+    .hamburger-menu a:hover { background: var(--bg); color: var(--accent); }
     .nav-links {
       display: flex; align-items: stretch; gap: 0; flex: 1; overflow-x: auto;
       scrollbar-width: none;
@@ -181,17 +202,8 @@
     .tile-url { font-size: 0.78rem; color: var(--muted); }
     .tile-desc { font-size: 0.91rem; color: var(--ink); flex: 1; }
     .tile-cta { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-top: 0.3rem; }
-    details { margin: 2rem 0 0; }
-    details summary {
-      cursor: pointer; font-weight: 600; font-size: 0.97rem;
-      color: var(--accent); list-style: none; display: flex; align-items: center; gap: 0.4rem;
-      user-select: none;
-    }
-    details summary::-webkit-details-marker { display: none; }
-    details summary::before { content: "▶"; font-size: 0.7rem; transition: transform 0.2s; }
-    details[open] summary::before { transform: rotate(90deg); }
-    details .details-body { padding: 1.2rem 0 0; }
-    details .details-body p { margin: 0 0 0.9rem; }
+    .story-section { margin: 0 0 1rem; }
+    .story-section p { margin: 0 0 0.9rem; }
   </style>
 </head>
 <body>
@@ -205,7 +217,16 @@
         <span class="nav-sep">|</span>
         <a href="https://search.obx.deals/price-drops/">Price Drops</a>
         <span class="nav-sep">|</span>
+        <a href="https://search.obx.deals/quick-getaways/">Quick Getaways</a>
+        <span class="nav-sep">|</span>
         <a href="https://owners.obx.deals/">Owner Hub</a>
+      </div>
+      <div class="nav-hamburger-wrap" id="hamburger-wrap">
+        <button class="nav-hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+        <div class="hamburger-menu" id="hamburger-menu">
+          <a href="#story">Our Story</a>
+          <a href="https://obx.deals/privacy">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -275,26 +296,19 @@
       <p class="signup-msg" id="signup-msg"></p>
     </div>
     <hr>
+    <section id="story" class="story-section">
+      <h2>Our story</h2>
+      <img src="/images/hero.png" alt="OBX Deals — Find the deal. Own the beach." class="hero-img">
+      <p>We own two vacation rentals on the Outer Banks — a soundfront cottage in Avon and a poolside house in Corolla — and for years we struggled with the same question every OBX owner faces: <em>how do I know if my rates are right?</em></p>
+      <p>The tools didn't exist. PMC market reports are opaque. Comparing your calendar to a competitor meant opening dozens of browser tabs and doing rough math in a spreadsheet. We had no reliable way to see where we sat in the market, which weeks were underpriced, or whether our property management company was doing us any favors.</p>
+      <p>So we built one. What started as a script to track a handful of competitors grew into a nightly intelligence system that monitors rates, availability, and visibility across 9,000+ vacation rentals on the Outer Banks — 25 property management companies, refreshed every morning before sunrise.</p>
+      <p>The search engine and deal alerts are the public face of that system. The owner tools are what we actually run our rentals on.</p>
+    </section>
+    <hr>
     <footer>
       <p>Vacation rental price intelligence for the Outer Banks of North Carolina.
-      Independent project — not affiliated with any property management company.</p>
-      <details>
-        <summary>Our story</summary>
-        <div class="details-body">
-          <img src="/images/hero.png" alt="OBX Deals — Find the deal. Own the beach." class="hero-img">
-          <p>We own two vacation rentals on the Outer Banks — a soundfront cottage in Avon and a poolside house in Corolla — and for years we struggled with the same question every OBX owner faces: <em>how do I know if my rates are right?</em></p>
-          <p>The tools didn't exist. PMC market reports are opaque. Comparing your calendar to a competitor meant opening dozens of browser tabs and doing rough math in a spreadsheet. We had no reliable way to see where we sat in the market, which weeks were underpriced, or whether our property management company was doing us any favors.</p>
-          <p>So we built one. What started as a script to track a handful of competitors grew into a nightly intelligence system that monitors rates, availability, and visibility across 9,000+ vacation rentals on the Outer Banks — 25 property management companies, refreshed every morning before sunrise.</p>
-          <p>The search engine and deal alerts are the public face of that system. The owner tools are what we actually run our rentals on.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Privacy</summary>
-        <div class="details-body">
-          <p>When you click an outbound listing link we record the destination, an anonymous browser ID (a UUID stored as a first-party cookie, no email or identifier ever attached), the country your request came from, and a coarse device class. We do not store IP addresses, full user-agent strings, or any third-party identifier. Records expire 365 days after the click. To opt out: enable Do Not Track in your browser, block <code>track.obx.deals</code> in an ad blocker, or clear the <code>obxd_vid</code> cookie — the site works either way.</p>
-          <p><a href="https://obx.deals/privacy">Full privacy policy &rarr;</a></p>
-        </div>
-      </details>
+      Independent project — not affiliated with any property management company.
+      &nbsp;·&nbsp; <a href="https://obx.deals/privacy">Privacy policy</a></p>
     </footer>
   </main>
   <script>
@@ -368,6 +382,21 @@ function doSignup() {
     msg.textContent = 'Could not connect — please try again.';
   });
 }
+// Hamburger menu toggle
+(function() {
+  var wrap = document.getElementById('hamburger-wrap');
+  var btn  = document.getElementById('hamburger-btn');
+  if (!wrap || !btn) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var open = wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', function() {
+    wrap.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  });
+})();
   </script>
 </body>
 </html>
