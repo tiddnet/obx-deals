@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OBX Deals — Outer Banks vacation rental search &amp; deals</title>
-  <meta name="description" content="5 short-stay openings — June 21, 2026.">
+  <title>OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence</title>
+  <meta name="description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://obx.deals/">
-  <meta property="og:title" content="OBX Deals — Outer Banks vacation rental search &amp; deals">
-  <meta property="og:description" content="5 short-stay openings — June 21, 2026.">
-  <meta property="og:image" content="https://gallery.streamlinevrs.com/units-gallery/00/10/0A/image_173206811.jpeg">
+  <meta property="og:title" content="OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence">
+  <meta property="og:description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
+  <meta property="og:image" content="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=768&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/0D/5E/image_166956434.jpeg&amp;settings=default">
   <link rel="canonical" href="https://obx.deals/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <style>
@@ -165,18 +165,22 @@
     }
     .story { margin: 0 0 2rem; }
     .story p { margin: 0 0 0.9rem; }
-    .web-properties {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 0.5rem;
+    .hero-tagline { font-size: 1.35rem; color: var(--muted); margin: 0.1rem 0 2rem; font-weight: 400; }
+    .product-tiles {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0 0 2.5rem;
     }
-    @media (max-width: 560px) { .web-properties { grid-template-columns: 1fr; } }
-    .web-prop {
-      border: 1px solid var(--rule); border-radius: 8px; padding: 1.1rem 1.2rem;
-      background: #fff;
+    @media (max-width: 640px) { .product-tiles { grid-template-columns: 1fr; } }
+    .tile {
+      border: 1px solid var(--rule); border-radius: 10px; padding: 1.4rem 1.3rem 1.5rem;
+      background: #fff; display: flex; flex-direction: column; gap: 0.5rem;
+      transition: box-shadow 0.15s, border-color 0.15s;
     }
-    .web-prop .wp-title { font-weight: 700; font-size: 1rem; margin: 0 0 0.2rem; }
-    .web-prop .wp-url { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.5rem; }
-    .web-prop .wp-desc { font-size: 0.93rem; color: var(--ink); margin: 0 0 0.75rem; }
-    .web-prop .wp-cta { font-size: 0.9rem; font-weight: 600; }
+    .tile:hover { box-shadow: 0 2px 12px rgba(11,122,117,0.10); border-color: var(--accent); text-decoration: none; }
+    .tile-icon { font-size: 1.6rem; line-height: 1; }
+    .tile-title { font-weight: 700; font-size: 1.05rem; color: var(--ink); margin: 0; }
+    .tile-url { font-size: 0.78rem; color: var(--muted); }
+    .tile-desc { font-size: 0.91rem; color: var(--ink); flex: 1; }
+    .tile-cta { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-top: 0.3rem; }
   </style>
 </head>
 <body>
@@ -186,30 +190,46 @@
         <span class="brand-obx">OBX</span><span class="brand-deals"> Deals</span>
       </a>
       <div class="nav-links">
-        <a href="https://obx.deals/" class="nav-active" aria-current="page">Today&#39;s Deals</a>
-        <span class="nav-sep">|</span>
         <a href="https://search.obx.deals/">Search</a>
         <span class="nav-sep">|</span>
-        <a href="https://owners.obx.deals/">Owner Hub</a>
-        <span class="nav-sep">|</span>
         <a href="https://search.obx.deals/price-drops/">Price Drops</a>
+        <span class="nav-sep">|</span>
+        <a href="https://owners.obx.deals/">Owner Hub</a>
       </div>
     </div>
   </nav>
   <main>
     <h1>OBX Deals</h1>
-    <p class="tagline">5 short-stay openings — June 21, 2026.</p>
+    <p class="hero-tagline">Find the deal. Own the beach.</p>
+    <div class="product-tiles">
+      <a class="tile" href="https://search.obx.deals/">
+        <div class="tile-icon">🔍</div>
+        <p class="tile-title">Search Rentals</p>
+        <p class="tile-url">search.obx.deals</p>
+        <p class="tile-desc">9,000+ OBX rentals by dates, bedrooms, amenities, and location — with fair price ratings across all 25 PMCs.</p>
+        <span class="tile-cta">Search now &rarr;</span>
+      </a>
+      <a class="tile" href="https://search.obx.deals/price-drops/">
+        <div class="tile-icon">📉</div>
+        <p class="tile-title">Price Drops</p>
+        <p class="tile-url">search.obx.deals/price-drops</p>
+        <p class="tile-desc">Properties that cut rates since last month — updated every morning from nightly scrapes across the OBX market.</p>
+        <span class="tile-cta">See today's drops &rarr;</span>
+      </a>
+      <a class="tile" href="https://owners.obx.deals/">
+        <div class="tile-icon">🏠</div>
+        <p class="tile-title">Owner Hub</p>
+        <p class="tile-url">owners.obx.deals</p>
+        <p class="tile-desc">Pricing intelligence for OBX rental owners. Compare your rates against the market — week by week, bedroom for bedroom.</p>
+        <span class="tile-cta">Owner tools &rarr;</span>
+      </a>
+    </div>
     <h2>Featured</h2>
 <article class="featured"><a href="https://www.hatterasrealty.com/hatteras-realty-rentals/avic15-island-thunder-15-i/" data-property="hr-avic15" target="_blank" rel="noopener" class="featured-photo"><img src="/images/hr-avic15.jpg" alt="AVIC15 Island Thunder #15-I" loading="lazy"></a><div class="featured-body"><h3>AVIC15 Island Thunder #15-I <span class="loc">— Island Creek</span></h3><p class="meta">4BR soundfront · pool, hot tub</p><p class="blurb">4BR soundfront in Avon — hot tub, sunset water views, owner-direct via Hatteras Realty.</p><p class="cta"><a href="https://www.hatterasrealty.com/hatteras-realty-rentals/avic15-island-thunder-15-i/" data-property="hr-avic15" target="_blank" rel="noopener">View on Hatteras Realty &rarr;</a></p></div></article>
 <article class="featured"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/os3q-shared-dreams" data-property="obb-os3q" target="_blank" rel="noopener" class="featured-photo"><img src="/images/obb-os3q.jpg" alt="OS3Q-Shared Dreams" loading="lazy"></a><div class="featured-body"><h3>OS3Q-Shared Dreams <span class="loc">— Ocean Sands</span></h3><p class="meta">5BR oceanside · pool, hot tub</p><p class="blurb">5BR oceanside in Corolla's Ocean Sands — private pool, hot tub, 500 ft to the beach.</p><p class="cta"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/os3q-shared-dreams" data-property="obb-os3q" target="_blank" rel="noopener">View on Outer Banks Blue &rarr;</a></p></div></article>
 <article class="featured"><a href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/wizardry-by-the-sea/" data-property="twiddy-wizardry" target="_blank" rel="noopener" class="featured-photo"><img src="/images/twiddy-wizardry.jpg" alt="Wizardry by the Sea" loading="lazy"></a><div class="featured-body"><h3>Wizardry by the Sea <span class="loc">— Carova Beach</span></h3><p class="meta">6BR semi-oceanfront · pool, hot tub · 4x4 area</p><p class="blurb">Harry Potter-themed 6BR semi-oceanfront in Carova's 4x4 — private pool, hot tub, game room, and wild ponies on the beach.</p><p class="cta"><a href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/wizardry-by-the-sea/" data-property="twiddy-wizardry" target="_blank" rel="noopener">View on Twiddy &amp; Co &rarr;</a></p></div></article>
 <p class="get-featured">Own an OBX rental? <a href="https://owners.obx.deals">Feature your property here &rarr;</a></p>
 
-    <p class="archive-nav">
-      <a href="https://search.obx.deals/price-drops/">Today's price drops &rarr;</a>
-      &nbsp;&nbsp;·&nbsp;&nbsp;
-      <a href="https://search.obx.deals/">Search all OBX rentals &rarr;</a>
-    </p>
     
     <h2>Quick getaways</h2>
 <p class="intro">Short 2–6 night gaps in the calendar — uncommon openings since most listings demand a full week.</p>
@@ -259,33 +279,6 @@
       <p>The tools didn't exist. PMC market reports are opaque. Comparing your calendar to a competitor meant opening dozens of browser tabs and doing rough math in a spreadsheet. We had no reliable way to see where we sat in the market, which weeks were underpriced, or whether our property management company was doing us any favors.</p>
       <p>So we built one. What started as a script to track a handful of competitors grew into a nightly intelligence system that monitors rates, availability, and visibility across 9,000+ vacation rentals on the Outer Banks — 25 property management companies, refreshed every morning before sunrise.</p>
       <p>The search engine and deal alerts are the public face of that system. The owner tools are what we actually run our rentals on.</p>
-    </div>
-    <h2>Our web properties</h2>
-    <div class="web-properties">
-      <div class="web-prop">
-        <p class="wp-title">OBX Deals</p>
-        <p class="wp-url">obx.deals</p>
-        <p class="wp-desc">The hub for OBX vacation rental intelligence — short-stay openings, owner tools, and the search engine behind it all.</p>
-        <a class="wp-cta" href="https://obx.deals/">View today&#39;s deals &rarr;</a>
-      </div>
-      <div class="web-prop">
-        <p class="wp-title">OBX Search</p>
-        <p class="wp-url">search.obx.deals</p>
-        <p class="wp-desc">Search 9,000+ Outer Banks vacation rentals by dates, bedrooms, amenities, and location — with fair price ratings and availability across all major PMCs in one place.</p>
-        <a class="wp-cta" href="https://search.obx.deals/">Search rentals &rarr;</a>
-      </div>
-      <div class="web-prop">
-        <p class="wp-title">Owner Hub</p>
-        <p class="wp-url">owners.obx.deals</p>
-        <p class="wp-desc">Pricing intelligence for OBX rental owners. See how your property compares against rentals with the same bedrooms, view type, and community — week by week.</p>
-        <a class="wp-cta" href="https://owners.obx.deals/">Explore owner tools &rarr;</a>
-      </div>
-      <div class="web-prop">
-        <p class="wp-title">Price Drop Archive</p>
-        <p class="wp-url">search.obx.deals/price-drops/</p>
-        <p class="wp-desc">Every price drop detected since May 2026, archived by day — useful for spotting patterns in which PMCs cut most often and where last-minute deals cluster.</p>
-        <a class="wp-cta" href="https://search.obx.deals/price-drops/">Browse the archive &rarr;</a>
-      </div>
     </div>
     <hr>
     <footer>
