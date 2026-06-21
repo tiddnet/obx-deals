@@ -147,20 +147,8 @@
     footer { color: var(--muted); font-size: 0.9rem; }
     footer p { margin: 0 0 0.6rem; }
     .hero-tagline { font-size: 1.35rem; color: var(--muted); margin: 0.1rem 0 2rem; font-weight: 400; }
-    .hero-layout {
-      display: grid; grid-template-columns: 2fr 3fr; gap: 1.5rem;
-      align-items: start; margin: 0 0 2.5rem;
-    }
-    .hero-photo {
-      width: 100%; border-radius: 8px; display: block;
-      object-fit: cover; max-height: 460px;
-    }
     .product-tiles {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
-    }
-    @media (max-width: 600px) {
-      .hero-layout { grid-template-columns: 1fr; }
-      .hero-photo { max-height: 220px; }
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 0 0 2.5rem;
     }
     @media (max-width: 480px) { .product-tiles { grid-template-columns: 1fr; } }
     .tile {
@@ -203,11 +191,7 @@
   <main>
     <h1>OBX Deals</h1>
     <p class="hero-tagline">Find the deal. Own the beach.</p>
-    <div class="hero-layout">
-      <div>
-        <img src="/images/hero.png" alt="OBX Deals — Find the deal. Own the beach." class="hero-photo">
-      </div>
-      <div class="product-tiles">
+    <div class="product-tiles">
         <a class="tile" href="https://search.obx.deals/">
           <div class="tile-icon">🔍</div>
           <p class="tile-title">Search Rentals</p>
@@ -236,7 +220,6 @@
           <p class="tile-desc">Pricing intelligence for OBX rental owners. Compare your rates against the market — week by week, bedroom for bedroom.</p>
           <span class="tile-cta">Owner tools &rarr;</span>
         </a>
-      </div>
     </div>
     <footer>
       <p>Vacation rental price intelligence for the Outer Banks of North Carolina.
