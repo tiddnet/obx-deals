@@ -3,104 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy — OBX Deals</title>
-  <meta name="description" content="Privacy policy for obx.deals — what we collect, what we don't, and how to opt out.">
+  <title>Privacy Policy — OBX Deals</title>
+  <meta name="description" content="Privacy policy for obx.deals, search.obx.deals, and owners.obx.deals.">
   <link rel="canonical" href="https://obx.deals/privacy">
-  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico">
   <style>
     :root {
-      --ink: #1a1a1a;
-      --muted: #5a5a5a;
-      --rule: #e0e0e0;
-      --accent: #1e6fa8;
-      --bg: #fafaf7;
+      --ink: #1a1a1a; --muted: #666; --rule: #d8e8e7;
+      --accent: #0B7A75; --bg: #F2FAF9;
+      --nav-bg: #1A2B3C; --nav-text: #b8d0cc;
+      --nav-active: #ffffff; --nav-gold: #E8B84B;
     }
     * { box-sizing: border-box; }
     html, body {
-      margin: 0; padding: 0;
-      background: var(--bg); color: var(--ink);
+      margin: 0; padding: 0; background: var(--bg); color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 17px; line-height: 1.6;
     }
+    .site-nav { background: var(--nav-bg); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--nav-gold); }
+    .site-nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; padding: 0 1.25rem; }
+    .nav-brand { font-weight: 800; font-size: 1.1rem; color: var(--nav-active); text-decoration: none; padding: 0.75rem 0; margin-right: 0.75rem; }
+    .nav-brand:hover { color: var(--nav-gold); }
+    .nav-brand .brand-obx { color: var(--nav-gold); }
+    .nav-links { display: flex; align-items: stretch; gap: 0; flex: 1; overflow-x: auto; }
+    .nav-links a { color: var(--nav-text); text-decoration: none; font-size: 0.88rem; font-weight: 500; padding: 0.75rem 0.9rem; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .nav-links a:hover { color: var(--nav-active); }
+    .nav-links .nav-sep { color: #3a5060; align-self: center; font-size: 0.8rem; padding: 0 0.1rem; }
     main { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-    h1 { font-size: 2rem; letter-spacing: -0.01em; margin: 0 0 0.3rem; }
-    .back { font-size: 0.95rem; margin: 0 0 2rem; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h2 {
-      font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
-      color: var(--muted); margin: 2.5rem 0 0.8rem; font-weight: 600;
-      border-top: 1px solid var(--rule); padding-top: 1.5rem;
-    }
-    h2:first-of-type { border-top: none; padding-top: 0; }
-    p { margin: 0 0 0.8rem; }
-    ul { margin: 0 0 0.8rem; padding-left: 1.5rem; }
+    h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+    h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 2rem 0 0.75rem; font-weight: 600; }
+    p { margin: 0 0 1rem; }
+    ul { margin: 0 0 1rem; padding-left: 1.4rem; }
     li { margin: 0.3rem 0; }
-    code {
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 0.88em; background: #eef0f2;
-      padding: 0.1em 0.35em; border-radius: 3px;
-    }
-    .updated { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0 2.5rem; }
-    hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 1.5rem; }
+    a { color: var(--accent); }
+    code { font-size: 0.9em; background: #e2f0ef; padding: 0.1em 0.3em; border-radius: 3px; }
+    .last-updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 2rem; }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
     footer { color: var(--muted); font-size: 0.9rem; }
-    footer p { margin: 0 0 0.4rem; }
   </style>
 </head>
 <body>
-<main>
-  <p class="back"><a href="/">← OBX Deals</a></p>
-  <h1>Privacy</h1>
-  <p class="updated">Last updated May 2026</p>
+  <nav class="site-nav" aria-label="OBX Deals network">
+    <div class="site-nav-inner">
+      <a href="https://obx.deals/" class="nav-brand"><span class="brand-obx">OBX</span><span class="brand-deals"> Deals</span></a>
+      <div class="nav-links">
+        <a href="https://search.obx.deals/">Search</a>
+        <span class="nav-sep">|</span>
+        <a href="https://search.obx.deals/price-drops/">Price Drops</a>
+        <span class="nav-sep">|</span>
+        <a href="https://owners.obx.deals/">Owner Hub</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: June 2026. Applies to obx.deals, search.obx.deals, and owners.obx.deals.</p>
 
-  <h2>What we collect</h2>
-  <p>When you click an outbound property listing link, we record:</p>
-  <ul>
-    <li><strong>Destination URL</strong> — the PMC listing you clicked</li>
-    <li><strong>Property ID</strong> — our internal identifier for the listing</li>
-    <li><strong>Anonymous browser ID</strong> — a UUID we set in a first-party cookie (<code>obxd_vid</code>); no email, name, or any identifier is ever attached to it</li>
-    <li><strong>Country</strong> — two-letter country code derived from your request, not stored per-IP</li>
-    <li><strong>Device class</strong> — coarse classification (desktop, mobile, tablet, or bot) derived from your browser's user-agent string; the full string is not stored</li>
-    <li><strong>Page path</strong> — which page on obx.deals you were on when you clicked</li>
-  </ul>
-  <p>All click records expire automatically after 365 days.</p>
+    <h2>What we collect</h2>
+    <p>When you click an outbound listing link on any OBX Deals property, we record:</p>
+    <ul>
+      <li>The destination URL</li>
+      <li>An anonymous browser ID — a UUID we generate and store as a first-party cookie, never tied to your email, name, or any other identifier</li>
+      <li>The country your request came from (from CloudFront headers — not a precise location)</li>
+      <li>A coarse device class (mobile vs. desktop, from the User-Agent string — the string itself is not stored)</li>
+    </ul>
+    <p>We do <strong>not</strong> store IP addresses, full User-Agent strings, or any third-party tracking identifier.</p>
+    <p>If you submit your email address via the signup form, we store it in our subscriber table along with the features you opted into. We do not sell or share your email address.</p>
 
-  <h2>What we don't collect</h2>
-  <ul>
-    <li>IP addresses</li>
-    <li>Full user-agent strings</li>
-    <li>Precise location (city, region, postal code)</li>
-    <li>Any third-party identifier (no Google Analytics, no Meta Pixel, no ad network)</li>
-    <li>Email address or any account information — unless you explicitly sign up for deal alerts</li>
-  </ul>
+    <h2>Cookies</h2>
+    <p>We set one first-party cookie: <code>obxd_vid</code>. It contains a random UUID, expires after 365 days, and is shared across all <code>*.obx.deals</code> subdomains so we can count a visitor once even if they navigate between our properties. It carries no personal information.</p>
 
-  <h2>The anonymous browser ID cookie</h2>
-  <p>We set one first-party cookie, <code>obxd_vid</code>, containing a random UUID (e.g. <code>f47ac10b-58cc-4372-a567-0e02b2c3d479</code>). It is scoped to <code>.obx.deals</code> so it works across <code>obx.deals</code> and <code>search.obx.deals</code> — both are the same service. It has no meaning outside of aggregating your own clicks over time. It expires after 365 days. We do not share it with any third party.</p>
+    <h2>How we use this data</h2>
+    <p>Click data is used to measure which properties generate interest and to understand which property management companies drive the most traffic — this feeds the owner intelligence tools. It is never sold or shared with third parties.</p>
+    <p>Email addresses are used only to send the digest or alerts you signed up for. Every email includes a one-click unsubscribe link.</p>
 
-  <h2>Opt out</h2>
-  <p>Any of these stops click tracking entirely — the site works fine either way:</p>
-  <ul>
-    <li><strong>Do Not Track</strong> — enable DNT in your browser settings; we check it before the beacon fires</li>
-    <li><strong>Ad blocker</strong> — block <code>track.obx.deals</code>; the beacon endpoint is on a clearly named subdomain</li>
-    <li><strong>Clear the cookie</strong> — delete <code>obxd_vid</code> from your browser's cookie storage for obx.deals</li>
-  </ul>
+    <h2>Owner Hub (owners.obx.deals)</h2>
+    <p>The Owner Hub uses Auth0 for authentication. When you log in, Auth0 stores a session token in memory (not localStorage) to reduce XSS exposure. We store your email address, property ID, and subscription tier in our user table. Payment processing is handled by Stripe — we do not store card numbers.</p>
 
-  <h2>Email subscribers</h2>
-  <p>If you sign up for deal alerts, we store your email address and the features you selected. We use it only to send the emails you asked for. You can unsubscribe at any time using the link at the bottom of any email, which permanently removes your address. We do not share subscriber email addresses with anyone.</p>
+    <h2>Data retention</h2>
+    <p>Click records expire after 365 days. Subscriber records are retained until you unsubscribe. Owner Hub accounts are retained until you request deletion — email <a href="mailto:privacy@obx.deals">privacy@obx.deals</a> to request removal.</p>
 
-  <h2>Infrastructure</h2>
-  <p>Click events are written to AWS DynamoDB with a 365-day TTL. Subscriber records are stored in AWS DynamoDB. Emails are sent via AWS SES. No data leaves AWS US-East-1.</p>
+    <h2>Opting out of click tracking</h2>
+    <p>Any of the following will prevent click tracking:</p>
+    <ul>
+      <li>Enable Do Not Track in your browser (we honor the DNT header)</li>
+      <li>Block <code>track.obx.deals</code> in an ad blocker</li>
+      <li>Clear or block the <code>obxd_vid</code> cookie</li>
+    </ul>
+    <p>The site works fully either way — tracking is never required to use any feature.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>If we make material changes we'll update the date at the top of this page. The site is a personal project — there's no legal entity behind it — but we take the above commitments seriously.</p>
+    <h2>Third-party services</h2>
+    <ul>
+      <li><strong>AWS CloudFront / Lambda</strong> — serves the search API and click tracker</li>
+      <li><strong>Auth0</strong> — authentication for the Owner Hub</li>
+      <li><strong>Stripe</strong> — payment processing for Owner Hub subscriptions</li>
+      <li><strong>GitHub Pages</strong> — hosts the static HTML for all OBX Deals properties</li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Questions: <a href="mailto:hello@obx.deals">hello@obx.deals</a></p>
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:privacy@obx.deals">privacy@obx.deals</a></p>
 
-  <hr>
-  <footer>
-    <p><a href="/">OBX Deals</a> — Outer Banks vacation rental price intelligence</p>
-  </footer>
-</main>
+    <hr>
+    <footer><p>&larr; <a href="https://obx.deals/">Back to OBX Deals</a></p></footer>
+  </main>
 </body>
 </html>
