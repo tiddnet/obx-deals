@@ -40,6 +40,29 @@
     .last-updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 2rem; }
     hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
     footer { color: var(--muted); font-size: 0.9rem; }
+    .contact-form { background: #e2f0ef; border-radius: 8px; padding: 1.4rem 1.6rem; margin: 1rem 0 0; }
+    .contact-form label { display: block; font-size: 0.92rem; font-weight: 600; margin: 0 0 0.3rem; }
+    .contact-form select,
+    .contact-form input[type=email],
+    .contact-form textarea {
+      width: 100%; padding: 0.55rem 0.75rem; margin: 0 0 1rem;
+      border: 1px solid #b8d0cc; border-radius: 5px;
+      font-size: 1rem; font-family: inherit; color: var(--ink);
+      background: #fff; box-sizing: border-box;
+    }
+    .contact-form textarea { resize: vertical; min-height: 100px; }
+    .contact-form select:focus,
+    .contact-form input:focus,
+    .contact-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+    .contact-btn {
+      padding: 0.55rem 1.3rem; background: var(--accent); color: #fff;
+      border: none; border-radius: 5px; font-size: 1rem; font-family: inherit;
+      font-weight: 600; cursor: pointer;
+    }
+    .contact-btn:hover { background: #096560; }
+    .contact-msg { margin-top: 0.7rem; font-size: 0.95rem; min-height: 1.3em; }
+    .contact-msg.ok { color: #2a7a3b; font-weight: 600; }
+    .contact-msg.err { color: #b04a2c; }
   </style>
 </head>
 <body>
@@ -81,7 +104,7 @@
     <p>The Owner Hub uses Auth0 for authentication. When you log in, Auth0 stores a session token in memory (not localStorage) to reduce XSS exposure. We store your email address, property ID, and subscription tier in our user table. Payment processing is handled by Stripe — we do not store card numbers.</p>
 
     <h2>Data retention</h2>
-    <p>Click records expire after 365 days. Subscriber records are retained until you unsubscribe. Owner Hub accounts are retained until you request deletion — email <a href="mailto:privacy@obx.deals">privacy@obx.deals</a> to request removal.</p>
+    <p>Click records expire after 365 days. Subscriber records are retained until you unsubscribe. Owner Hub accounts are retained until you request deletion — use the <a href="#contact-form">contact form below</a> to submit a deletion request.</p>
 
     <h2>Opting out of click tracking</h2>
     <p>Any of the following will prevent click tracking:</p>
@@ -101,10 +124,67 @@
     </ul>
 
     <h2>Contact</h2>
-    <p>Questions about this policy: <a href="mailto:privacy@obx.deals">privacy@obx.deals</a></p>
+    <p>Use the form below for questions about this policy, account deletion requests, or any other privacy concern.</p>
+    <div class="contact-form" id="contact-form">
+      <label for="cf-reason">What's this about?</label>
+      <select id="cf-reason">
+        <option value="policy_question">Question about this policy</option>
+        <option value="account_deletion">Request account / data deletion</option>
+        <option value="other">Other privacy concern</option>
+      </select>
+      <label for="cf-email">Your email</label>
+      <input type="email" id="cf-email" placeholder="you@example.com" autocomplete="email">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" placeholder="Describe your question or request…"></textarea>
+      <button class="contact-btn" onclick="submitContact()">Send</button>
+      <p class="contact-msg" id="cf-msg"></p>
+    </div>
 
     <hr>
     <footer><p>&larr; <a href="https://obx.deals/">Back to OBX Deals</a></p></footer>
   </main>
+  <script>
+  function submitContact() {
+    var reason  = document.getElementById('cf-reason').value;
+    var email   = document.getElementById('cf-email').value.trim();
+    var message = document.getElementById('cf-message').value.trim();
+    var msg     = document.getElementById('cf-msg');
+    var btn     = document.querySelector('.contact-btn');
+    msg.className = 'contact-msg';
+    msg.textContent = '';
+    if (!email || !email.includes('@')) {
+      msg.className = 'contact-msg err';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    if (!message) {
+      msg.className = 'contact-msg err';
+      msg.textContent = 'Please enter a message.';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch('https://track.obx.deals/contact', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({reason: reason, email: email, message: message})
+    }).then(function(r) {
+      if (r.ok) {
+        document.getElementById('contact-form').innerHTML =
+          '<p style="margin:0;font-size:1rem"><strong>Message received.</strong> We\'ll follow up at the email you provided.</p>';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send';
+        msg.className = 'contact-msg err';
+        msg.textContent = 'Something went wrong — please try again.';
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send';
+      msg.className = 'contact-msg err';
+      msg.textContent = 'Could not connect — please try again.';
+    });
+  }
+  </script>
 </body>
 </html>
