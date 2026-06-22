@@ -3,27 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence</title>
-  <meta name="description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
+  <title>OBX Deals — Today's Outer Banks rental price drops</title>
+  <meta name="description" content="7 fresh price drops and 5 short-stay openings — June 22, 2026.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://obx.deals/">
-  <meta property="og:title" content="OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence">
-  <meta property="og:description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
-  <meta property="og:image" content="https://obx.deals/images/hero.png">
+  <meta property="og:title" content="OBX Deals — Today's Outer Banks rental price drops">
+  <meta property="og:description" content="7 fresh price drops and 5 short-stay openings — June 22, 2026.">
+  <meta property="og:image" content="https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/a9f4fa18-ba45-4c2c-bd0e-9735f82195bb">
   <link rel="canonical" href="https://obx.deals/">
-  <link rel="icon" href="/favicon.ico" sizes="any">
   <style>
     :root {
       --ink: #1a1a1a;
       --muted: #5a5a5a;
-      --rule: #d8e8e7;
-      --accent: #0B7A75;
+      --rule: #e0e0e0;
+      --accent: #1e6fa8;
       --save: #b04a2c;
-      --bg: #F2FAF9;
-      --nav-bg: #1A2B3C;
-      --nav-text: #b8d0cc;
-      --nav-active: #ffffff;
-      --nav-gold: #E8B84B;
+      --bg: #fafaf7;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -32,70 +27,6 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 17px; line-height: 1.55;
     }
-    /* ── Site nav ── */
-    .site-nav {
-      background: var(--nav-bg);
-      position: sticky; top: 0; z-index: 100;
-      border-bottom: 2px solid var(--nav-gold);
-    }
-    .site-nav-inner {
-      max-width: 900px; margin: 0 auto;
-      display: flex; align-items: center; gap: 0;
-      padding: 0 1.25rem;
-    }
-    .nav-brand {
-      display: flex; align-items: center; gap: 0.45rem;
-      font-weight: 800; font-size: 1.1rem; color: var(--nav-active);
-      text-decoration: none; padding: 0.75rem 0;
-      margin-right: 0.75rem; white-space: nowrap; flex-shrink: 0;
-    }
-    .nav-brand:hover { color: var(--nav-gold); text-decoration: none; }
-    .nav-brand .brand-obx { color: var(--nav-gold); }
-    .nav-hamburger-wrap { position: relative; margin-left: auto; flex-shrink: 0; }
-    .nav-hamburger {
-      background: none; border: none; cursor: pointer;
-      color: var(--nav-text); padding: 0.75rem 0 0.75rem 0.75rem;
-      font-size: 1.2rem; line-height: 1; display: flex; align-items: center;
-    }
-    .nav-hamburger:hover { color: var(--nav-active); }
-    .hamburger-menu {
-      display: none; position: absolute; top: calc(100% + 2px); right: 0;
-      background: #fff; border: 1px solid var(--rule);
-      border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-      min-width: 170px; z-index: 200; overflow: hidden;
-    }
-    .nav-hamburger-wrap.open .hamburger-menu { display: block; }
-    .hamburger-menu a {
-      display: block; padding: 0.75rem 1.1rem;
-      color: var(--ink); font-size: 0.92rem; font-weight: 500;
-      text-decoration: none; border-bottom: 1px solid var(--rule);
-    }
-    .hamburger-menu a:last-child { border-bottom: 0; }
-    .hamburger-menu a:hover { background: var(--bg); color: var(--accent); }
-    .nav-links {
-      display: flex; align-items: stretch; gap: 0; flex: 1; overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .nav-links::-webkit-scrollbar { display: none; }
-    .nav-links a {
-      color: var(--nav-text); text-decoration: none;
-      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.01em;
-      padding: 0.75rem 0.9rem; white-space: nowrap;
-      border-bottom: 2px solid transparent; margin-bottom: -2px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .nav-links a:hover { color: var(--nav-active); text-decoration: none; }
-    .nav-links a.nav-active {
-      color: var(--nav-active); border-bottom-color: var(--nav-gold); font-weight: 600;
-    }
-    .nav-links .nav-sep {
-      color: #3a5060; align-self: center; font-size: 0.8rem; padding: 0 0.1rem; user-select: none;
-    }
-    @media (max-width: 480px) {
-      .nav-brand .brand-deals { display: none; }
-      .nav-links a { padding: 0.75rem 0.6rem; font-size: 0.82rem; }
-    }
-    /* ── Page body ── */
     main { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
     h1 { font-size: 2.2rem; letter-spacing: -0.01em; margin: 0 0 0.25rem; }
     .tagline { color: var(--muted); font-size: 1.1rem; margin: 0 0 0.4rem; }
@@ -146,85 +77,124 @@
     hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 1.5rem; }
     footer { color: var(--muted); font-size: 0.9rem; }
     footer p { margin: 0 0 0.6rem; }
-    .hero-tagline { font-size: 1.35rem; color: var(--muted); margin: 0.1rem 0 2rem; font-weight: 400; }
-    .product-tiles {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 0 0 2.5rem;
+    .signup {
+      background: #f0f4f8; border-radius: 8px;
+      padding: 1.6rem 1.8rem; margin: 2.5rem 0;
     }
-    @media (max-width: 480px) { .product-tiles { grid-template-columns: 1fr; } }
-    .tile {
-      border: 1px solid var(--rule); border-radius: 10px; padding: 1.4rem 1.3rem 1.5rem;
-      background: #fff; display: flex; flex-direction: column; gap: 0.5rem;
-      transition: box-shadow 0.15s, border-color 0.15s;
+    .signup h2 {
+      font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 0.3rem; font-weight: 600;
     }
-    .tile:hover { box-shadow: 0 2px 12px rgba(11,122,117,0.10); border-color: var(--accent); text-decoration: none; }
-    .tile-icon { font-size: 1.6rem; line-height: 1; }
-    .tile-title { font-weight: 700; font-size: 1.05rem; color: var(--ink); margin: 0; }
-    .tile-url { font-size: 0.78rem; color: var(--muted); }
-    .tile-desc { font-size: 0.91rem; color: var(--ink); flex: 1; }
-    .tile-cta { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-top: 0.3rem; }
+    .signup p { margin: 0 0 1.1rem; font-size: 0.97rem; color: var(--ink); }
+    .signup-features { list-style: none; margin: 0 0 1.2rem; padding: 0; }
+    .signup-features li { margin: 0.4rem 0; font-size: 0.95rem; }
+    .signup-features label { cursor: pointer; display: flex; align-items: baseline; gap: 0.5rem; }
+    .signup-features input[type=checkbox] { flex-shrink: 0; margin-top: 0.15em; accent-color: var(--accent); }
+    .feat-name { font-weight: 600; }
+    .feat-desc { color: var(--muted); font-size: 0.9rem; }
+    .signup-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
+    .signup-row input[type=email] {
+      flex: 1 1 220px; padding: 0.55rem 0.75rem;
+      border: 1px solid #c8d0d8; border-radius: 5px;
+      font-size: 1rem; font-family: inherit; color: var(--ink);
+      background: #fff;
+    }
+    .signup-row input[type=email]:focus {
+      outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent;
+    }
+    .signup-btn {
+      padding: 0.55rem 1.3rem; background: var(--accent); color: #fff;
+      border: none; border-radius: 5px; font-size: 1rem; font-family: inherit;
+      font-weight: 600; cursor: pointer; white-space: nowrap;
+    }
+    .signup-btn:hover { background: #195e90; }
+    .signup-msg { margin-top: 0.7rem; font-size: 0.95rem; min-height: 1.3em; }
+    .signup-msg.ok { color: #2a7a3b; font-weight: 600; }
+    .signup-msg.err { color: var(--save); }
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="OBX Deals network">
-    <div class="site-nav-inner">
-      <a href="https://obx.deals/" class="nav-brand">
-        <span class="brand-obx">OBX</span><span class="brand-deals"> Deals</span>
-      </a>
-      <div class="nav-links">
-        <a href="https://search.obx.deals/">Search</a>
-        <span class="nav-sep">|</span>
-        <a href="https://search.obx.deals/price-drops/">Price Drops</a>
-        <span class="nav-sep">|</span>
-        <a href="https://search.obx.deals/quick-getaways/">Quick Getaways</a>
-        <span class="nav-sep">|</span>
-        <a href="https://owners.obx.deals/">Owner Hub</a>
-      </div>
-      <div class="nav-hamburger-wrap" id="hamburger-wrap">
-        <button class="nav-hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
-        <div class="hamburger-menu" id="hamburger-menu">
-          <a href="https://obx.deals/about">Our Story</a>
-          <a href="https://obx.deals/privacy">Privacy Policy</a>
-        </div>
-      </div>
-    </div>
-  </nav>
   <main>
     <h1>OBX Deals</h1>
-    <p class="hero-tagline">Find the deal. Own the beach.</p>
-    <div class="product-tiles">
-        <a class="tile" href="https://search.obx.deals/">
-          <div class="tile-icon">🔍</div>
-          <p class="tile-title">Search Rentals</p>
-          <p class="tile-url">search.obx.deals</p>
-          <p class="tile-desc">9,000+ OBX rentals by dates, bedrooms, amenities, and location — with fair price ratings across all 25 PMCs.</p>
-          <span class="tile-cta">Search now &rarr;</span>
-        </a>
-        <a class="tile" href="https://search.obx.deals/price-drops/">
-          <div class="tile-icon">📉</div>
-          <p class="tile-title">Price Drops</p>
-          <p class="tile-url">search.obx.deals/price-drops</p>
-          <p class="tile-desc">Properties that cut rates since last month — updated every morning from nightly scrapes across the OBX market.</p>
-          <span class="tile-cta">See today's drops &rarr;</span>
-        </a>
-        <a class="tile" href="https://search.obx.deals/quick-getaways/">
-          <div class="tile-icon">⚡</div>
-          <p class="tile-title">Quick Getaways</p>
-          <p class="tile-url">search.obx.deals/quick-getaways</p>
-          <p class="tile-desc">Short 2–6 night calendar gaps — uncommon openings since most listings require a full week. Updated every morning.</p>
-          <span class="tile-cta">Find a getaway &rarr;</span>
-        </a>
-        <a class="tile" href="https://owners.obx.deals/">
-          <div class="tile-icon">🏠</div>
-          <p class="tile-title">Owner Hub</p>
-          <p class="tile-url">owners.obx.deals</p>
-          <p class="tile-desc">Pricing intelligence for OBX rental owners. Compare your rates against the market — week by week, bedroom for bedroom.</p>
-          <span class="tile-cta">Owner tools &rarr;</span>
-        </a>
+    <p class="tagline">7 fresh price drops and 5 short-stay openings — June 22, 2026.</p>
+    <h2>Featured</h2>
+<article class="featured"><a href="https://www.hatterasrealty.com/hatteras-realty-rentals/avic15-island-thunder-15-i/" data-property="hr-avic15" target="_blank" rel="noopener" class="featured-photo"><img src="/images/hr-avic15.jpg" alt="AVIC15 Island Thunder #15-I" loading="lazy"></a><div class="featured-body"><h3>AVIC15 Island Thunder #15-I <span class="loc">— Island Creek</span></h3><p class="meta">4BR soundfront · pool, hot tub</p><p class="blurb">4BR soundfront in Avon — hot tub, sunset water views, owner-direct via Hatteras Realty.</p><p class="cta"><a href="https://www.hatterasrealty.com/hatteras-realty-rentals/avic15-island-thunder-15-i/" data-property="hr-avic15" target="_blank" rel="noopener">View on Hatteras Realty &rarr;</a></p></div></article>
+<article class="featured"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/os3q-shared-dreams" data-property="obb-os3q" target="_blank" rel="noopener" class="featured-photo"><img src="/images/obb-os3q.jpg" alt="OS3Q-Shared Dreams" loading="lazy"></a><div class="featured-body"><h3>OS3Q-Shared Dreams <span class="loc">— Corolla</span></h3><p class="meta">5BR oceanside · pool, hot tub</p><p class="blurb">5BR oceanside in Corolla's Ocean Sands — private pool, hot tub, 500 ft to the beach.</p><p class="cta"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/os3q-shared-dreams" data-property="obb-os3q" target="_blank" rel="noopener">View on Outer Banks Blue &rarr;</a></p></div></article>
+<article class="featured"><a href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/wizardry-by-the-sea/" data-property="twiddy-wizardry" target="_blank" rel="noopener" class="featured-photo"><img src="/images/twiddy-wizardry.jpg" alt="Wizardry by the Sea" loading="lazy"></a><div class="featured-body"><h3>Wizardry by the Sea <span class="loc">— Carova Beach</span></h3><p class="meta">6BR semi-oceanfront · pool, hot tub · 4x4 area</p><p class="blurb">Harry Potter-themed 6BR semi-oceanfront in Carova's 4x4 — private pool, hot tub, game room, and wild ponies on the beach.</p><p class="cta"><a href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/wizardry-by-the-sea/" data-property="twiddy-wizardry" target="_blank" rel="noopener">View on Twiddy &amp; Co &rarr;</a></p></div></article>
+<p class="get-featured">Own an OBX rental? <a href="https://owners.obx.deals">Feature your property here &rarr;</a></p>
+
+    <p class="archive-nav">
+      <a href="/archive.html">Recently discovered deals &rarr;</a>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="https://search.obx.deals/">Search all OBX rentals &rarr;</a>
+    </p>
+    
+    <h2>Price drops</h2>
+<article class="deal"><h3>WJ072 - Castawaves <span class="loc">— Waves</span></h3><p class="meta">7BR oceanside · Week of Jun 27 - Jul 4</p><p class="price"><span class="old">$4,121</span> &rarr; <span class="new">$2,500</span> <span class="save">save $1,621 (-39%)</span></p><p class="cta"><a href="https://www.midgettrealty.com/rental/castawaves" data-property="midgett-wj072" target="_blank" rel="noopener">View on Midgett Realty &rarr;</a></p></article>
+<article class="deal"><h3>Sandy Cheeks <span class="loc">— South Nags Head</span></h3><p class="meta">8BR oceanfront · pool, hot tub · Week of Jun 28 - Jul 5</p><p class="price"><span class="old">$11,995</span> &rarr; <span class="new">$8,995</span> <span class="save">save $3,000 (-25%)</span></p><p class="cta"><a href="https://www.joelambjr.com/outer-banks-rentals/south-nags-head/014-sandy-cheeks?checkin=06/28/2026&amp;checkout=07/05/2026" data-property="joe_lamb_jr-014" target="_blank" rel="noopener">View on Joe Lamb Jr &rarr;</a></p></article>
+<article class="deal"><h3>Just Beachy <span class="loc">— Southern Shores</span></h3><p class="meta">8BR oceanside · pool, hot tub · Week of Jul 5 - Jul 12</p><p class="price"><span class="old">$9,995</span> &rarr; <span class="new">$7,995</span> <span class="save">save $2,000 (-20%)</span></p><p class="cta"><a href="https://www.joelambjr.com/outer-banks-rentals/southern-shores/252-just-beachy?checkin=07/05/2026&amp;checkout=07/12/2026" data-property="joe_lamb_jr-252" target="_blank" rel="noopener">View on Joe Lamb Jr &rarr;</a></p></article>
+<article class="deal"><h3>SV37: Captain Reid's Devereux <span class="loc">— Ocracoke</span></h3><p class="meta">1BR · Week of Jun 27 - Jul 4</p><p class="price"><span class="old">$1,313</span> &rarr; <span class="new">$1,029</span> <span class="save">save $284 (-22%)</span></p><p class="cta"><a href="https://www.ocracokeislandrealty.com/ocracoke-island-vacation-rentals/sv37-captain-reids-devereux?checkin=06/27/2026&amp;checkout=07/04/2026" data-property="oir-sv37" target="_blank" rel="noopener">View on Ocracoke Island Realty &rarr;</a></p></article>
+<article class="deal"><h3>NP43: Dockside Sunset <span class="loc">— Ocracoke</span></h3><p class="meta">3BR soundfront · Week of Jun 27 - Jul 4</p><p class="price"><span class="old">$3,287</span> &rarr; <span class="new">$2,705</span> <span class="save">save $581 (-18%)</span></p><p class="cta"><a href="https://www.ocracokeislandrealty.com/ocracoke-island-vacation-rentals/np43-dockside-sunset?checkin=06/27/2026&amp;checkout=07/04/2026" data-property="oir-np43" target="_blank" rel="noopener">View on Ocracoke Island Realty &rarr;</a></p></article>
+<article class="deal"><h3>Run-A-Way Bay <span class="loc">— Duck</span></h3><p class="meta">5BR oceanfront · pool, hot tub · Week of Sep 5 - Sep 12</p><p class="price"><span class="old">$4,215</span> &rarr; <span class="new">$3,558</span> <span class="save">save $658 (-16%)</span></p><p class="cta"><a href="https://www.beachrealtync.com/outer-banks-rentals/run-way-bay?rcav%5Bbegin%5D=09/05/2026&amp;rcav%5Bend%5D=09/12/2026&amp;rcav%5Badult%5D=1&amp;rcav%5Bchild%5D=0&amp;rcav%5Beid%5D=467&amp;eid=467&amp;arrival=09/05/2026&amp;departure=09/12/2026" data-property="beach_realty_nc-run-way-bay" target="_blank" rel="noopener">View on Beach Realty NC &rarr;</a></p></article>
+<article class="deal"><h3>AV106 Dancing Dolphin <span class="loc">— Avon</span></h3><p class="meta">4BR oceanside · pool, hot tub · Week of Jul 25 - Aug 1</p><p class="price"><span class="old">$5,040</span> &rarr; <span class="new">$4,334</span> <span class="save">save $707 (-14%)</span></p><p class="cta"><a href="https://www.hatterasrealty.com/hatteras-realty-rentals/av106-dancing-dolphin-106/?checkin=07-25-2026&amp;checkout=08-01-2026" data-property="hr-av106" target="_blank" rel="noopener">View on Hatteras Realty &rarr;</a></p></article>
+
+    <h2>Quick getaways</h2>
+<p class="intro">Short 2–6 night gaps in the calendar — uncommon openings since most listings demand a full week.</p>
+<article class="deal"><h3>The Wright Duck COS <span class="loc">— Duck</span></h3><p class="meta">1BR oceanfront · pool · Jun 25 - Jun 28 (3 nights, gap)</p><p class="price"><span class="new">$1,028</span> total <span class="loc">($343/night)</span></p><p class="cta"><a href="https://www.sunrealtync.com/outer-banks/duck-nc-rentals/oceanfront/cos-303?arrival=06/25/2026&amp;departure=06/28/2026" data-property="sr-thewrigh" target="_blank" rel="noopener">View on Sun Realty &rarr;</a></p></article>
+<article class="deal"><h3>Take It Easy HRC <span class="loc">— Kill Devil Hills</span></h3><p class="meta">3BR oceanside · pool · Jun 25 - Jun 28 (3 nights, gap)</p><p class="price"><span class="new">$1,030</span> total <span class="loc">($343/night)</span></p><p class="cta"><a href="https://www.sunrealtync.com/outer-banks/kill-devil-hills-nc-rentals/oceanside/hrc-101?arrival=06/25/2026&amp;departure=06/28/2026" data-property="sr-takeitea" target="_blank" rel="noopener">View on Sun Realty &rarr;</a></p></article>
+<article class="deal"><h3>CD015-Sunny Lagoon <span class="loc">— Duck</span></h3><p class="meta">4BR oceanside · Jun 25 - Jul 1 (6 nights, gap)</p><p class="price"><span class="new">$3,873</span> total <span class="loc">($645/night)</span></p><p class="cta"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/cd015-sunny-lagoon?checkin=06-25-2026&amp;checkout=07-01-2026" data-property="obb-cd015" target="_blank" rel="noopener">View on Outer Banks Blue &rarr;</a></p></article>
+<article class="deal"><h3>STERN4-A Peace of Quiet <span class="loc">— Duck</span></h3><p class="meta">4BR oceanside · pool · Jun 25 - Jun 28 (3 nights, gap)</p><p class="price"><span class="new">$2,213</span> total <span class="loc">($738/night)</span></p><p class="cta"><a href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/stern4-a-peace-of-quiet?checkin=06-25-2026&amp;checkout=06-28-2026" data-property="obb-stern4" target="_blank" rel="noopener">View on Outer Banks Blue &rarr;</a></p></article>
+<article class="deal"><h3>Bikini Bottom <span class="loc">— Kill Devil Hills</span></h3><p class="meta">3BR oceanside · pool, hot tub · Jun 25 - Jun 28 (3 nights, gap)</p><p class="price"><span class="new">$2,705</span> total <span class="loc">($902/night)</span></p><p class="cta"><a href="https://www.beachrealtync.com/outer-banks-rentals/bikini-bottom?rcav%5Bbegin%5D=07/11/2026&amp;rcav%5Bend%5D=07/18/2026&amp;rcav%5Badult%5D=1&amp;rcav%5Bchild%5D=0&amp;rcav%5Beid%5D=860&amp;eid=860&amp;alt_turnday=1&amp;arrival=06/25/2026&amp;departure=06/28/2026" data-property="beach_realty_nc-bikini-bottom" target="_blank" rel="noopener">View on Beach Realty NC &rarr;</a></p></article>
+
+    <div class="signup" id="signup">
+      <h2>Get deals in your inbox</h2>
+      <p>Tell us what you want — we'll build it and let you know when it's ready.</p>
+      <ul class="signup-features">
+        <li><label><input type="checkbox" name="feat" value="daily_digest" checked>
+          <span><span class="feat-name">Daily deal digest</span>
+          <span class="feat-desc">— price drops and quick getaway openings every morning</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="price_alerts">
+          <span><span class="feat-name">Price drop alerts</span>
+          <span class="feat-desc">— notify me the moment a property I like drops</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="filtered_deals">
+          <span><span class="feat-name">Deals matching my criteria</span>
+          <span class="feat-desc">— filtered by bedrooms, town, and amenities</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="group_finder">
+          <span><span class="feat-name">Group trip finder</span>
+          <span class="feat-desc">— 2–3 nearby houses for 10+ person groups</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="market_pulse">
+          <span><span class="feat-name">Weekly OBX market pulse</span>
+          <span class="feat-desc">— what's booking, what's not, trend summary</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="owner_intel">
+          <span><span class="feat-name">Owner pricing intel</span>
+          <span class="feat-desc">— I own an OBX rental and want competitive data</span></span></label></li>
+        <li><label><input type="checkbox" name="feat" value="investor">
+          <span><span class="feat-name">Investor insights</span>
+          <span class="feat-desc">— I'm considering buying an OBX rental property</span></span></label></li>
+      </ul>
+      <div class="signup-row">
+        <input type="email" id="signup-email" placeholder="your@email.com" autocomplete="email">
+        <button class="signup-btn" onclick="doSignup()">Notify me</button>
+      </div>
+      <p class="signup-msg" id="signup-msg"></p>
     </div>
+    <hr>
     <footer>
       <p>Vacation rental price intelligence for the Outer Banks of North Carolina.
-      Independent project — not affiliated with any property management company.
-      &nbsp;·&nbsp; <a href="https://obx.deals/privacy">Privacy policy</a></p>
+      We monitor weekly rates, calendar availability, and listing visibility across
+      around five thousand vacation rentals — sixteen property management companies —
+      refreshed nightly.</p>
+      <p>Independent project. Property listings and rates are sourced from publicly
+      accessible PMC websites; not affiliated with any property management company.</p>
+      <p><strong>Privacy.</strong> When you click an outbound listing link we record
+      the destination, an anonymous browser ID (a UUID stored as a first-party
+      cookie, no email or identifier ever attached), the country your request came
+      from, and a coarse device class. We do not store IP addresses, full
+      user-agent strings, or any third-party identifier. Records expire 365 days
+      after the click. To opt out: enable Do Not Track in your browser, block
+      <code>track.obx.deals</code> in an ad blocker, or clear the
+      <code>obxd_vid</code> cookie — the site works either way.
+      <a href="/privacy">Full privacy policy.</a></p>
     </footer>
   </main>
   <script>
@@ -258,21 +228,46 @@
 })();
   </script>
   <script>
-// Hamburger menu toggle
-(function() {
-  var wrap = document.getElementById('hamburger-wrap');
-  var btn  = document.getElementById('hamburger-btn');
-  if (!wrap || !btn) return;
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var open = wrap.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+function doSignup() {
+  var email = document.getElementById('signup-email').value.trim();
+  var msg = document.getElementById('signup-msg');
+  var feats = Array.from(document.querySelectorAll('input[name="feat"]:checked')).map(function(c){return c.value;});
+  msg.className = 'signup-msg';
+  msg.textContent = '';
+  if (!email || !email.includes('@')) {
+    msg.className = 'signup-msg err';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  if (!feats.length) {
+    msg.className = 'signup-msg err';
+    msg.textContent = 'Please select at least one option.';
+    return;
+  }
+  var btn = document.querySelector('.signup-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  fetch('https://track.obx.deals/subscribe', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email, features: feats})
+  }).then(function(r) {
+    if (r.ok) {
+      document.getElementById('signup').innerHTML =
+        '<p style="font-size:1.05rem;margin:0"><strong>You're in!</strong> We'll email you when what you asked for is ready.</p>';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Notify me';
+      msg.className = 'signup-msg err';
+      msg.textContent = 'Something went wrong — please try again.';
+    }
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Notify me';
+    msg.className = 'signup-msg err';
+    msg.textContent = 'Could not connect — please try again.';
   });
-  document.addEventListener('click', function() {
-    wrap.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-  });
-})();
+}
   </script>
 </body>
 </html>
