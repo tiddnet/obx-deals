@@ -25,6 +25,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://obx.deals/sound/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://obx.deals/wind-sports/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://obx.deals/view/airbnb-47311492/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
