@@ -11,15 +11,15 @@
     gtag('config', 'G-1P2LPD0VMY');
   </script>
   <title>The Refuge — OBX Verified Wind Sports Home</title>
-  <meta name="description" content="Premier kiteboarding/windsurfing access — independently scored by OBX Deals. Premier wind-sports access in Frisco, NC.">
+  <meta name="description" content="Premier kiteboarding/windsurfing access — independently scored by OBX Deals. Premier wind-sports access in Buxton, NC.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Refuge — OBX Verified Wind Sports Home">
-  <meta property="og:description" content="Premier kiteboarding/windsurfing access · Frisco, NC">
+  <meta property="og:description" content="Premier kiteboarding/windsurfing access · Buxton, NC">
   <meta property="og:url" content="https://obx.deals/wind-sports/frisco/brigands-bay/956f7f8e-2dfb-58ba-8c1f-d5019a027f89/">
   <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE1Mzk0NDAxNDU4MzcyMDM0Mg%3D%3D/original/000be671-78da-40ee-b20d-58059847f2ad.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Refuge — OBX Verified Wind Sports Home">
-  <meta name="twitter:description" content="Premier kiteboarding/windsurfing access · Frisco, NC">
+  <meta name="twitter:description" content="Premier kiteboarding/windsurfing access · Buxton, NC">
   <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE1Mzk0NDAxNDU4MzcyMDM0Mg%3D%3D/original/000be671-78da-40ee-b20d-58059847f2ad.jpeg">
   <link rel="canonical" href="https://obx.deals/wind-sports/frisco/brigands-bay/956f7f8e-2dfb-58ba-8c1f-d5019a027f89/">
   <style>
@@ -97,6 +97,13 @@
       .hero { flex-direction: column; gap: 1rem; }
       .stats { grid-template-columns: repeat(2, 1fr); }
     }
+    
+    .lookup-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1.5rem; }
+    .lookup-box input { width: 100%; padding: 0.55rem 0.7rem; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; }
+    .lookup-results { margin-top: 0.6rem; font-size: 0.9rem; }
+    .lookup-results a { display: block; padding: 0.35rem 0; color: var(--accent); text-decoration: none; }
+    .lookup-results a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
@@ -114,7 +121,7 @@
     </div>
     <div class="hero-text">
       <h1>The Refuge</h1>
-      <p class="location">Frisco, NC</p>
+      <p class="location">Buxton, NC</p>
       <p class="meta">3BR · Premier Wind Sports Access</p>
       <span class="badge-unclaimed">Unclaimed</span>
     </div>
@@ -144,6 +151,11 @@
         page, free.
         <a href="https://owners.obx.deals/" class="claim-btn">Claim in Owner Hub &rarr;</a>
       </div>
+  
+      <p style="margin-top:1rem;font-size:0.85rem">
+        <a href="https://obx.deals/property/frisco/brigands-bay/956f7f8e-2dfb-58ba-8c1f-d5019a027f89/" data-property="956f7f8e-2dfb-58ba-8c1f-d5019a027f89" data-track-page="badge_to_canonical"
+           onclick="obxTrack(this)">View full property profile &rarr;</a>
+      </p>
 
   <div class="methodology">
     <strong>How this is determined:</strong> OBX Deals independently analyzed
@@ -153,11 +165,63 @@
     &middot; <a href="https://search.obx.deals/">Search all OBX properties &rarr;</a>
   </div>
 
+  
+  <div class="lookup-box">
+    <label for="lookup-q" style="font-size:0.85rem;color:var(--muted)">Looking for a different property?</label>
+    <input id="lookup-q" type="text" placeholder="House name or street address…" autocomplete="off">
+    <div id="lookup-results" class="lookup-results"></div>
+  </div>
+
+
   <footer>
     <a href="https://obx.deals/">obx.deals</a> &middot;
     <a href="https://search.obx.deals/">Search rentals</a> &middot;
     <a href="https://obx.deals/wind-sports/">All Verified Wind Sports Homes</a>
   </footer>
 </main>
+
+  <script>
+    function getVid() {
+      var m = document.cookie.match(/obxd_vid=([^;]+)/);
+      if (m) return m[1];
+      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
+      return v;
+    }
+    var vid = getVid();
+    window.obxTrack = function(el) {
+      if (navigator.doNotTrack === '1') return;
+      var pid = el.getAttribute('data-property') || '';
+      navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        property_id: pid, page: el.getAttribute('data-track-page') || 'badge_to_canonical',
+        visitor_id: vid, referrer: document.referrer || ''
+      }));
+    };
+  </script>
+
+
+  <script>
+    (function() {
+      var input = document.getElementById('lookup-q');
+      var results = document.getElementById('lookup-results');
+      var timer = null;
+      input.addEventListener('input', function() {
+        clearTimeout(timer);
+        var q = input.value.trim();
+        if (q.length < 2) { results.innerHTML = ''; return; }
+        timer = setTimeout(function() {
+          fetch('https://search-api.obx.deals/lookup?q=' + encodeURIComponent(q))
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              results.innerHTML = (data.results || []).map(function(r) {
+                return '<a href="' + r.url + '">' + r.display_name + ' — ' + r.community + '</a>';
+              }).join('') || '<span style="color:var(--muted)">No matches.</span>';
+            })
+            .catch(function() {});
+        }, 300);
+      });
+    })();
+  </script>
+
 </body>
 </html>

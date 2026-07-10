@@ -66,6 +66,13 @@
     }
     footer { color: var(--muted); font-size: 0.87rem; margin-top: 3rem; }
     footer a { color: var(--accent); text-decoration: none; }
+    
+    .lookup-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1.5rem; }
+    .lookup-box input { width: 100%; padding: 0.55rem 0.7rem; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; }
+    .lookup-results { margin-top: 0.6rem; font-size: 0.9rem; }
+    .lookup-results a { display: block; padding: 0.35rem 0; color: var(--accent); text-decoration: none; }
+    .lookup-results a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
@@ -476,10 +483,41 @@
     </div>
   </a>
   </div>
+  
+  <div class="lookup-box">
+    <label for="lookup-q" style="font-size:0.85rem;color:var(--muted)">Looking for a different property?</label>
+    <input id="lookup-q" type="text" placeholder="House name or street address…" autocomplete="off">
+    <div id="lookup-results" class="lookup-results"></div>
+  </div>
+
   <footer>
     <a href="https://obx.deals/">obx.deals</a> &middot;
     <a href="https://search.obx.deals/">Search rentals</a>
   </footer>
 </main>
+
+  <script>
+    (function() {
+      var input = document.getElementById('lookup-q');
+      var results = document.getElementById('lookup-results');
+      var timer = null;
+      input.addEventListener('input', function() {
+        clearTimeout(timer);
+        var q = input.value.trim();
+        if (q.length < 2) { results.innerHTML = ''; return; }
+        timer = setTimeout(function() {
+          fetch('https://search-api.obx.deals/lookup?q=' + encodeURIComponent(q))
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              results.innerHTML = (data.results || []).map(function(r) {
+                return '<a href="' + r.url + '">' + r.display_name + ' — ' + r.community + '</a>';
+              }).join('') || '<span style="color:var(--muted)">No matches.</span>';
+            })
+            .catch(function() {});
+        }, 300);
+      });
+    })();
+  </script>
+
 </body>
 </html>
