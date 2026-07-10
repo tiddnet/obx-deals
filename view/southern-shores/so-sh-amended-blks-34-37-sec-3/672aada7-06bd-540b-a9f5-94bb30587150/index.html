@@ -192,6 +192,11 @@
           <button type="submit" class="claim-btn">Submit my photo &rarr;</button>
         </form>
       </div>
+  
+      <p style="margin-top:1rem;font-size:0.85rem">
+        <a href="https://obx.deals/property/southern-shores/so-sh-amended-blks-34-37-sec-3/672aada7-06bd-540b-a9f5-94bb30587150/" data-property="672aada7-06bd-540b-a9f5-94bb30587150" data-track-page="badge_to_canonical"
+           onclick="obxTrack(this)">View full property profile &rarr;</a>
+      </p>
 
   <div class="methodology">
     <strong>How this score works:</strong> OBX Deals independently analyzed
@@ -209,5 +214,25 @@
     <a href="https://obx.deals/view/">All verified views</a>
   </footer>
 </main>
+
+  <script>
+    function getVid() {
+      var m = document.cookie.match(/obxd_vid=([^;]+)/);
+      if (m) return m[1];
+      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
+      return v;
+    }
+    var vid = getVid();
+    window.obxTrack = function(el) {
+      if (navigator.doNotTrack === '1') return;
+      var pid = el.getAttribute('data-property') || '';
+      navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        property_id: pid, page: el.getAttribute('data-track-page') || 'badge_to_canonical',
+        visitor_id: vid, referrer: document.referrer || ''
+      }));
+    };
+  </script>
+
 </body>
 </html>
