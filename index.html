@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence</title>
-  <meta name="description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
+  <meta name="description" content="Search 8,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://obx.deals/">
   <meta property="og:title" content="OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence">
-  <meta property="og:description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
+  <meta property="og:description" content="Search 8,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools — all from one place.">
   <meta property="og:image" content="https://obx.deals/images/hero.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="OBX Deals — Outer Banks rental search, price drops &amp; owner intelligence">
-  <meta name="twitter:description" content="Search 9,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools.">
+  <meta name="twitter:description" content="Search 8,000+ OBX vacation rentals, track nightly price drops, and access owner pricing tools.">
   <meta name="twitter:image" content="https://obx.deals/images/hero.png">
   <link rel="canonical" href="https://obx.deals/">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -203,7 +203,7 @@
           <div class="tile-icon">🔍</div>
           <p class="tile-title">Search Rentals</p>
           <p class="tile-url">search.obx.deals</p>
-          <p class="tile-desc">9,000+ OBX rentals by dates, bedrooms, amenities, and location — with fair price ratings across all 25 PMCs.</p>
+          <p class="tile-desc">8,000+ OBX rentals by dates, bedrooms, amenities, and location — with fair price ratings across all 25 PMCs.</p>
           <span class="tile-cta">Search now &rarr;</span>
         </a>
         <a class="tile" href="https://search.obx.deals/price-drops/">
@@ -249,6 +249,18 @@
     return v;
   }
   var v = vid();
+  if (!sessionStorage.getItem('obxd_pv')) {
+    sessionStorage.setItem('obxd_pv', '1');
+    try {
+      navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'pageview',
+        visitor_id: v,
+        url: location.href,
+        page_path: location.pathname,
+        referrer: document.referrer || null
+      }));
+    } catch(_) {}
+  }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest && e.target.closest('a[data-property]');
     if (!a) return;
