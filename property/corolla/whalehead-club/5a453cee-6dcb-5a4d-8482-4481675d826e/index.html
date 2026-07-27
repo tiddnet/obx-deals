@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gandhi — OBX Deals</title>
-<meta name="description" content="Gandhi in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
-<meta name="robots" content="index, follow">
+<title>Coastal Lookout — OBX Deals</title>
+<meta name="description" content="Coastal Lookout in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://obx.deals/property/corolla/whalehead-club/5a453cee-6dcb-5a4d-8482-4481675d826e/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gandhi — OBX Deals">
+<meta property="og:title" content="Coastal Lookout — OBX Deals">
 <meta property="og:description" content="Corolla · 12BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/whalehead-club/5a453cee-6dcb-5a4d-8482-4481675d826e/">
 <meta property="og:image" content="https://images.twiddy.com/property-images/402441?v=d40db093231b4e482ad5c4a366ef878eacb09db19c1f3c13e90fd7d0b989868f&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gandhi — OBX Deals">
+<meta name="twitter:title" content="Coastal Lookout — OBX Deals">
 <meta name="twitter:image" content="https://images.twiddy.com/property-images/402441?v=d40db093231b4e482ad5c4a366ef878eacb09db19c1f3c13e90fd7d0b989868f&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,16 +60,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Gandhi</h1>
+  <h1>Coastal Lookout</h1>
   <p class="sub">Corolla · 909 Lighthouse</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/402441?v=d40db093231b4e482ad5c4a366ef878eacb09db19c1f3c13e90fd7d0b989868f&amp;w=1200&amp;quality=80" alt="Gandhi">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/402441?v=d40db093231b4e482ad5c4a366ef878eacb09db19c1f3c13e90fd7d0b989868f&amp;w=1200&amp;quality=80" alt="Coastal Lookout">
   <div class="stats"><div class="stat"><div class="num">12</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">1</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">0.6</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Twiddy</strong></p>
-    <p><strong>$5,975/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 19.8% in 30d)</span> — next available 2026-10-17</p>
-    <a class="btn" href="https://www.twiddy.com/outer-banks/corolla/whalehead/rentals/gandhi/" data-property="5a453cee-6dcb-5a4d-8482-4481675d826e" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
+    <p><strong>$5,975/wk</strong> — next available 2026-10-17</p>
+    <a class="btn" href="https://www.twiddy.com/outer-banks/corolla/whalehead/rentals/coastal-lookout/" data-property="5a453cee-6dcb-5a4d-8482-4481675d826e" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
   <p class="footer-links"><a href="./history/">Ownership &amp; listing history &rarr;</a></p>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

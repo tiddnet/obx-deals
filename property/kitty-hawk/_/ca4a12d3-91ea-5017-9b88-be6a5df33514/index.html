@@ -63,12 +63,12 @@
   <h1>Log &#x27;N&#x27; Out  (formerly H&amp;H III)</h1>
   <p class="sub">Kitty Hawk · 204 Fonck St</p>
   <img class="hero-img" src="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=768&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/0F/03/image_169092511.jpeg&amp;settings=default" alt="Log &#x27;N&#x27; Out  (formerly H&amp;H III)">
-  <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Beach Realty Nc</strong></p>
-    <p><strong>$9,160/wk</strong> — next available 2026-08-01</p>
+    <p><strong>$9,114/wk</strong> — next available 2026-08-01</p>
     <a class="btn" href="https://www.beachrealtync.com/outer-banks-rentals/log-n-out-formerly-hh-iii?rcav%5Bbegin%5D=08/01/2026&amp;rcav%5Bend%5D=08/08/2026&amp;rcav%5Badult%5D=1&amp;rcav%5Bchild%5D=0&amp;rcav%5Beid%5D=1021&amp;eid=1021" data-property="ca4a12d3-91ea-5017-9b88-be6a5df33514" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

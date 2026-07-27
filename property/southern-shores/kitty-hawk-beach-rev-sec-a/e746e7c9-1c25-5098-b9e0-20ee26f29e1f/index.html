@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Walkin&#x27; On Sunshine — OBX Deals</title>
-<meta name="description" content="Walkin&#x27; On Sunshine in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Walkin&#x27; On Sunshine in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/southern-shores/kitty-hawk-beach-rev-sec-a/e746e7c9-1c25-5098-b9e0-20ee26f29e1f/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Walkin&#x27; On Sunshine — OBX Deals">
-<meta property="og:description" content="Southern Shores · 4BR">
+<meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/kitty-hawk-beach-rev-sec-a/e746e7c9-1c25-5098-b9e0-20ee26f29e1f/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjQ1OTExNDM%3D/original/4f5d32f4-e014-4431-b0e0-56fc1358e2cd.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Walkin&#x27; On Sunshine</h1>
-  <p class="sub">Southern Shores · 4500 Ride Ln</p>
+  <p class="sub">Kitty Hawk · 4500 Ride Ln</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MjQ1OTExNDM%3D/original/4f5d32f4-e014-4431-b0e0-56fc1358e2cd.jpeg" alt="Walkin&#x27; On Sunshine">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.93</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

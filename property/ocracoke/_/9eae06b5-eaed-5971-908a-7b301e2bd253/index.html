@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One Beautiful September Weekend Left ! — OBX Deals</title>
-<meta name="description" content="One Beautiful September Weekend Left ! in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>A few wonderful September/October days left — OBX Deals</title>
+<meta name="description" content="A few wonderful September/October days left in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/ocracoke/_/9eae06b5-eaed-5971-908a-7b301e2bd253/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="One Beautiful September Weekend Left ! — OBX Deals">
+<meta property="og:title" content="A few wonderful September/October days left — OBX Deals">
 <meta property="og:description" content="Ocracoke · 2BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/9eae06b5-eaed-5971-908a-7b301e2bd253/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/88aa7556-8f30-4a4e-8c4d-9e8c9856fb6e.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="One Beautiful September Weekend Left ! — OBX Deals">
+<meta name="twitter:title" content="A few wonderful September/October days left — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/88aa7556-8f30-4a4e-8c4d-9e8c9856fb6e.jpg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,9 +60,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>One Beautiful September Weekend Left !</h1>
+  <h1>A few wonderful September/October days left</h1>
   <p class="sub">Ocracoke</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/88aa7556-8f30-4a4e-8c4d-9e8c9856fb6e.jpg" alt="One Beautiful September Weekend Left !">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/88aa7556-8f30-4a4e-8c4d-9e8c9856fb6e.jpg" alt="A few wonderful September/October days left">
   <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.97</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

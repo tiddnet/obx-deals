@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oceanside Retreat | Hot Tub &amp; Easy Beach Walk — OBX Deals</title>
-<meta name="description" content="Oceanside Retreat | Hot Tub &amp; Easy Beach Walk in South Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Oceanside Retreat | Hot Tub &amp; Easy Beach Walk in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/south-nags-head/moongate/edadd6e0-661a-59a7-9bb3-b9b9f3e4656d/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oceanside Retreat | Hot Tub &amp; Easy Beach Walk — OBX Deals">
-<meta property="og:description" content="South Nags Head · 8BR">
+<meta property="og:description" content="Kill Devil Hills · 8BR">
 <meta property="og:url" content="https://obx.deals/property/south-nags-head/moongate/edadd6e0-661a-59a7-9bb3-b9b9f3e4656d/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1354462701067788059/original/9b6a0320-b153-40b7-bf46-9dd6a43b9ccb.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Oceanside Retreat | Hot Tub &amp; Easy Beach Walk</h1>
-  <p class="sub">South Nags Head · 4938 S Passage Way</p>
+  <p class="sub">Kill Devil Hills · 4938 S Passage Way</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1354462701067788059/original/9b6a0320-b153-40b7-bf46-9dd6a43b9ccb.jpeg" alt="Oceanside Retreat | Hot Tub &amp; Easy Beach Walk">
   <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.0</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access — OBX Deals</title>
 <meta name="description" content="1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access in Rodanthe, Outer Banks — stable property profile, current listing, and rental history across property managers.">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://obx.deals/property/rodanthe/south-shore-phase-1/6282db72-32b0-5ac8-8390-52b643f7e81d/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access — OBX Deals">
 <meta property="og:description" content="Rodanthe · 6BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/south-shore-phase-1/6282db72-32b0-5ac8-8390-52b643f7e81d/">
-<meta property="og:image" content="https://imgservice.rentbyowner.com/640x417/1-lot-oceanside-6-bedr-us-rodanthe-ha-3213590568-0.jpg">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-958027405806865525/original/dc44f5b8-2a27-49ce-b8b4-8fb03ad7d03e.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access — OBX Deals">
-<meta name="twitter:image" content="https://imgservice.rentbyowner.com/640x417/1-lot-oceanside-6-bedr-us-rodanthe-ha-3213590568-0.jpg">
+<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-958027405806865525/original/dc44f5b8-2a27-49ce-b8b4-8fb03ad7d03e.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,14 +62,14 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access</h1>
   <p class="sub">Rodanthe · 24241 South Shore Dr</p>
-  <img class="hero-img" src="https://imgservice.rentbyowner.com/640x417/1-lot-oceanside-6-bedr-us-rodanthe-ha-3213590568-0.jpg" alt="1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access">
-  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">10.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-958027405806865525/original/dc44f5b8-2a27-49ce-b8b4-8fb03ad7d03e.jpeg" alt="1-lot Oceanside 6 Bedroom Home, Pet Friendly, Private Pool, Private Beach Access">
+  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">7.5</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
-    <p style="margin:0 0 0.3rem">Currently managed by <strong>Rbo</strong></p>
+    <p style="margin:0 0 0.3rem">Currently managed by <strong>Airbnb</strong></p>
     
-    <a class="btn" href="https://www.rentbyowner.com/property/1-lot-oceanside-6-bedroom-home-pet-friendly-private-pool-private-beach-access/HA-3213590568" data-property="6282db72-32b0-5ac8-8390-52b643f7e81d" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
+    <a class="btn" href="https://www.airbnb.com/rooms/958027405806865525" data-property="6282db72-32b0-5ac8-8390-52b643f7e81d" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
   <p class="footer-links"><a href="./history/">Ownership &amp; listing history &rarr;</a></p>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

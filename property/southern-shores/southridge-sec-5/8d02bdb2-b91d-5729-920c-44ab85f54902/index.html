@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SR37: Cherished Memories: Pet Friendly | Private — OBX Deals</title>
-<meta name="description" content="SR37: Cherished Memories: Pet Friendly | Private in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="SR37: Cherished Memories: Pet Friendly | Private in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/southern-shores/southridge-sec-5/8d02bdb2-b91d-5729-920c-44ab85f54902/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SR37: Cherished Memories: Pet Friendly | Private — OBX Deals">
-<meta property="og:description" content="Southern Shores · 4BR">
+<meta property="og:description" content="Nags Head · 4BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/southridge-sec-5/8d02bdb2-b91d-5729-920c-44ab85f54902/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1634942927646407001/original/7e576ff8-73b7-4051-9ad8-8a2af1e6cbaa.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>SR37: Cherished Memories: Pet Friendly | Private</h1>
-  <p class="sub">Southern Shores · 411 Ridgeview Way</p>
+  <p class="sub">Nags Head · 411 Ridgeview Way</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1634942927646407001/original/7e576ff8-73b7-4051-9ad8-8a2af1e6cbaa.jpeg" alt="SR37: Cherished Memories: Pet Friendly | Private">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

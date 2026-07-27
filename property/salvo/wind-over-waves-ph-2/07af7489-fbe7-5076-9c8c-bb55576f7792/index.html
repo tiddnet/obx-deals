@@ -11,10 +11,10 @@
 <meta property="og:title" content="Ride Like the Wind - #1224 — OBX Deals">
 <meta property="og:description" content="Wind Over Waves · 7BR">
 <meta property="og:url" content="https://obx.deals/property/salvo/wind-over-waves-ph-2/07af7489-fbe7-5076-9c8c-bb55576f7792/">
-<meta property="og:image" content="https://www.surforsound.com/media/gexklsje/surf-or-sound-realty-1224-ride-like-the-wind-exterior-2.jpg">
+<meta property="og:image" content="https://www.surforsound.com/media/aw0puerj/surf-or-sound-realty-1224-ride-like-the-wind-exterior-9.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ride Like the Wind - #1224 — OBX Deals">
-<meta name="twitter:image" content="https://www.surforsound.com/media/gexklsje/surf-or-sound-realty-1224-ride-like-the-wind-exterior-2.jpg">
+<meta name="twitter:image" content="https://www.surforsound.com/media/aw0puerj/surf-or-sound-realty-1224-ride-like-the-wind-exterior-9.jpg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Ride Like the Wind - #1224</h1>
   <p class="sub">Wind Over Waves · 26143 Otter Way</p>
-  <img class="hero-img" src="https://www.surforsound.com/media/gexklsje/surf-or-sound-realty-1224-ride-like-the-wind-exterior-2.jpg" alt="Ride Like the Wind - #1224">
+  <img class="hero-img" src="https://www.surforsound.com/media/aw0puerj/surf-or-sound-realty-1224-ride-like-the-wind-exterior-9.jpg" alt="Ride Like the Wind - #1224">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">18</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Semi Soundfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Surf Or Sound</strong></p>
-    <p><strong>$2,995/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2026-08-29</p>
+    <p><strong>$2,795/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 6.7% in 30d)</span> — next available 2026-08-29</p>
     <a class="btn" href="https://www.surforsound.com/hatteras-vacation-rental/property/1224" data-property="07af7489-fbe7-5076-9c8c-bb55576f7792" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

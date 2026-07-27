@@ -11,10 +11,10 @@
 <meta property="og:title" content="Outer Banks Retreat - Walk to Beach! — OBX Deals">
 <meta property="og:description" content="Duck · 3BR">
 <meta property="og:url" content="https://obx.deals/property/duck/sea-crest-village/dab9daec-667e-5c5a-bb4d-8731bdcfd085/">
-<meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1029114767764007272/original/8b8ad501-d627-423f-a983-0a73da0cf6fb.jpeg">
+<meta property="og:image" content="https://imgservice.rentbyowner.com/640x417/outer-banks-retre-us-southern-shores-bc-11101567-0.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Outer Banks Retreat - Walk to Beach! — OBX Deals">
-<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1029114767764007272/original/8b8ad501-d627-423f-a983-0a73da0cf6fb.jpeg">
+<meta name="twitter:image" content="https://imgservice.rentbyowner.com/640x417/outer-banks-retre-us-southern-shores-bc-11101567-0.jpg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,14 +62,14 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Outer Banks Retreat - Walk to Beach!</h1>
   <p class="sub">Duck · 15 Twelfth Ave</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1029114767764007272/original/8b8ad501-d627-423f-a983-0a73da0cf6fb.jpeg" alt="Outer Banks Retreat - Walk to Beach!">
+  <img class="hero-img" src="https://imgservice.rentbyowner.com/640x417/outer-banks-retre-us-southern-shores-bc-11101567-0.jpg" alt="Outer Banks Retreat - Walk to Beach!">
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.87</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
-    <p style="margin:0 0 0.3rem">Currently managed by <strong>Airbnb</strong></p>
+    <p style="margin:0 0 0.3rem">Currently managed by <strong>Rbo</strong></p>
     
-    <a class="btn" href="https://www.airbnb.com/rooms/1029114767764007272" data-property="dab9daec-667e-5c5a-bb4d-8731bdcfd085" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
+    <a class="btn" href="https://www.rentbyowner.com/property/outer-banks-retreat-walk-to-beach/BC-11101567" data-property="dab9daec-667e-5c5a-bb4d-8731bdcfd085" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
   <p class="footer-links"><a href="./history/">Ownership &amp; listing history &rarr;</a></p>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

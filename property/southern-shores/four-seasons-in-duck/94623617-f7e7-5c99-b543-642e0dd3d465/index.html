@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2 — OBX Deals</title>
-<meta name="description" content="7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2 in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2 in Duck, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/southern-shores/four-seasons-in-duck/94623617-f7e7-5c99-b543-642e0dd3d465/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2 — OBX Deals">
-<meta property="og:description" content="Southern Shores · 7BR">
+<meta property="og:description" content="Duck · 7BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/four-seasons-in-duck/94623617-f7e7-5c99-b543-642e0dd3d465/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1264621733777867963/original/55997217-efaa-4760-9522-813a378b4f33.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,9 +61,9 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2</h1>
-  <p class="sub">Southern Shores · 136 Four Seasons Ln</p>
+  <p class="sub">Duck · 136 Four Seasons Ln</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1264621733777867963/original/55997217-efaa-4760-9522-813a378b4f33.jpeg" alt="7 Ensuites + Pool + Pet + 5 Min Walk to DT Duck2">
-  <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.75</div><div class="lbl">Rating</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

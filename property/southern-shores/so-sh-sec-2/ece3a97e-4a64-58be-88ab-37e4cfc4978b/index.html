@@ -11,10 +11,10 @@
 <meta property="og:title" content="Perfect 4BR Family Getaway Close to the Beach — OBX Deals">
 <meta property="og:description" content="Southern Shores · 4BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/so-sh-sec-2/ece3a97e-4a64-58be-88ab-37e4cfc4978b/">
-<meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1497324271927785109/original/759d66d4-ff6a-46fd-bd29-aeda08747baf.jpeg">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1497324271927785109/original/54f93eb5-d037-4ad3-86dd-9c15370715ff.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Perfect 4BR Family Getaway Close to the Beach — OBX Deals">
-<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1497324271927785109/original/759d66d4-ff6a-46fd-bd29-aeda08747baf.jpeg">
+<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1497324271927785109/original/54f93eb5-d037-4ad3-86dd-9c15370715ff.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,7 +62,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Perfect 4BR Family Getaway Close to the Beach</h1>
   <p class="sub">Southern Shores · 113 Ocean Blvd</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1497324271927785109/original/759d66d4-ff6a-46fd-bd29-aeda08747baf.jpeg" alt="Perfect 4BR Family Getaway Close to the Beach">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1497324271927785109/original/54f93eb5-d037-4ad3-86dd-9c15370715ff.jpeg" alt="Perfect 4BR Family Getaway Close to the Beach">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

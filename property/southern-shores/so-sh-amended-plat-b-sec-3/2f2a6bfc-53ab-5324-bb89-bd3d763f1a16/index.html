@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4667 - Cape Dreams — OBX Deals</title>
-<meta name="description" content="4667 - Cape Dreams in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Luxury Oceanfront Retreat w Pool &amp; Hot Tub — OBX Deals</title>
+<meta name="description" content="Luxury Oceanfront Retreat w Pool &amp; Hot Tub in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/southern-shores/so-sh-amended-plat-b-sec-3/2f2a6bfc-53ab-5324-bb89-bd3d763f1a16/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="4667 - Cape Dreams — OBX Deals">
-<meta property="og:description" content="Southern Shores · 7BR">
+<meta property="og:title" content="Luxury Oceanfront Retreat w Pool &amp; Hot Tub — OBX Deals">
+<meta property="og:description" content="Kill Devil Hills · 7BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/so-sh-amended-plat-b-sec-3/2f2a6bfc-53ab-5324-bb89-bd3d763f1a16/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1421740855598587983/original/9a31997a-dd34-41f8-bfc4-e2124cacb1b5.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="4667 - Cape Dreams — OBX Deals">
+<meta name="twitter:title" content="Luxury Oceanfront Retreat w Pool &amp; Hot Tub — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1421740855598587983/original/9a31997a-dd34-41f8-bfc4-e2124cacb1b5.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,9 +60,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>4667 - Cape Dreams</h1>
-  <p class="sub">Southern Shores · 154 Ocean Blvd</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1421740855598587983/original/9a31997a-dd34-41f8-bfc4-e2124cacb1b5.jpeg" alt="4667 - Cape Dreams">
+  <h1>Luxury Oceanfront Retreat w Pool &amp; Hot Tub</h1>
+  <p class="sub">Kill Devil Hills · 154 Ocean Blvd</p>
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1421740855598587983/original/9a31997a-dd34-41f8-bfc4-e2124cacb1b5.jpeg" alt="Luxury Oceanfront Retreat w Pool &amp; Hot Tub">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

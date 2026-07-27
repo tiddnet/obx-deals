@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The SeaGOAT - New custom beach home — OBX Deals</title>
-<meta name="description" content="The SeaGOAT - New custom beach home in Rodanthe, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="The SeaGOAT - New custom beach home in Avon, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/rodanthe/windward-isle/467f3ff2-660a-5179-8d54-85e7ccad502a/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The SeaGOAT - New custom beach home — OBX Deals">
-<meta property="og:description" content="Rodanthe · 2BR">
+<meta property="og:description" content="Avon · 2BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/windward-isle/467f3ff2-660a-5179-8d54-85e7ccad502a/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-51964277/original/a98495b2-ecaf-48d5-8266-530c64274c8e.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,9 +61,9 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>The SeaGOAT - New custom beach home</h1>
-  <p class="sub">Rodanthe · 40193 W Antillas Rd</p>
+  <p class="sub">Avon · 40193 W Antillas Rd</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-51964277/original/a98495b2-ecaf-48d5-8266-530c64274c8e.jpeg" alt="The SeaGOAT - New custom beach home">
-  <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.88</div><div class="lbl">Rating</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.89</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -11,10 +11,10 @@
 <meta property="og:title" content="7853 - Anchor Management — OBX Deals">
 <meta property="og:description" content="Frisco · 6BR">
 <meta property="og:url" content="https://obx.deals/property/frisco/tidesedge/92d9d7ed-e4fe-5b9c-ae97-699c6d8f21df/">
-<meta property="og:image" content="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1783350433_image.jpeg">
+<meta property="og:image" content="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1784048387_image.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="7853 - Anchor Management — OBX Deals">
-<meta name="twitter:image" content="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1783350433_image.jpeg">
+<meta name="twitter:image" content="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1784048387_image.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,7 +62,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>7853 - Anchor Management</h1>
   <p class="sub">Frisco · 54022 Tides Edge Ln</p>
-  <img class="hero-img" src="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1783350433_image.jpeg" alt="7853 - Anchor Management">
+  <img class="hero-img" src="https://gallery.streamlinevrs.com/stl-default-images/1538/home/1094469/1784048387_image.jpeg" alt="7853 - Anchor Management">
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">12</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

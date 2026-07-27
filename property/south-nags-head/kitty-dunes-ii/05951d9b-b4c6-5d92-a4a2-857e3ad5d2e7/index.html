@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Picture Perfect soundfront getaway — OBX Deals</title>
-<meta name="description" content="Picture Perfect soundfront getaway in South Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Picture Perfect soundfront getaway in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/south-nags-head/kitty-dunes-ii/05951d9b-b4c6-5d92-a4a2-857e3ad5d2e7/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Picture Perfect soundfront getaway — OBX Deals">
-<meta property="og:description" content="South Nags Head · 2BR">
+<meta property="og:description" content="Kitty Hawk · 2BR">
 <meta property="og:url" content="https://obx.deals/property/south-nags-head/kitty-dunes-ii/05951d9b-b4c6-5d92-a4a2-857e3ad5d2e7/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-47867385/original/1ca9030f-abcb-493c-a68a-ef5ff9ed9e99.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Picture Perfect soundfront getaway</h1>
-  <p class="sub">South Nags Head · 3401 Bay Dr</p>
+  <p class="sub">Kitty Hawk · 3401 Bay Dr</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-47867385/original/1ca9030f-abcb-493c-a68a-ef5ff9ed9e99.jpeg" alt="Picture Perfect soundfront getaway">
   <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.98</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -11,10 +11,10 @@
 <meta property="og:title" content="Summer Fridays — OBX Deals">
 <meta property="og:description" content="Carova · 12BR">
 <meta property="og:url" content="https://obx.deals/property/carova/_/904597a3-1ecc-5198-8f52-bfcd82ab896a/">
-<meta property="og:image" content="https://images.twiddy.com/property-images/755971?v=fa6f89161b802ddc8cb01c38d8a43f1be96f48ce31e91f7ac45f4d7e49f04a0d&amp;w=1200&amp;quality=80">
+<meta property="og:image" content="https://images.twiddy.com/property-images/755970?v=9e3291f40cc260e54d1d854cdb72d9d955a4cbdbf69116a9b8016e1a0d358761&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Summer Fridays — OBX Deals">
-<meta name="twitter:image" content="https://images.twiddy.com/property-images/755971?v=fa6f89161b802ddc8cb01c38d8a43f1be96f48ce31e91f7ac45f4d7e49f04a0d&amp;w=1200&amp;quality=80">
+<meta name="twitter:image" content="https://images.twiddy.com/property-images/755970?v=9e3291f40cc260e54d1d854cdb72d9d955a4cbdbf69116a9b8016e1a0d358761&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Summer Fridays</h1>
   <p class="sub">Carova · 2371 Sandfiddler</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/755971?v=fa6f89161b802ddc8cb01c38d8a43f1be96f48ce31e91f7ac45f4d7e49f04a0d&amp;w=1200&amp;quality=80" alt="Summer Fridays">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/755970?v=9e3291f40cc260e54d1d854cdb72d9d955a4cbdbf69116a9b8016e1a0d358761&amp;w=1200&amp;quality=80" alt="Summer Fridays">
   <div class="stats"><div class="stat"><div class="num">12</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">2</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Twiddy</strong></p>
-    <p><strong>$5,995/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 4.3% in 30d)</span> — next available 2026-09-26</p>
+    <p><strong>$5,995/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2026-09-26</p>
     <a class="btn" href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/summer-fridays/" data-property="904597a3-1ecc-5198-8f52-bfcd82ab896a" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

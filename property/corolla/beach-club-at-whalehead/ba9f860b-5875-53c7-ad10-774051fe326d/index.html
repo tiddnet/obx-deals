@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Early bird discounts. Oceanside. New in &#x27;24. — OBX Deals</title>
-<meta name="description" content="Early bird discounts. Oceanside. New in &#x27;24. in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>25% discounts Aug - Sept. Oceanside. New in &#x27;24. — OBX Deals</title>
+<meta name="description" content="25% discounts Aug - Sept. Oceanside. New in &#x27;24. in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/corolla/beach-club-at-whalehead/ba9f860b-5875-53c7-ad10-774051fe326d/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Early bird discounts. Oceanside. New in &#x27;24. — OBX Deals">
+<meta property="og:title" content="25% discounts Aug - Sept. Oceanside. New in &#x27;24. — OBX Deals">
 <meta property="og:description" content="Corolla · 3BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/beach-club-at-whalehead/ba9f860b-5875-53c7-ad10-774051fe326d/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTY4NDI3Nzk1ODU3ODg0MTE4/original/ea042631-7f81-46dd-ad8a-7e5a78155d88.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Early bird discounts. Oceanside. New in &#x27;24. — OBX Deals">
+<meta name="twitter:title" content="25% discounts Aug - Sept. Oceanside. New in &#x27;24. — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTY4NDI3Nzk1ODU3ODg0MTE4/original/ea042631-7f81-46dd-ad8a-7e5a78155d88.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,9 +60,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Early bird discounts. Oceanside. New in &#x27;24.</h1>
+  <h1>25% discounts Aug - Sept. Oceanside. New in &#x27;24.</h1>
   <p class="sub">Corolla · 1115 Ocean</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTY4NDI3Nzk1ODU3ODg0MTE4/original/ea042631-7f81-46dd-ad8a-7e5a78155d88.jpeg" alt="Early bird discounts. Oceanside. New in &#x27;24.">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTY4NDI3Nzk1ODU3ODg0MTE4/original/ea042631-7f81-46dd-ad8a-7e5a78155d88.jpeg" alt="25% discounts Aug - Sept. Oceanside. New in &#x27;24.">
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

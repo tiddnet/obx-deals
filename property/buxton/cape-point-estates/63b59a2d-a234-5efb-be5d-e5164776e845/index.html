@@ -11,10 +11,10 @@
 <meta property="og:title" content="Surfside Retreat — OBX Deals">
 <meta property="og:description" content="Buxton · 7BR">
 <meta property="og:url" content="https://obx.deals/property/buxton/cape-point-estates/63b59a2d-a234-5efb-be5d-e5164776e845/">
-<meta property="og:image" content="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideRetreatRelocation.jpg?v=89339">
+<meta property="og:image" content="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideFront.jpg?v=92085">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Surfside Retreat — OBX Deals">
-<meta name="twitter:image" content="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideRetreatRelocation.jpg?v=89339">
+<meta name="twitter:image" content="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideFront.jpg?v=92085">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Surfside Retreat</h1>
   <p class="sub">Buxton · 46259 Old Lighthouse Rd</p>
-  <img class="hero-img" src="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideRetreatRelocation.jpg?v=89339" alt="Surfside Retreat">
+  <img class="hero-img" src="https://photos.barefoot.com/v3ckvr0915/images/properties/66141/SurfsideFront.jpg?v=92085" alt="Surfside Retreat">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Kees</strong></p>
-    <p><strong>$12,642/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 1.0% in 30d)</span> — next available 2026-08-15</p>
+    <p><strong>$9,343/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 9.0% in 30d)</span> — next available 2026-09-12</p>
     <a class="btn" href="https://www.keesouterbanks.com/booking/K6400-surfside-retreat-oceanfront-7-bedroom-home/66141" data-property="63b59a2d-a234-5efb-be5d-e5164776e845" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

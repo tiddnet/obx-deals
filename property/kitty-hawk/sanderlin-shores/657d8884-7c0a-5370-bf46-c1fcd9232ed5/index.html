@@ -11,10 +11,10 @@
 <meta property="og:title" content="NEW! Stunning Beach House w/Ocean View &amp; Hot Tub! — OBX Deals">
 <meta property="og:description" content="Kitty Hawk · 3BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/sanderlin-shores/657d8884-7c0a-5370-bf46-c1fcd9232ed5/">
-<meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/155f88a1-9f88-4aeb-bcfb-ec519dbf30d5.jpeg">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/ad033c12-1c96-470d-bcdd-714b63a6ee57.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NEW! Stunning Beach House w/Ocean View &amp; Hot Tub! — OBX Deals">
-<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/155f88a1-9f88-4aeb-bcfb-ec519dbf30d5.jpeg">
+<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/ad033c12-1c96-470d-bcdd-714b63a6ee57.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,7 +62,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>NEW! Stunning Beach House w/Ocean View &amp; Hot Tub!</h1>
   <p class="sub">Kitty Hawk · 4200 N Va Dare Trl</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/155f88a1-9f88-4aeb-bcfb-ec519dbf30d5.jpeg" alt="NEW! Stunning Beach House w/Ocean View &amp; Hot Tub!">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODg4OTQxODMwMzAzNzY1ODM2/original/ad033c12-1c96-470d-bcdd-714b63a6ee57.jpeg" alt="NEW! Stunning Beach House w/Ocean View &amp; Hot Tub!">
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.99</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

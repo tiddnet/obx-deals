@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>7030 - Waves Against the Machine — OBX Deals</title>
-<meta name="description" content="7030 - Waves Against the Machine in Waves, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Outer Banks Retreat | Pool, Hot Tub &amp; Game Room — OBX Deals</title>
+<meta name="description" content="Outer Banks Retreat | Pool, Hot Tub &amp; Game Room in Hatteras Village, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/waves/beulah-m-onealmrs/1b2c9fc7-a125-583e-a5f5-371f758f69e8/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="7030 - Waves Against the Machine — OBX Deals">
-<meta property="og:description" content="Waves · 6BR">
+<meta property="og:title" content="Outer Banks Retreat | Pool, Hot Tub &amp; Game Room — OBX Deals">
+<meta property="og:description" content="Hatteras Village · 6BR">
 <meta property="og:url" content="https://obx.deals/property/waves/beulah-m-onealmrs/1b2c9fc7-a125-583e-a5f5-371f758f69e8/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1384787849390156553/original/42a2f9fc-4421-4d51-805d-28ad087f1b6f.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="7030 - Waves Against the Machine — OBX Deals">
+<meta name="twitter:title" content="Outer Banks Retreat | Pool, Hot Tub &amp; Game Room — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1384787849390156553/original/42a2f9fc-4421-4d51-805d-28ad087f1b6f.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,10 +60,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>7030 - Waves Against the Machine</h1>
-  <p class="sub">Waves · 24220 Beulah Oneal Dr</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1384787849390156553/original/42a2f9fc-4421-4d51-805d-28ad087f1b6f.jpeg" alt="7030 - Waves Against the Machine">
-  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div></div>
+  <h1>Outer Banks Retreat | Pool, Hot Tub &amp; Game Room</h1>
+  <p class="sub">Hatteras Village · 24220 Beulah Oneal Dr</p>
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1384787849390156553/original/42a2f9fc-4421-4d51-805d-28ad087f1b6f.jpeg" alt="Outer Banks Retreat | Pool, Hot Tub &amp; Game Room">
+  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.67</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -11,10 +11,10 @@
 <meta property="og:title" content="Private Hot Tub + Spa Bath | OBX Couples Retreat — OBX Deals">
 <meta property="og:description" content="Kill Devil Hills · 1BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/virginia-dare-shores/6dced5f1-1d8e-55eb-b646-8b9ee8eda47d/">
-<meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-888463807262434315/original/f693cacc-ca7c-4fd4-b8cb-5db4a6afd3f3.jpeg">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-888463807262434315/original/6fe23b1b-1944-4342-9727-60dcfa62140e.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Private Hot Tub + Spa Bath | OBX Couples Retreat — OBX Deals">
-<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-888463807262434315/original/f693cacc-ca7c-4fd4-b8cb-5db4a6afd3f3.jpeg">
+<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-888463807262434315/original/6fe23b1b-1944-4342-9727-60dcfa62140e.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,7 +62,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Private Hot Tub + Spa Bath | OBX Couples Retreat</h1>
   <p class="sub">Kill Devil Hills · 512 W Chowan St</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-888463807262434315/original/f693cacc-ca7c-4fd4-b8cb-5db4a6afd3f3.jpeg" alt="Private Hot Tub + Spa Bath | OBX Couples Retreat">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-888463807262434315/original/6fe23b1b-1944-4342-9727-60dcfa62140e.jpeg" alt="Private Hot Tub + Spa Bath | OBX Couples Retreat">
   <div class="stats"><div class="stat"><div class="num">1</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.96</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

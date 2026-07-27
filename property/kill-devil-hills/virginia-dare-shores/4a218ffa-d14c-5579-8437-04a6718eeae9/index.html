@@ -11,10 +11,10 @@
 <meta property="og:title" content="High Five — OBX Deals">
 <meta property="og:description" content="Kill Devil Hills · 3BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/virginia-dare-shores/4a218ffa-d14c-5579-8437-04a6718eeae9/">
-<meta property="og:image" content="https://images.rezfusion.com?optimize=true&amp;amp;rotate=true&amp;amp;quality=70&amp;amp;width=1600&amp;amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;amp;settings=default">
+<meta property="og:image" content="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=1600&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;settings=default">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="High Five — OBX Deals">
-<meta name="twitter:image" content="https://images.rezfusion.com?optimize=true&amp;amp;rotate=true&amp;amp;quality=70&amp;amp;width=1600&amp;amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;amp;settings=default">
+<meta name="twitter:image" content="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=1600&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;settings=default">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>High Five</h1>
   <p class="sub">Kill Devil Hills · 216 W Chowan St</p>
-  <img class="hero-img" src="https://images.rezfusion.com?optimize=true&amp;amp;rotate=true&amp;amp;quality=70&amp;amp;width=1600&amp;amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;amp;settings=default" alt="High Five">
+  <img class="hero-img" src="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=1600&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/C9/image_160166095.jpeg&amp;settings=default" alt="High Five">
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Seaside</strong></p>
-    <p><strong>$1,916/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 0.8% in 30d)</span> — next available 2026-08-08</p>
+    <p><strong>$1,548/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 2.5% in 30d)</span> — next available 2026-08-29</p>
     <a class="btn" href="https://www.outerbanksvacations.com/vacation-rentals/5015-high-five" data-property="4a218ffa-d14c-5579-8437-04a6718eeae9" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prime Time 222: Oceanfront w/pool and hot tub — OBX Deals</title>
-<meta name="description" content="Prime Time 222: Oceanfront w/pool and hot tub in Avon, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Prime Time 222: Oceanfront w/pool and hot tub in Salvo, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/avon/kinnakeet-shores-phase-3/b886ed81-b649-5892-b603-b75f5e8744fe/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Prime Time 222: Oceanfront w/pool and hot tub — OBX Deals">
-<meta property="og:description" content="Avon · 5BR">
+<meta property="og:description" content="Salvo · 5BR">
 <meta property="og:url" content="https://obx.deals/property/avon/kinnakeet-shores-phase-3/b886ed81-b649-5892-b603-b75f5e8744fe/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1538719142162968100/original/19ae4921-4064-4e72-be88-b66543d90b0c.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Prime Time 222: Oceanfront w/pool and hot tub</h1>
-  <p class="sub">Avon · 41573 Ocean View Dr</p>
+  <p class="sub">Salvo · 41573 Ocean View Dr</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1538719142162968100/original/19ae4921-4064-4e72-be88-b66543d90b0c.jpeg" alt="Prime Time 222: Oceanfront w/pool and hot tub">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

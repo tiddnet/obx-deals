@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oceanfront Artist&#x27;s Retreat in heart of Nags Head — OBX Deals</title>
-<meta name="description" content="Oceanfront Artist&#x27;s Retreat in heart of Nags Head in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Oceanfront 5 BR in heart of Nags Head. Art lovers. — OBX Deals</title>
+<meta name="description" content="Oceanfront 5 BR in heart of Nags Head. Art lovers. in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/nags-head/geo-t-stronach/4711b2ef-019c-5167-b8a9-09ce860bdd72/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Oceanfront Artist&#x27;s Retreat in heart of Nags Head — OBX Deals">
+<meta property="og:title" content="Oceanfront 5 BR in heart of Nags Head. Art lovers. — OBX Deals">
 <meta property="og:description" content="Nags Head · 5BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/geo-t-stronach/4711b2ef-019c-5167-b8a9-09ce860bdd72/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-545697935069528415/original/070f8d68-6580-479a-b448-3d5f9d785bb3.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Oceanfront Artist&#x27;s Retreat in heart of Nags Head — OBX Deals">
+<meta name="twitter:title" content="Oceanfront 5 BR in heart of Nags Head. Art lovers. — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-545697935069528415/original/070f8d68-6580-479a-b448-3d5f9d785bb3.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -60,9 +60,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Oceanfront Artist&#x27;s Retreat in heart of Nags Head</h1>
+  <h1>Oceanfront 5 BR in heart of Nags Head. Art lovers.</h1>
   <p class="sub">Nags Head · 3709 S Va Dare Trl</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-545697935069528415/original/070f8d68-6580-479a-b448-3d5f9d785bb3.jpeg" alt="Oceanfront Artist&#x27;s Retreat in heart of Nags Head">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-545697935069528415/original/070f8d68-6580-479a-b448-3d5f9d785bb3.jpeg" alt="Oceanfront 5 BR in heart of Nags Head. Art lovers.">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

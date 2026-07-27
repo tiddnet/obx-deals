@@ -11,10 +11,10 @@
 <meta property="og:title" content="Oceanview/Elevator/Pool/Hot tub/Steps to beach — OBX Deals">
 <meta property="og:description" content="Rodanthe · 4BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/sea-oats-subdiv-sec-2/892d8fab-87d4-59ee-8c46-b5da23736da3/">
-<meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1618285733490835584/original/d4819595-0457-477a-bcc5-bdea64d4e758.jpeg">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1586410615290286052/original/a92eafc6-73ef-44c0-b1d3-e46566664ef6.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Oceanview/Elevator/Pool/Hot tub/Steps to beach — OBX Deals">
-<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1618285733490835584/original/d4819595-0457-477a-bcc5-bdea64d4e758.jpeg">
+<meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1586410615290286052/original/a92eafc6-73ef-44c0-b1d3-e46566664ef6.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,14 +62,14 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Oceanview/Elevator/Pool/Hot tub/Steps to beach</h1>
   <p class="sub">Rodanthe · 27272 Dory Rd</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1618285733490835584/original/d4819595-0457-477a-bcc5-bdea64d4e758.jpeg" alt="Oceanview/Elevator/Pool/Hot tub/Steps to beach">
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1586410615290286052/original/a92eafc6-73ef-44c0-b1d3-e46566664ef6.jpeg" alt="Oceanview/Elevator/Pool/Hot tub/Steps to beach">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Airbnb</strong></p>
     
-    <a class="btn" href="https://www.airbnb.com/rooms/1618285733490835584" data-property="892d8fab-87d4-59ee-8c46-b5da23736da3" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
+    <a class="btn" href="https://www.airbnb.com/rooms/1586410615290286052" data-property="892d8fab-87d4-59ee-8c46-b5da23736da3" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
   <p class="footer-links"><a href="./history/">Ownership &amp; listing history &rarr;</a></p>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

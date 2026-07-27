@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kiteopia- 350 sqft studio room on the sound — OBX Deals</title>
-<meta name="description" content="Kiteopia- 350 sqft studio room on the sound in Rodanthe, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Kiteopia- 350 sqft studio room on the sound in Waves, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/rodanthe/estates-at-hatteras-isl-resort/85a511f5-4c2f-598b-a6ac-09b0602fb4a1/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kiteopia- 350 sqft studio room on the sound — OBX Deals">
-<meta property="og:description" content="Rodanthe · BR">
+<meta property="og:description" content="Waves · BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/estates-at-hatteras-isl-resort/85a511f5-4c2f-598b-a6ac-09b0602fb4a1/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTgxMTA4MTM5Njg5Nzg5NDE1/original/adab5600-6e46-4b87-8c5b-d9bf047676a0.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Kiteopia- 350 sqft studio room on the sound</h1>
-  <p class="sub">Rodanthe · 24201 Caribbean Way</p>
+  <p class="sub">Waves · 24201 Caribbean Way</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTgxMTA4MTM5Njg5Nzg5NDE1/original/adab5600-6e46-4b87-8c5b-d9bf047676a0.jpeg" alt="Kiteopia- 350 sqft studio room on the sound">
   <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

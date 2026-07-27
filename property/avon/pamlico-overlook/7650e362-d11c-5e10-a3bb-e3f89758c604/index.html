@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4BR Soundview | Pool | Hot Tub | Game Room — OBX Deals</title>
-<meta name="description" content="4BR Soundview | Pool | Hot Tub | Game Room in Avon, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="4BR Soundview | Pool | Hot Tub | Game Room in Buxton, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/avon/pamlico-overlook/7650e362-d11c-5e10-a3bb-e3f89758c604/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="4BR Soundview | Pool | Hot Tub | Game Room — OBX Deals">
-<meta property="og:description" content="Avon · 4BR">
+<meta property="og:description" content="Buxton · 4BR">
 <meta property="og:url" content="https://obx.deals/property/avon/pamlico-overlook/7650e362-d11c-5e10-a3bb-e3f89758c604/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1538656107171922627/original/4d78a13d-1e8f-4ce7-b6d8-fd208428b667.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,9 +61,9 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>4BR Soundview | Pool | Hot Tub | Game Room</h1>
-  <p class="sub">Avon · 49004 Nc 12 Hwy</p>
+  <p class="sub">Buxton · 49004 Nc 12 Hwy</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1538656107171922627/original/4d78a13d-1e8f-4ce7-b6d8-fd208428b667.jpeg" alt="4BR Soundview | Pool | Hot Tub | Game Room">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

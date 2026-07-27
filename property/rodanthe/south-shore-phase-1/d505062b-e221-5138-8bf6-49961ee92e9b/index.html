@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ocean Crest: Oceanfront | Elevator | Pet-Friendly — OBX Deals</title>
-<meta name="description" content="Ocean Crest: Oceanfront | Elevator | Pet-Friendly in Rodanthe, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Ocean Crest: Oceanfront | Elevator | Pet-Friendly in Waves, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/rodanthe/south-shore-phase-1/d505062b-e221-5138-8bf6-49961ee92e9b/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ocean Crest: Oceanfront | Elevator | Pet-Friendly — OBX Deals">
-<meta property="og:description" content="Rodanthe · 6BR">
+<meta property="og:description" content="Waves · 6BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/south-shore-phase-1/d505062b-e221-5138-8bf6-49961ee92e9b/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1272456618956733485/original/42323dcb-ce2a-4513-ba24-160989514208.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Ocean Crest: Oceanfront | Elevator | Pet-Friendly</h1>
-  <p class="sub">Rodanthe · 24250 South Shore Dr</p>
+  <p class="sub">Waves · 24250 South Shore Dr</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-1272456618956733485/original/42323dcb-ce2a-4513-ba24-160989514208.jpeg" alt="Ocean Crest: Oceanfront | Elevator | Pet-Friendly">
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -11,10 +11,10 @@
 <meta property="og:title" content="SITTING PRETTY — OBX Deals">
 <meta property="og:description" content="Corolla · 6BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/ocean-sands/4047798c-e470-5766-8b11-75a4c4faf1e4/">
-<meta property="og:image" content="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/b7aefc8c-cac2-4b1f-7688-1765903ed600/w=768">
+<meta property="og:image" content="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/19b4b5df-32c6-45f7-8fdd-eb50f95c8c00/w=768">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SITTING PRETTY — OBX Deals">
-<meta name="twitter:image" content="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/b7aefc8c-cac2-4b1f-7688-1765903ed600/w=768">
+<meta name="twitter:image" content="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/19b4b5df-32c6-45f7-8fdd-eb50f95c8c00/w=768">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,7 +62,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>SITTING PRETTY</h1>
   <p class="sub">Corolla · 622 Staysail</p>
-  <img class="hero-img" src="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/b7aefc8c-cac2-4b1f-7688-1765903ed600/w=768" alt="SITTING PRETTY">
+  <img class="hero-img" src="https://imagedelivery.net/6FnrvAofLkLn01BGl7PdQQ/19b4b5df-32c6-45f7-8fdd-eb50f95c8c00/w=768" alt="SITTING PRETTY">
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">17</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

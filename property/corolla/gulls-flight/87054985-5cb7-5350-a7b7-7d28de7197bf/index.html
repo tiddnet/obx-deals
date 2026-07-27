@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Luxurious Sunset Flat in Duck with Gorgeous Views! — OBX Deals</title>
-<meta name="description" content="Luxurious Sunset Flat in Duck with Gorgeous Views! in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Luxurious Sunset Flat in Duck with Gorgeous Views! in Duck, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/corolla/gulls-flight/87054985-5cb7-5350-a7b7-7d28de7197bf/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Luxurious Sunset Flat in Duck with Gorgeous Views! — OBX Deals">
-<meta property="og:description" content="Corolla · 1BR">
+<meta property="og:description" content="Duck · 1BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/gulls-flight/87054985-5cb7-5350-a7b7-7d28de7197bf/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-900657052583003643/original/cf9bf729-442d-4114-b9fe-06b3653d21b2.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Luxurious Sunset Flat in Duck with Gorgeous Views!</h1>
-  <p class="sub">Corolla · 106 Flight Dr</p>
+  <p class="sub">Duck · 106 Flight Dr</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-900657052583003643/original/cf9bf729-442d-4114-b9fe-06b3653d21b2.jpeg" alt="Luxurious Sunset Flat in Duck with Gorgeous Views!">
   <div class="stats"><div class="stat"><div class="num">1</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.92</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

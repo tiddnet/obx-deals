@@ -8,14 +8,14 @@
 New July and August dates available! — OBX Deals</title>
 <meta name="description" content="Reel Fun
 
-New July and August dates available! in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+New July and August dates available! in Manteo, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/nags-head/pirates-cove-rudder-village/45681a3d-aa31-5a41-b581-fe95c306990e/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Reel Fun
 
 New July and August dates available! — OBX Deals">
-<meta property="og:description" content="Nags Head · 4BR">
+<meta property="og:description" content="Manteo · 4BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/pirates-cove-rudder-village/45681a3d-aa31-5a41-b581-fe95c306990e/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-875458028334893769/original/d1443be0-8ddf-4165-b07b-875658300521.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -71,7 +71,7 @@ New July and August dates available! — OBX Deals">
   <h1>Reel Fun
 
 New July and August dates available!</h1>
-  <p class="sub">Nags Head · 11 A Pirates Way</p>
+  <p class="sub">Manteo · 11 A Pirates Way</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-875458028334893769/original/d1443be0-8ddf-4165-b07b-875658300521.jpeg" alt="Reel Fun
 
 New July and August dates available!">
@@ -99,7 +99,11 @@ New July and August dates available!">
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -112,6 +116,15 @@ New July and August dates available!">
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

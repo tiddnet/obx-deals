@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Knotty Times in Kill Devil Hills — OBX Deals</title>
-<meta name="description" content="Knotty Times in Kill Devil Hills in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Knotty Times in Kill Devil Hills in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kill-devil-hills/virginia-dare-shores/dba6e4ba-b7d6-5019-9178-49827b50c6c7/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Knotty Times in Kill Devil Hills — OBX Deals">
-<meta property="og:description" content="Kill Devil Hills · 4BR">
+<meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/virginia-dare-shores/dba6e4ba-b7d6-5019-9178-49827b50c6c7/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1378280370110869501/original/ac6aef5d-2634-465c-9d7e-3b55d08c6a83.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,9 +61,9 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Knotty Times in Kill Devil Hills</h1>
-  <p class="sub">Kill Devil Hills · 322 W Bickett St</p>
+  <p class="sub">Kitty Hawk · 322 W Bickett St</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1378280370110869501/original/ac6aef5d-2634-465c-9d7e-3b55d08c6a83.jpeg" alt="Knotty Times in Kill Devil Hills">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.88</div><div class="lbl">Rating</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.89</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

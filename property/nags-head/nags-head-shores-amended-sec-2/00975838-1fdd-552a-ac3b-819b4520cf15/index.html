@@ -11,10 +11,10 @@
 <meta property="og:title" content="NH186 Sun on My Beach — OBX Deals">
 <meta property="og:description" content="Nags Head · 5BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/nags-head-shores-amended-sec-2/00975838-1fdd-552a-ac3b-819b4520cf15/">
-<meta property="og:image" content="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1744653401_image.jpeg">
+<meta property="og:image" content="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1784918304_image.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NH186 Sun on My Beach — OBX Deals">
-<meta name="twitter:image" content="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1744653401_image.jpeg">
+<meta name="twitter:image" content="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1784918304_image.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>NH186 Sun on My Beach</h1>
   <p class="sub">Nags Head · 2612 S Va Dare Trl</p>
-  <img class="hero-img" src="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1744653401_image.jpeg" alt="NH186 Sun on My Beach">
+  <img class="hero-img" src="https://gallery.streamlinevrs.com/stl-default-images/2656/home/491825/1784918304_image.jpeg" alt="NH186 Sun on My Beach">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Coastal Carolina</strong></p>
-    <p><strong>$7,346/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 0.1% in 30d)</span> — next available 2026-08-15</p>
+    <p><strong>$7,133/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 2.9% in 30d)</span> — next available 2026-08-15</p>
     <a class="btn" href="https://coastalcarolinaobx.com/outer-banks-rentals/nh186-sun-on-my-beach" data-property="00975838-1fdd-552a-ac3b-819b4520cf15" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

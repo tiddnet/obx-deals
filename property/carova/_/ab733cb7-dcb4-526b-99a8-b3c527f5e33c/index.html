@@ -11,10 +11,10 @@
 <meta property="og:title" content="Idyll Time — OBX Deals">
 <meta property="og:description" content="Carova · 8BR">
 <meta property="og:url" content="https://obx.deals/property/carova/_/ab733cb7-dcb4-526b-99a8-b3c527f5e33c/">
-<meta property="og:image" content="https://images.twiddy.com/property-images/423171?v=cdf0c5d656c112d7efba643265407a445720b10cc2a1e7a0513724aa25ab460f&amp;w=1200&amp;quality=80">
+<meta property="og:image" content="https://images.twiddy.com/property-images/754880?v=82ffc8930d9fdeed0de3ade04c2b44c6486f538fb79e5eac1bfef8b89573ce52&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Idyll Time — OBX Deals">
-<meta name="twitter:image" content="https://images.twiddy.com/property-images/423171?v=cdf0c5d656c112d7efba643265407a445720b10cc2a1e7a0513724aa25ab460f&amp;w=1200&amp;quality=80">
+<meta name="twitter:image" content="https://images.twiddy.com/property-images/754880?v=82ffc8930d9fdeed0de3ade04c2b44c6486f538fb79e5eac1bfef8b89573ce52&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -62,13 +62,13 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Idyll Time</h1>
   <p class="sub">Carova · 2093 Sandfiddler</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/423171?v=cdf0c5d656c112d7efba643265407a445720b10cc2a1e7a0513724aa25ab460f&amp;w=1200&amp;quality=80" alt="Idyll Time">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/754880?v=82ffc8930d9fdeed0de3ade04c2b44c6486f538fb79e5eac1bfef8b89573ce52&amp;w=1200&amp;quality=80" alt="Idyll Time">
   <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">1.1</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Twiddy</strong></p>
-    <p><strong>$10,950/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 24.2% in 30d)</span> — next available 2026-07-11</p>
+    <p><strong>$2,950/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 12.3% in 30d)</span> — next available 2026-10-10</p>
     <a class="btn" href="https://www.twiddy.com/outer-banks/4x4/carova-beach/rentals/idyll-time/" data-property="ab733cb7-dcb4-526b-99a8-b3c527f5e33c" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>&quot;It&#x27;s About Time&quot; OBX — OBX Deals</title>
-<meta name="description" content="&quot;It&#x27;s About Time&quot; OBX in Rodanthe, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="&quot;It&#x27;s About Time&quot; OBX in Hatteras Village, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/rodanthe/hatteras-estates-sec-2/f794f3bc-4967-58e9-b6f2-4f64a8d465b1/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="&quot;It&#x27;s About Time&quot; OBX — OBX Deals">
-<meta property="og:description" content="Rodanthe · 2BR">
+<meta property="og:description" content="Hatteras Village · 2BR">
 <meta property="og:url" content="https://obx.deals/property/rodanthe/hatteras-estates-sec-2/f794f3bc-4967-58e9-b6f2-4f64a8d465b1/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-8067512/original/e145e537-d674-4476-bea4-e8a233eac837.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>&quot;It&#x27;s About Time&quot; OBX</h1>
-  <p class="sub">Rodanthe · 56189 Shoal Dr</p>
+  <p class="sub">Hatteras Village · 56189 Shoal Dr</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/miso/Hosting-8067512/original/e145e537-d674-4476-bea4-e8a233eac837.jpeg" alt="&quot;It&#x27;s About Time&quot; OBX">
   <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4.96</div><div class="lbl">Rating</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 

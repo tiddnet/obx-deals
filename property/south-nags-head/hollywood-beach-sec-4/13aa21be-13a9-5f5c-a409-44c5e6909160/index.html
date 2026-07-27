@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Turtles Roost: Oceanfront, Pool, Spa, Game room — OBX Deals</title>
-<meta name="description" content="Turtles Roost: Oceanfront, Pool, Spa, Game room in South Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Turtles Roost: Oceanfront, Pool, Spa, Game room in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/south-nags-head/hollywood-beach-sec-4/13aa21be-13a9-5f5c-a409-44c5e6909160/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Turtles Roost: Oceanfront, Pool, Spa, Game room — OBX Deals">
-<meta property="og:description" content="South Nags Head · 7BR">
+<meta property="og:description" content="Kill Devil Hills · 7BR">
 <meta property="og:url" content="https://obx.deals/property/south-nags-head/hollywood-beach-sec-4/13aa21be-13a9-5f5c-a409-44c5e6909160/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/prohost-api/Hosting-860715115470792076/original/d647681d-7d84-44b0-984e-8ac9fd860104.jpeg">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,7 +61,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Turtles Roost: Oceanfront, Pool, Spa, Game room</h1>
-  <p class="sub">South Nags Head · 8923 S Old Oregon Inlet Rd</p>
+  <p class="sub">Kill Devil Hills · 8923 S Old Oregon Inlet Rd</p>
   <img class="hero-img" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-860715115470792076/original/d647681d-7d84-44b0-984e-8ac9fd860104.jpeg" alt="Turtles Roost: Oceanfront, Pool, Spa, Game room">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div></div>
   
@@ -87,7 +87,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -100,6 +104,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 
