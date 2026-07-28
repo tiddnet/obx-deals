@@ -17,11 +17,11 @@
   <meta property="og:title" content="Gardners Hut — OBX Verified View">
   <meta property="og:description" content="80/100 view score · Unobstructed Ocean View · Kitty Hawk, NC">
   <meta property="og:url" content="https://obx.deals/view/kitty-hawk/kitty-hawk-beach-rev-sec-a/8787a15d-2ffa-5fa7-bc7d-b7f831007b97/">
-  <meta property="og:image" content="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=1600&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/8B/image_164747782.jpeg&amp;settings=default">
+  <meta property="og:image" content="https://images.rezfusion.com?optimize=true&rotate=true&quality=70&width=1600&source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/8B/image_164747782.jpeg&settings=default">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gardners Hut — OBX Verified View">
   <meta name="twitter:description" content="80/100 view score · Unobstructed Ocean View · Kitty Hawk, NC">
-  <meta name="twitter:image" content="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=1600&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/8B/image_164747782.jpeg&amp;settings=default">
+  <meta name="twitter:image" content="https://images.rezfusion.com?optimize=true&rotate=true&quality=70&width=1600&source=https%3A//gallery.streamlinevrs.com/units-gallery/00/06/8B/image_164747782.jpeg&settings=default">
   <link rel="canonical" href="https://obx.deals/view/kitty-hawk/kitty-hawk-beach-rev-sec-a/8787a15d-2ffa-5fa7-bc7d-b7f831007b97/">
   <style>
     :root {
@@ -234,7 +234,11 @@
     function getVid() {
       var m = document.cookie.match(/obxd_vid=([^;]+)/);
       if (m) return m[1];
-      var v = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
       document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
       return v;
     }
@@ -247,6 +251,15 @@
         visitor_id: vid, referrer: document.referrer || ''
       }));
     };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
   </script>
 
 
