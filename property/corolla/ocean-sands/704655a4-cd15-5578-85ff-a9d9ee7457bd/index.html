@@ -47,6 +47,22 @@
     .history .row { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
     .history .row:last-child { border-bottom: none; }
     .history .range { font-size: 0.8rem; color: var(--muted); }
+    .reviews { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .reviews h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 0.6rem; }
+    .review-summary { font-size: 0.95rem; color: var(--muted); margin: 0 0 0.75rem; }
+    .review-breakdown { margin-bottom: 1rem; }
+    .review-breakdown-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.15rem; }
+    .review-breakdown-bar { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+    .review-breakdown-bar div { height: 100%; background: var(--accent); }
+    .review-bubble { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: 0.9rem; }
+    .review-bubble:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+    .review-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .review-stars { color: #d69a00; letter-spacing: 0.05em; }
+    .review-meta { font-size: 0.82rem; color: var(--muted); }
+    .review-text { margin: 0.3rem 0; font-size: 0.92rem; }
+    .review-source { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.3rem; }
+    .review-response { background: var(--bg); border-radius: 8px; padding: 0.6rem 0.8rem; margin-top: 0.5rem; }
+    .review-response-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.2rem; }
     .footer-links { font-size: 0.85rem; color: var(--muted); margin-top: 2rem; }
     .footer-links a { color: var(--accent); text-decoration: none; }
 
@@ -65,10 +81,253 @@
   <img class="hero-img" src="https://gallery.streamlinevrs.com/units-gallery/00/0F/60/thumbnail_170460042.jpeg" alt="OS3Q-Shared Dreams">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
+  <div class="reviews">
+    <h2>Guest Reviews</h2>
+    <p class="review-summary">4.53 avg &middot; 40 reviews</p>
+    <div class="review-breakdown"><div class="review-breakdown-row"><span>5&#9733;</span><div class="review-breakdown-bar"><div style="width:63.2%"></div></div><span>63%</span></div><div class="review-breakdown-row"><span>4&#9733;</span><div class="review-breakdown-bar"><div style="width:28.9%"></div></div><span>29%</span></div><div class="review-breakdown-row"><span>3&#9733;</span><div class="review-breakdown-bar"><div style="width:5.3%"></div></div><span>5%</span></div><div class="review-breakdown-row"><span>2&#9733;</span><div class="review-breakdown-bar"><div style="width:2.6%"></div></div><span>3%</span></div><div class="review-breakdown-row"><span>1&#9733;</span><div class="review-breakdown-bar"><div style="width:0.0%"></div></div><span>0%</span></div></div>
+    
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-meta">Amanda S. &middot; April 2026</span></div>
+      <p class="review-text">Loved it! -- We loved our time here it was great spending time with family. Property was very well clean with excellent amenities. The view is to die for! We were already planning our return trip.</p>
+      <div class="review-source">via Outer Banks Blue</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Joe K. &middot; August 2025</span></div>
+      <p class="review-text">The house was great! Excellent location with just a short walk to the beach and beautiful views from the decks. Kitchen was well stocked with pots, pans, dishes and utensils, enough to cook anything you want. Plenty of space for our large group and plenty to do with the pool and hot tub. Overall a very clean and pleasant place to spend the week with friends and family.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Nicholas and Kelsey P. &middot; August 2025</span></div>
+      <p class="review-text">This house was great! A short walk to the beach with a cut through at the back. There was everything you needed for kids (high chair, pack n play, plates/cups, toys, etc) and so many beach items for everyone to use! Pool was small but perfect for our group and the two toddlers. We would definitely return! Beware the beach does get crowded so getting out there early is key if you want an oceanfront view - not a big deal in our case but nice to know!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Mike B. &middot; August 2025</span></div>
+      <p class="review-text">However, I sometimes make suggestions for improvements to help the owner and to improve on the stay of the next guest, but this stay was worthy of 5 stars and beyond!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Christina C. &middot; July 2025</span></div>
+      <p class="review-text">Pros: View, Kitchen, Living area, pool, porches, outside seating x amount of inside seating, shower pressure, random kiddos items, beach toys, parking amount, location. Cons: cleanliness (found trash and food wrappers in drawers, dead flies laying around), mattresses were not that comfortable. We had a great stay and would definitely use Vacasa again! The staff communicated beautifully upon our arrival and helped us with check in greatly!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Thank you so much for taking the time to share such a thorough and thoughtful review of your stay with us, Christina. We&#x27;re delighted to hear that you enjoyed so many aspects of the home-from the beautiful view and well-equipped kitchen to the comfortable living area, pool, porches, and both the inside and outside seating. It&#x27;s wonderful to know that the shower pressure met your expectations and that the kids&#x27; items and beach toys added to your family&#x27;s enjoyment. We&#x27;re also glad the parking and location worked well for you. Your positive feedback truly brightens our day. At the same time, we want to sincerely apologize for the cleanliness issues you encountered, including the trash and food wrappers found in drawers and the presence of dead flies. We understand how important a spotless environment is to a comfortable stay, and we&#x27;re sorry this fell short of your expectations. Additionally, we regret that the mattresses were uncomfortable for you, as a good night&#x27;s sleep is essential to a great vacation experience. Please know that we have shared your concerns with our local team so they can address these issues promptly and ensure they do not affect future guests. Your feedback is invaluable in helping us maintain and improve the quality of our homes. We&#x27;re thrilled to hear that you had a great stay overall and that our staff&#x27;s communication and check-in assistance made a positive impression. We truly appreciate your kind words and your intention to use our home again in the future. We look forward to welcoming you back and providing an even better experience next time.</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Bruce H. &middot; June 2025</span></div>
+      <p class="review-text">2-3 minutes to walk to beach.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Hannah S. &middot; June 2025</span></div>
+      <p class="review-text">This is our second time staying here and we would choose this house every single time in the future. Everything we could need and more.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Jason G. &middot; May 2025</span></div>
+      <p class="review-text">We enjoyed our stay. We encountered a problem when we got to the property. Vacasa and the home owner went about and beyond to fix the problem and make our stay more enjoyable. We will definitely use vacasa from now on. Thanks for helping us make memories we will never forget.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Ellen M. &middot; April 2025</span></div>
+      <p class="review-text">One of our favorite places to stay. The house is very clean, well set out and very comfortable. This is our second time visiting and it is fast becoming our guy to relaxing vacation spot. The view is fantastic with dolphins, sunsets over the ocean and an amazing night sky. We were a 2 minute walk from a gorgeous beach and surrounded by enough fun activities to keep us and our kids well entertained all week. Really recommend this house.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-meta">Ellen M. &middot; April 2025</span></div>
+      <p class="review-text">Gorgeous hidden gem -- We had a fantastic week staying at Shared Dreams, the house was spacious enough for everyone to have their own space but still feel cozy and comfy. The sea view meant we ate breakfast watching dolphins surface and gulls follow them. It was super convenient for both the beach and entertainment and despite losing to my kids at mini golf it was one of the best vacations we have had in years! 5 stars all the way.</p>
+      <div class="review-source">via Outer Banks Blue</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Catherine W. &middot; December 2024</span></div>
+      <p class="review-text">We enjoyed hanging out for a few days at this home and appreciated how close it was to the ocean. It was clean and kitchen was well stocked. Hot tub was great! Houses are a bit close on the sides but still felt private. Home was easy to reserve and we had no issues.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Jillian G. &middot; December 2024</span></div>
+      <p class="review-text">We decided to relocate Thanksgiving and it was a great decision. Everything about this house from booking to checkout was awesome! Wonderful view of the ocean (even saw dolphins!), and a quick walk to the beach. Great location, nice, quiet neighborhood. Kitchen was well stocked. We especially loved the PacMan arcade game. There are few properties that accommodate 3 dogs, and we truly appreciate the fact that this property did, this allowed our entire family to stay together. The only bummer we had was that the fireplace didn&#x27;t work. However, they responded promptly and had a tech out to service it. Definitely recommend!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Sara C. &middot; November 2024</span></div>
+      <p class="review-text">Gosh this house is a dream. We had 7 kids and it worked perfect for our group. The kid room in the basement was awesome! We all loved the hot tub. The beach was so close! The kitchen was the most well stocked kitchen I&#x27;ve seen. We loved the view of the water! The kids were so happy with the games and puzzles provided. Everything was perfect and wonderful; we really enjoyed our stay.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Roger O. &middot; October 2024</span></div>
+      <p class="review-text">Here&#x27;s a semi-oceanfront cottage with an oceanfront view.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Hannah S. &middot; September 2024</span></div>
+      <p class="review-text">We enjoyed our stay so much and would consider booking again in the future. Such a quick walk to the beach and tons of items provided for kids, adults, etc. to make our time on the beach great.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Cameron M. &middot; August 2024</span></div>
+      <p class="review-text">The house is spacious and perfect for large groups! This home is also equipped with everything you need at the beach plus some! The view is gorgeous! Quick walk to the beach. Plenty of outdoor space (decks) to relax and enjoy the scenery! The house has hardwood floors, so it was easy clean up if there were any spills etc. I was impressed with the kitchen set up. Inside the cabinets are labeled to show were items go. The kitchen had plenty of mixing bowls, a Ninja Blender, counter icemaker, plenty of cooking supplies and baking dishes! It also had a Kitchn Aid Mixer! Literally had everything you need to cook for a large group! There were plenty of towels stocked in the home. Also, plenty of extra blankets and pillows. Also, there is a closet downstairs that has beach toys, sand boards, and blowups for the pool. We brought down some extra beach chairs but didn&#x27;t need to! The house supplies plenty of beach chairs! Leave your chairs at home! The neighborhood was quiet and quaint with other families vacationing. We felt saft and secure in this location. I highly recommend this home for your next visit to Corolla! It is perfect for large groups, and everyone has their own space. It is centrally located to the stores, etc. We will defiantly book again at Shared Dreams! Only complaint is that we wish we could have stayed longer!!! The area has so much to do and it&#x27;s hard cramming everything in during a week. Hopefully, we can stay longer next time!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Kevin O. &middot; July 2024</span></div>
+      <p class="review-text">Location to beach is fantastic. View from 3rd deck is great. The shades in rooms need to be upgraded. Tv is all streaming so hard to get all the main channels. Very good house overall</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">We are pleased to hear you enjoyed your stay! Thank you for taking the time to share your feedback with us. We will be sure to pass your suggestions along to our local manager who will work with our homeowner to make necessary upgrades. We look forward to hosting you again!</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Sue N. &middot; July 2024</span></div>
+      <p class="review-text">Well stocked kitchen, very clean house, fantastic location to the beach, wonderful pool. We had a fantastic visit. Highly recommend.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Kristen C. &middot; June 2024</span></div>
+      <p class="review-text">Only rated this property 4 due to I&#x27;m slightly OCD and my cleanliness is far different from others. This home allows pets, we brought our 3 dogs and I did not expect the place to be spin and span as I like. The place was so chill, the view from the top deck is amazing I sat with binoculars and watched the dolphins. If you want shade go to the middle deck and read a book. Hot tub was awesome as the view is of the dunes. My husband and I gave up the king bedroom to have the queen top floor view...it was so worth it. We brought bikes and I would also recommend since all the amenities are about 1 miles away, so fun riding there daily for food, mini golf, awesome shops, seafood markets.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Thannia R. &middot; May 2024</span></div>
+      <p class="review-text">The place was nice, clean and organized Inside, my only complain was the garbage found on the driveway, around pool area, piece of wood soneone left on too of balcony when you enter to the house that was an hazard. Someone should check also outside in case previous guest left stuff as garbage on pockets of beach chair. There were more positive, we enjoyed being in this place</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Hi Thannia, thank you for sharing your valuable feedback during your stay. We are happy to know that you found our home nice and that the cleanliness met your expectations. We take guest feedback seriously and have forwarded this information to the local staff so they can review and update the home as needed for future guests. Thank you for your stay, and we hope to welcome you back soon.</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Akers G. &middot; May 2024</span></div>
+      <p class="review-text">We really enjoyed our stay. We had a family of 11</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Timm T. &middot; April 2024</span></div>
+      <p class="review-text">Nice place to stay view is amazing and beautiful catch of sunrise from up stairs</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Ellen M. &middot; April 2024</span></div>
+      <p class="review-text">Enough space for families to enjoy each other&#x27;s company and not be on top of each other. Perfect location and a wonderful view.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Thank you for your positive feedback! We&#x27;re glad to hear that you found our property spacious and well-located, allowing for an enjoyable family experience. We appreciate your kind words and hope to welcome you back again in the future.</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Erin B. &middot; March 2024</span></div>
+      <p class="review-text">My family recently stayed for a last minute trip and it was better than expected! We enjoyed the thoughtful amenities, large entertainment items in the &quot;kids room&quot; open concept main living area and the views of the ocean from the hot tub and every deck! It&#x27;s clear that the owners have worked hard to update and refresh the home; we look forward to coming back for a full week this summer!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Travis W. &middot; March 2024</span></div>
+      <p class="review-text">Great place Great views Great trip</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Lisa I. &middot; September 2023</span></div>
+      <p class="review-text">Great ocean view... close proximity to beach! Perfect size for our families needs. Even a Tropical Storm at the end of our stay didn&#x27;t ruin our trip. Had amble space in main area for family game night! Loved having all the beach chairs.. boogie boards... and sand toys for our grandkids to use while there</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Charlene F. &middot; September 2023</span></div>
+      <p class="review-text">We had a great time at the Banks this year. The house was great and met all our needs and more! Amazingly we had plenty of towels and blankets which is usually a issue when you rent a beach house. Our toaster went on the blink which was not good for me since I am a real toast freak but I texted the management to report it and they delivered a brand new one within hours!!!! I was delighted!! Our stay was exactly what I wanted! From my bedroom I could see the ocean and hear the waves crashing against the beach. It was a great beach trip comfortable, peaceful, and beautiful. Thank you</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★☆☆☆</span><span class="review-meta">Stella L. &middot; September 2023</span></div>
+      <p class="review-text">The rental was below average, my family still enjoyed the vacation overall. A few things to note about the property: - mold on one of the shower curtains - ants in the pantry closet - crumbs under furniture - empty propane tank</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Stella, we are sorry to hear your stay with us did not meet your expectations and we appreciate you bringing some concerns to our attention. We have passed this feedback on to our local property manager to work with the owner to make the necessary improvements and to address the cleaning oversights with our housekeeping staff. We understand that cleanliness is of utmost importance and we deeply regret that the home was not up to your expectations upon arrival. We hope we can have another chance to impress you on a future stay.</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Jeffrey B. &middot; August 2023</span></div>
+      <p class="review-text">Overall great experience. Two minute walk to beach and great deck views of the ocean. Closeness to stores a plus. However, appliances and furniture need updating</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Thank you for taking the time to review your stay with us, Jeffrey. We are so glad to hear you enjoyed your stay and had a great experience. We appreciate you letting us know that there is room for improvement with the appliances and furniture, and we will follow up with our local team regarding your feedback. We look forward to hosting your next stay!</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Laura L. &middot; July 2023</span></div>
+      
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Barb C. &middot; July 2023</span></div>
+      <p class="review-text">Well appointed, clean unit.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">michael h. &middot; June 2023</span></div>
+      <p class="review-text">Love the house and location relative to the beach</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">David T. &middot; May 2023</span></div>
+      
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Roger O. &middot; May 2023</span></div>
+      
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★☆☆</span><span class="review-meta">William M. &middot; September 2022</span></div>
+      <p class="review-text">The home has a wonderful location and also has a beautiful view, but the home was not cleaned properly before our stay. We found dirty rags in the home as well as dirty clothing. We also found an uncleaned toilet. We notified the PM and they sent a cleaning crew to the home. The crew showed up without notification or warning and we did not feel comfortable having people clean the home with our possessions out in each room.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">William, thank you for taking the time to share your valuable feedback, we are glad to hear you enjoyed the location and views of our vacation home. We apologize for the house not being cleaned as thoroughly as is our standard. We are also sorry that our housekeeping team came to the property without prior notice. We strive to maintain a standard of excellence in home cleanliness and upkeep for the comfort of our guests, in addition to being readily available to assist in addressing any questions or concerns that might arise. We appreciate you bringing this to our attention, and we hope that the compensation helped alleviate your stress. We will follow up with the appropriate parties regarding your experience to discuss preventative measures and ensure the continued enjoyment of our future guests. We hope to have the opportunity to better impress you in the future!</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Ed B. &middot; August 2022</span></div>
+      <p class="review-text">The house was very clean upon arrival. I liked the doggie waste bags provided by the owners. There were also ample extra beach chairs and leftover boogie boards. The pool is a little small but is refreshing after a day on the beach. The pillow need updating and some additional pillows would be a nice add. The kitchen pots and pans need updating as well as the coffee pot.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Hi, Ed! We&#x27;re glad you stayed with us and appreciate you leaving your feedback. The homeowner will be making general updates throughout the home this fall and winter. Your input has been shared with them for their consideration while making plans. Thank you!</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Lynne F. &middot; August 2022</span></div>
+      
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Melissa P. &middot; July 2022</span></div>
+      <p class="review-text">Close to the beach, very clean and convenient!</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★☆☆</span><span class="review-meta">Diana B. &middot; June 2022</span></div>
+      <p class="review-text">It was very spacious.</p>
+      <div class="review-source">via Vacasa (former property manager)</div>
+      <div class="review-response">
+        <div class="review-response-label">Response from the property manager</div>
+        <p style="margin:0">Thanks for sharing feedback, Diana! We&#x27;re glad to hear that you enjoyed the property and had a fantastic time. We look forward to hosting you again!</p>
+      </div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Karen C. &middot; May 2022</span></div>
+      
+      <div class="review-source">via Vacasa (former property manager)</div>
+    </div>
+  </div>
+  
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Outer Banks Blue</strong></p>
-    
+    <p><strong>$3,307/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2026-08-28</p>
     <a class="btn" href="https://www.outerbanksblue.com/outer-banks-vacation-rentals/os3q-shared-dreams" data-property="704655a4-cd15-5578-85ff-a9d9ee7457bd" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   <div class="desc"><h2>About this property</h2><p>The property is built next to a reserve space, which gives the house a clear view of the ocean. Unheard of in most communities for a second or third row home.</p></div>

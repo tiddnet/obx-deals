@@ -47,6 +47,22 @@
     .history .row { padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
     .history .row:last-child { border-bottom: none; }
     .history .range { font-size: 0.8rem; color: var(--muted); }
+    .reviews { background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .reviews h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 0.6rem; }
+    .review-summary { font-size: 0.95rem; color: var(--muted); margin: 0 0 0.75rem; }
+    .review-breakdown { margin-bottom: 1rem; }
+    .review-breakdown-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.15rem; }
+    .review-breakdown-bar { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+    .review-breakdown-bar div { height: 100%; background: var(--accent); }
+    .review-bubble { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: 0.9rem; }
+    .review-bubble:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+    .review-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .review-stars { color: #d69a00; letter-spacing: 0.05em; }
+    .review-meta { font-size: 0.82rem; color: var(--muted); }
+    .review-text { margin: 0.3rem 0; font-size: 0.92rem; }
+    .review-source { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.3rem; }
+    .review-response { background: var(--bg); border-radius: 8px; padding: 0.6rem 0.8rem; margin-top: 0.5rem; }
+    .review-response-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.2rem; }
     .footer-links { font-size: 0.85rem; color: var(--muted); margin-top: 2rem; }
     .footer-links a { color: var(--accent); text-decoration: none; }
 
@@ -64,6 +80,198 @@
   <p class="sub">Island Creek · 39222 Island Creek Ct</p>
   <img class="hero-img" src="https://gallery.streamlinevrs.com/stl-default-images/3562/home/976925/1784840332_image.jpeg" alt="AVIC15 Island Thunder #15-I">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.6</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundfront</div><div class="lbl">View</div></div></div>
+  
+  <div class="reviews">
+    <h2>Guest Reviews</h2>
+    <p class="review-summary">4.57 avg &middot; 37 reviews</p>
+    <div class="review-breakdown"><div class="review-breakdown-row"><span>5&#9733;</span><div class="review-breakdown-bar"><div style="width:62.2%"></div></div><span>62%</span></div><div class="review-breakdown-row"><span>4&#9733;</span><div class="review-breakdown-bar"><div style="width:32.4%"></div></div><span>32%</span></div><div class="review-breakdown-row"><span>3&#9733;</span><div class="review-breakdown-bar"><div style="width:5.4%"></div></div><span>5%</span></div><div class="review-breakdown-row"><span>2&#9733;</span><div class="review-breakdown-bar"><div style="width:0.0%"></div></div><span>0%</span></div><div class="review-breakdown-row"><span>1&#9733;</span><div class="review-breakdown-bar"><div style="width:0.0%"></div></div><span>0%</span></div></div>
+    
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Ivan</span></div>
+      <p class="review-text">Wonderful house for a family vacation!</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★☆☆</span><span class="review-meta">Anonymous</span></div>
+      <p class="review-text">Highly suggest having someone operate a magnetic sweeper to pick up both very old and rusty as well as new screws.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Ryan</span></div>
+      <p class="review-text">Great space, beautiful view of the sound. Interior was clean and comfortable. Convenient location for beach access and local amenities. Enough communal space and bathrooms for multiple couples/families.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Zoltan A.</span></div>
+      <p class="review-text">Waterfront corner property -- 180 degree view of the water. dock to launch your watercraft, large lawn to spread out your water toys. responsive group (e.g. fixed our dishwasher day of). If you want the crowds, stay in Kittyhawk. If not, then come here.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Kristan L.</span></div>
+      <p class="review-text">We enjoyed every minute of our stay in this beautiful home! The location is just perfect- amazing sound access for water sports, a short walk to the beach, and the most amazing sunset views!</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★☆☆</span><span class="review-meta">Mary</span></div>
+      <p class="review-text">Location, location, location, and the ninja blender.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Yevgeniy</span></div>
+      <p class="review-text">Spacious house with a view and a hot tub.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Lorna</span></div>
+      <p class="review-text">My twins and I needed time away from so much stress, this home was perfect! The views of the sound were amazing! We got to experience a heavy storm (which we love) and of course the house stayed sound. The people at Vacasa were so friendly and they went out of their way to make us feel comfortable and happy. When we got back home, my girls said they felt so refreshed and stress free and ready to get back to classes, which is exactly what we were looking for. Thank you so much Vacasa!</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Charles B.</span></div>
+      <p class="review-text">Very beautiful location on the water. The house was very well kept. Adequate rooms and sleeping are for 8. The layout was outstanding, couldnt ask for a better rental... short drive from Virginia already to go back again. Recommended 5</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Charles</span></div>
+      <p class="review-text">Wounderful home and experience. People were friendly and helpful.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Tailer</span></div>
+      <p class="review-text">Beautiful views of the sound, great location and great energy in the house. Highly recommend staying at this lovely home.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">J Michael</span></div>
+      <p class="review-text">The house is right on the water and has a grass yard between the house and the water. Sunsets are beautiful. The house was clean, and all the appliances worked just fine. The kitchen utensils, plateware, pots, pans, etc. were completely satisfactory.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">JASON</span></div>
+      <p class="review-text">Fantastic views and short walk to the beach. A water sports playground in secluded community setting. Well stocked kitchen - Ninja, lots of pots and pans and any utensil you can think of. Mattress topper on King bed was super comfortable. Lots of common areas to walk you furry friend. Short drive to many restaurants.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Thomas</span></div>
+      <p class="review-text">Love the location of the house and everything that it has to offer. Some infrastructure problems are a bit of a challenge, but overall the stay was fantastic.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Steven S.</span></div>
+      <p class="review-text">We had nine adult family members and one dog for a week in July. Thunder Island met our needs perfectly. The kitchen was well equipped, there is a large table for family meals and games, and the corner spot on the Sound was beautiful and quiet. Avon is the perfect beach town, big enough with a grocery store and restaurants but not at all overbuilt. We loved it.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Jeanette M</span></div>
+      <p class="review-text">We loved the beautiful sunsets and the community pool.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Philip M.</span></div>
+      <p class="review-text">Great rental for large parties, water sports, &amp; dog lovers.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Rhonda T.</span></div>
+      <p class="review-text">What made this house our favorite is the backyard fishing and kayaking and unbelievable sunset view and ten-minute walk to the beach or 5 minute drive to the pier for easy beach access with plentiful parking. We loved the open floor plan and beautiful wraparound decks with spectacular water views. We will definitely return to Island Thunder.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Diane</span></div>
+      <p class="review-text">This home was great for our water loving family. Windsurfing, paddleboarding and fishing right in your backyard. The views are incredible. The house needs a few minor things, but we would definitely stay again.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Carol</span></div>
+      <p class="review-text">Unparalleled view of the sound. Well stocked kitchen and great hot tub.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Piotr</span></div>
+      <p class="review-text">These homes have gorgeous views and are a great location for water sports. They are located right on the sound and they have a little lawn in front of the water to spread out the equipment and launch comfortably. The homes are little older but are kept well. Definitely in a shabby-chic category, but having all the amenities, from jacuzzi, multistory decks to communal swimming pool. I go there every year.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">J Michael</span></div>
+      <p class="review-text">Great location and now better taken care of. However, sometimes the external water was turned off, not handy</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Gavin</span></div>
+      <p class="review-text">good windsurfing and location close to beach</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Carol</span></div>
+      <p class="review-text">The house was comfortable, very well stocked, and roomy. The view was amazing!</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Karen S.</span></div>
+      <p class="review-text">We were a party of 6. Definitely more than enough space for us. The house is rigbt on the water so the view was amazing. We would definitely stay here again.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Vanessa R.</span></div>
+      <p class="review-text">This house has spectacular views, was very clean and is a great location for water access and a relaxing experience</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Jack</span></div>
+      <p class="review-text">We loved the variety of sports activity we took advantage of during out stay.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Elaine</span></div>
+      <p class="review-text">Very nice place with wonderfull view. Beds are comfortable. Nice adirondac chairs on the balcons. Wi-Fi is soso. You get about everything you need in the Kitchen but the knifes need to be sharpened. Just missing a gas BBQ.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Rosemary</span></div>
+      <p class="review-text">The views were spectacular! All bedrooms and the top level had views of the sound. Home was spotless. Vacasa was quick to respond to any questions or concerns. Furniture was comfortable and house was spacious.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Anna</span></div>
+      <p class="review-text">The house was in a perfect location for kite surfing and paddle boarding. Even though it is pet friendly, it was well maintained. My only negative would be the pots/pans. The saute pans were a large size but because they were aluminum, had warped due to excessively high heat. Did not make it easy to use when cooking.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Harry B.</span></div>
+      <p class="review-text">The sunset views (West) from the home are fabulous. To the North all you see is the national seashore without housing. The location allows for easy access to the Pamlico sound for windsurfing, kiting, kayaking, etc. The oceanside beach is only a 2 blocks walk. Very quiet unless to wind is blowing and then everyone is out playin on the sound. I have stayed here before the house has had several cosmetic interior upgrades which were appreciated.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Beverly B.</span></div>
+      <p class="review-text">Our family loves this location because of the proximity to the sound and the fun water sports. We have 3 kids and it is stress free water fun. BUT the ocean is just a quick ride away.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Thomas</span></div>
+      <p class="review-text">Great location and arrived to a very clean and well-prepared home. The great room upstairs was even bigger in person than it looked in pics and loved the house&#x27;s layout. Very comfortable for 8 of us (three being smaller kids). Kitchen was adequately stocked for cooking. Had to call maintenance for a minor electrical issue and they were there to fix it the next day.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-meta">Mary</span></div>
+      <p class="review-text">This property is ideally located for windsurfing/ kiting. Lovely large living area with views of the sound. My only complaint is that the kitchen was not as well equipped as other properties I have rented.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Mark S.</span></div>
+      <p class="review-text">This home has great views of the sound and is within walking distance to the ocean. Just a great spot.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Timothea M.</span></div>
+      <p class="review-text">Loved the panoramic view of the sound. The lapping of the sound that you heard while sitting on the deck. Gorgeous front row seats to the sunset. The house was a perfect size for the five of us. Spacious living room and kitchen. Easy walk to the ocean. Kayak rental place within walking distance just over the bridge. Great place to stay with the dogs. They could hop right into the water.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+    <div class="review-bubble">
+      <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-meta">Mark</span></div>
+      <p class="review-text">Loved its location...on the sound and yet a short walk to the ocean.</p>
+      <div class="review-source">via Hatteras Realty</div>
+    </div>
+  </div>
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
