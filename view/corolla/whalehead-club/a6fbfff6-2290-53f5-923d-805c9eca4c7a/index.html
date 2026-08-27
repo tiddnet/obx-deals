@@ -112,6 +112,13 @@
         border-bottom: 1px solid var(--rule);
       }
     }
+    
+    .lookup-box { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1.5rem; }
+    .lookup-box input { width: 100%; padding: 0.55rem 0.7rem; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; }
+    .lookup-results { margin-top: 0.6rem; font-size: 0.9rem; }
+    .lookup-results a { display: block; padding: 0.35rem 0; color: var(--accent); text-decoration: none; }
+    .lookup-results a:hover { text-decoration: underline; }
+
   </style>
 </head>
 <body>
@@ -192,6 +199,11 @@
           <button type="submit" class="claim-btn">Submit my photo &rarr;</button>
         </form>
       </div>
+  
+      <p style="margin-top:1rem;font-size:0.85rem">
+        <a href="https://obx.deals/property/corolla/whalehead-club/a6fbfff6-2290-53f5-923d-805c9eca4c7a/" data-property="a6fbfff6-2290-53f5-923d-805c9eca4c7a" data-track-page="badge_to_canonical"
+           onclick="obxTrack(this)">View full property profile &rarr;</a>
+      </p>
 
   <div class="methodology">
     <strong>How this score works:</strong> OBX Deals independently analyzed
@@ -203,11 +215,76 @@
     <a href="https://search.obx.deals/">Search all OBX properties &rarr;</a>
   </div>
 
+  
+  <div class="lookup-box">
+    <label for="lookup-q" style="font-size:0.85rem;color:var(--muted)">Looking for a different property?</label>
+    <input id="lookup-q" type="text" placeholder="House name or street address…" autocomplete="off">
+    <div id="lookup-results" class="lookup-results"></div>
+  </div>
+
+
   <footer>
     <a href="https://obx.deals/">obx.deals</a> &middot;
     <a href="https://search.obx.deals/">Search rentals</a> &middot;
     <a href="https://obx.deals/view/">All verified views</a>
   </footer>
 </main>
+
+  <script>
+    function getVid() {
+      var m = document.cookie.match(/obxd_vid=([^;]+)/);
+      if (m) return m[1];
+      var v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() :
+        'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, x = c==='x' ? r : (r&0x3|0x8);
+          return x.toString(16);
+        });
+      document.cookie = 'obxd_vid=' + v + '; max-age=31536000; path=/; domain=.obx.deals; SameSite=Lax; Secure';
+      return v;
+    }
+    var vid = getVid();
+    window.obxTrack = function(el) {
+      if (navigator.doNotTrack === '1') return;
+      var pid = el.getAttribute('data-property') || '';
+      navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        property_id: pid, page: el.getAttribute('data-track-page') || 'badge_to_canonical',
+        visitor_id: vid, referrer: document.referrer || ''
+      }));
+    };
+    if (navigator.doNotTrack !== '1' && !sessionStorage.getItem('obxd_pv')) {
+      sessionStorage.setItem('obxd_pv', '1');
+      try {
+        navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+          event_type: 'pageview', visitor_id: vid, url: location.href,
+          page_path: location.pathname, referrer: document.referrer || null
+        }));
+      } catch(_) {}
+    }
+  </script>
+
+
+  <script>
+    (function() {
+      var input = document.getElementById('lookup-q');
+      var results = document.getElementById('lookup-results');
+      var timer = null;
+      input.addEventListener('input', function() {
+        clearTimeout(timer);
+        var q = input.value.trim();
+        if (q.length < 2) { results.innerHTML = ''; return; }
+        timer = setTimeout(function() {
+          fetch('https://search-api.obx.deals/lookup?q=' + encodeURIComponent(q))
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              results.innerHTML = (data.results || []).map(function(r) {
+                return '<a href="' + r.url + '">' + r.display_name + ' — ' + r.community + '</a>';
+              }).join('') || '<span style="color:var(--muted)">No matches.</span>';
+            })
+            .catch(function() {});
+        }, 300);
+      });
+    })();
+  </script>
+
 </body>
 </html>
