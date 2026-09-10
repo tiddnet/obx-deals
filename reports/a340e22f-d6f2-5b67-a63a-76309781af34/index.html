@@ -301,7 +301,7 @@ footer{
   </div>
 
   <p class="lede" style="margin-top:20px;">
-    Pulled from rental-intel's own daily scrape of ~13,600 Outer Banks listings across 26 property
+    Pulled from OBX Deals' own daily scrape of ~13,600 Outer Banks listings across 26 property
     managers, compared against five other houses on the same block of Skimmer Arch/Court/Way — same
     micro-market, different PMCs. Built for an informal look at how OSH10 is performing under Village
     Realty versus what the neighbors are getting elsewhere. Not a substitute for reading an actual
@@ -416,11 +416,12 @@ footer{
       down, which booked 5–10 times each despite similar or larger size — worth noting as a PMC-level
       pattern, not just a house-level one.
       <br><br>
-      *OSH10's listing text doesn't publish a view type (Village Realty leaves it blank), but the
-      site's own dune-elevation ray-trace analysis puts it at 755 ft to the ocean with an 88% clear
-      sightline — the same "CLEAR" classification as Shared Dreams (531 ft, 93% clear), just ~225 ft
-      further back. Worth a real photo comparison before leaning on it in a PM conversation, but it's
-      not the interior lot the PM's own data implied.
+      *Village Realty's own listing does say "Oceanside" (caught mid-session — our own data
+      pipeline was reading a separate, often-blank field for view type and missing it, now fixed
+      at the source). Our own dune-elevation ray-trace analysis independently backs this up: 755 ft
+      to the ocean with an 88% clear sightline — the same "CLEAR" classification as Shared Dreams
+      (531 ft, 93% clear), just ~225 ft further back. Not the interior lot our own tooling briefly
+      implied.
     </div>
   </section>
 
@@ -1065,13 +1066,13 @@ footer{
   </section>
 
   <footer>
-    Data as of 2026-09-09 &middot; rental-intel internal scrape, 13,634 listings across 26 PMCs, Outer Banks NC<br>
+    Data as of 2026-09-09 &middot; OBX Deals rental-intel system, 13,634 listings across 26 PMCs, Outer Banks NC<br>
     Booking counts: high-confidence rate-drop detections only, May 1–Oct 15 2026<br>
     Pricing percentiles: search.obx.deals comp model (bedroom/view/amenity matched); Resort Realty's section B row recomputed 2026-09-10 against corrected post-fix rates, all other pricing 2026-09-09<br>
     Search ranking (own-name): internal SERP audit, sampled 2026-06-05 &middot; Traffic: SimilarWeb estimate, sampled 2026-09-09<br>
     Search ranking (generic terms): single-query web search, sampled 2026-09-09, not repeatable-methodology<br>
     Reputation tiers: NotebookLM synthesis of BBB/Trustpilot/OBX Coastal Life/Reddit/Facebook, 2026-09-09, not independently verified<br>
-    Cohort view/proximity: rental-intel GIS ray-sweep (county parcel + building data), computed 2026-06-27<br>
+    Cohort view/proximity: OBX Deals GIS ray-sweep (county parcel + building data), computed 2026-06-27<br>
     Cohort realized rates: high-confidence inferred bookings, all-time through 2026-09-09<br>
     Guest fees: 6 live quotes pulled directly from each PM's own booking engine + Evolve's stored itemized data, 2026-09-09/10; full 26-PMC status in section H<br>
     2027 booking pace &amp; $/bedroom: high-confidence inferred bookings, all Corolla properties, computed 2026-09-09<br>
