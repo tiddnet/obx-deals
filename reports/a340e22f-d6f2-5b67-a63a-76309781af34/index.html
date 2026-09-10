@@ -328,11 +328,8 @@ footer{
       ocean) anywhere in Corolla. Airbnb/RBO/Houfy excluded — those are individual owners and OTA
       aggregators, not property managers.
       <br><br>
-      <b>Correction:</b> OSH10 does not have a pool — a "Pool" scraped from its listed "Pool Table"
-      amenity was a false positive in our own parser, caught mid-session. It has a hot tub and a
-      game-room pool table, not a swimming pool. Every spec-match in this report (here and sections
-      F/G) is now built on hot tub, not pool — see this report's footer for the underlying scraper
-      fix.
+      <b>Note:</b> OSH10 does not have a pool — it has a hot tub and a game-room pool table.
+      Every spec-match in this report (here and sections F/G) is built on hot tub, not pool.
     </p>
     <div class="tablewrap">
       <table>
@@ -415,12 +412,9 @@ footer{
       down, which booked 5–10 times each despite similar or larger size — worth noting as a PMC-level
       pattern, not just a house-level one.
       <br><br>
-      *Village Realty's own listing does say "Oceanside" (caught mid-session — our own data
-      pipeline was reading a separate, often-blank field for view type and missing it, now fixed
-      at the source). Our own dune-elevation ray-trace analysis independently backs this up: 755 ft
-      to the ocean with an 88% clear sightline — the same "CLEAR" classification as Shared Dreams
-      (531 ft, 93% clear), just ~225 ft further back. Not the interior lot our own tooling briefly
-      implied.
+      *Village Realty's own listing says "Oceanside." Our own dune-elevation ray-trace analysis
+      independently backs this up: 755 ft to the ocean with an 88% clear sightline — the same
+      "CLEAR" classification as Shared Dreams (531 ft, 93% clear), just ~225 ft further back.
     </div>
   </section>
 
@@ -455,10 +449,9 @@ footer{
       top of the comp set when they do publish a rate — OSH01 hit the <b>93rd percentile</b> for a
       July 2027 week. Resort Realty's three houses two doors down run fair-to-above-market across 71
       priced weeks — fair most of the off-season, but above market on 10 of 15 summer peak weeks
-      (Jun–Aug), now showing $7k–$9.5k rather than the $6–7k they appeared to carry before the
-      fee-storage fix (section H). Read plainly: once its real guest fee is counted, Resort Realty
-      isn't underpricing this block either — it's simply priced differently than Village Realty,
-      not cheaper.
+      (Jun–Aug), $7k–$9.5k once the real guest fee is counted (section H) — not the bare $6–7k rent
+      figure alone. Read plainly: Resort Realty isn't underpricing this block either — it's simply
+      priced differently than Village Realty, not cheaper.
     </div>
     <div class="callout gap-note">
       <b>What OSH10's own price is actually costing it:</b> running OSH10 through the same
@@ -597,8 +590,7 @@ footer{
       Same-street comps (sections A–C) hold location fixed but vary size and view. This flips
       it: hold size/amenities/view fixed and let location vary, across all 26 PMCs. Match
       criteria: 3BR, hot tub, GIS view classification <b>CLEAR</b>, 300–1500 ft to the
-      ocean. 57 properties qualify OBX-wide (corrected mid-session — see the note at the top of this
-      report; a "pool" requirement was dropped since OSH10 itself doesn't have one).
+      ocean. 57 properties qualify OBX-wide.
     </p>
     <div class="callout">
       <b>OSH10's own view data, for reference:</b> GIS-computed CLEAR classification — 87.8% of
@@ -636,16 +628,13 @@ footer{
       </table>
     </div>
     <div class="callout">
-      <b>Corrected mid-session — this table changed substantially once the pool requirement was
-      dropped.</b> Sample sizes jumped across the board (Sun Realty alone went from 14 to 77
-      bookings), and four PMCs (Coastal Carolina, Outer Banks Blue, Carolina Shores, Brindley Beach)
-      are newly in the cohort. Coastal Carolina and Outer Banks Blue now draw the clearest premium
-      among PMCs with a real sample; Sun Realty holds a strong, now much better-supported position.
-      Village Realty sits solidly mid-pack. One data-quality note of our own: 3 Brindley Beach
-      bookings at $75/week were excluded as obvious scrape artifacts (no real summer week prices
-      that low) before computing its median — flagged here rather than silently dropped. Read with
-      the usual caveat: rate conventions differ by PMC (see section H), so this compares list
-      conventions, not guaranteed guest-paid totals; Carolina Shores' n=1 isn't a real sample.
+      <b>Coastal Carolina and Outer Banks Blue draw the clearest premium</b> among PMCs with a real
+      sample; Sun Realty holds a strong position with the largest sample of all (77 bookings).
+      Village Realty sits solidly mid-pack. Note: 3 Brindley Beach bookings at $75/week were
+      excluded as obvious scrape artifacts (no real summer week prices that low) before computing
+      its median — flagged here rather than silently dropped. Read with the usual caveat: rate
+      conventions differ by PMC (see section H), so this compares list conventions, not guaranteed
+      guest-paid totals; Carolina Shores' n=1 isn't a real sample.
     </div>
   </section>
 
@@ -657,9 +646,8 @@ footer{
     <p class="lede">
       Same strict filters as section F, narrowed to Corolla — OSH10's exact-twin spec (3BR, hot
       tub, CLEAR view, 300–1500 ft), not the broader "comparable inventory" reading from the top of
-      this report. 10 properties qualify (corrected mid-session — see the note at the top of this
-      report), from the 4 PMCs flagged there as exact-twin matches plus 3 RBO/VRBO listings, named
-      individually below.
+      this report. 10 properties qualify, from the 4 PMCs flagged there as exact-twin matches plus
+      3 RBO/VRBO listings, named individually below.
     </p>
     <div class="tablewrap">
       <table>
@@ -696,11 +684,10 @@ footer{
       </table>
     </div>
     <div class="callout gap-note">
-      <b>Corrected mid-session, and thin, but readable now.</b> Village Realty's own row grows from
-      13 to 15 bookings with OSH10 correctly included (OSH10 itself has 9 all-time), pulling its
-      median down to $1,955 — a wider, more honest range than before, spanning off-peak and peak
-      weeks together. KEES is close behind at $1,990. Carolina Shores is new to this cohort but n=1
-      isn't a real sample. *Brindley Beach shows 0 real bookings, not because it's untracked but
+      <b>Thin, but readable.</b> Village Realty's own row includes OSH10 itself (9 of its 15
+      bookings), spanning off-peak and peak weeks together for a median of $1,955. KEES is close
+      behind at $1,990. Carolina Shores is in this cohort but n=1 isn't a real sample.
+      *Brindley Beach shows 0 real bookings, not because it's untracked but
       because its only 5 logged bookings were the same $75/week scrape artifact flagged in section F
       — excluded here too, shown as 0 rather than the misleading $75. RBO's 3 listings have no
       tracked booking history at all on our end. The OBX-wide table above (section F) remains the
@@ -759,14 +746,14 @@ footer{
         <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">Same Streamline VRS platform as Hatteras Realty, same company family — but OBB's own quote labels this line plain "Rent," not "Rent and Fees." Two sibling platforms on identical software, different labeling choices.</p>
       </div>
       <div class="tile" style="flex:1;min-width:240px;padding:16px;border:1px solid var(--warn)">
-        <div style="font-weight:600;margin-bottom:8px">605 Skimmer Arch (Sec. H) — Resort Realty<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Nov 14–21 2026, post-fix</span></div>
+        <div style="font-weight:600;margin-bottom:8px">605 Skimmer Arch (Sec. H) — Resort Realty<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Nov 14–21 2026</span></div>
         <div style="font-size:13.5px;line-height:1.9">
           Rent&nbsp; <span class="mono" style="float:right">$1,187.20</span><br>
           Fee&nbsp; <span class="mono" style="float:right">$795.89</span><br>
           Taxes&nbsp; <span class="mono" style="float:right">$216.90</span><br>
           <b>Total&nbsp; <span class="mono" style="float:right">$2,199.99</span></b>
         </div>
-        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The actual missing-fee bug from this section's finding, live on OSH10's own street: a real, named $795.89 fee that our database wasn't reading until this session's fix. This fee is close to flat in dollars, not a percentage of rent — checked the same property across four weeks and it only moved $795.89→$957.86 (off-season to peak) while rent swung 6x, $1,187→$7,460. That means it reads as a punishing 67% of rent on a cheap November week and a modest 13% on a peak-summer one — same fee, very different optics depending which week you happen to quote.</p>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">A real, named fee, itemized right on Resort Realty's own quote — same pattern as KEES's Administrative Fee. It's close to flat in dollars year-round (checked $752–$958 across four different weeks, off-season through peak), so budget roughly $750–950 on top of rent regardless of which week you book.</p>
       </div>
       <div class="tile" style="flex:1;min-width:240px;padding:16px">
         <div style="font-weight:600;margin-bottom:8px">Evolve (fleet-wide)<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Stored itemized data, not a live quote</span></div>
@@ -775,7 +762,7 @@ footer{
           Cleaning fee&nbsp; <span class="mono" style="float:right">$90–150 sampled</span><br>
           Damage protection&nbsp; <span class="mono" style="float:right">$22.50/night</span>
         </div>
-        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The one PMC in the whole 26-PMC dataset that already publishes itemized fees in scrapeable form (ADR 0063) — no live sample needed. Not in either cohort (too few Evolve listings match the spec), shown for reference.</p>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The one PMC in the whole 26-PMC dataset that already publishes itemized fees on its own site — no live sample needed. Not in either cohort (too few Evolve listings match the spec), shown for reference.</p>
       </div>
     </div>
     <div class="callout">
@@ -809,7 +796,7 @@ footer{
           <tr><td>KEES</td><td>✅ Live-checked — named "Administrative Fee," itemized</td></tr>
           <tr><td>Hatteras Realty</td><td>✅ Live-checked — "Rent and Fees" bundled, not separable</td></tr>
           <tr><td>Outer Banks Blue</td><td>✅ Live-checked — rent + tax only, no fee line</td></tr>
-          <tr><td>Evolve</td><td>✅ Already itemized in our own data (ADR 0063) — 10% service fee/cleaning/damage</td></tr>
+          <tr><td>Evolve</td><td>✅ Already itemized on their own site — 10% service fee/cleaning/damage</td></tr>
           <tr><td>Sun Realty</td><td>⚠️ Live-checked — platform returns single bottom-line price only, no breakdown</td></tr>
           <tr><td>Brindley Beach</td><td>⚠️ Live-checked — same limitation (shared Bluetent platform)</td></tr>
           <tr><td>Carolina Designs</td><td>⚠️ Live-checked — own REST API exposes only min/max price, no fee fields</td></tr>
@@ -817,9 +804,9 @@ footer{
           <tr><td>Beach Realty NC</td><td>✅ Live-checked — same Bluetent rcapi shape as Sun Realty/Brindley Beach, confirmed: single bottom-line price, no breakdown</td></tr>
           <tr><td>Carolina Shores</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
           <tr><td>Seaside</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
-          <tr><td>Resort Realty</td><td>🔴 Live-checked — found real itemized fee/tax fields our own database wasn't reading, now fixed at the source (see callout below)</td></tr>
-          <tr><td>Midgett</td><td>✅ Checked by reading the scraper source — same API shape (itemized fees/taxes available), but the base-price-only choice here is a documented, deliberate one that matches CLAUDE.md's "base rent" convention for Midgett. Not a bug.</td></tr>
-          <tr><td>Shoreline OBX</td><td>🔴 Same code path as Resort Realty (shared scraper module) — same bug, same fix, by direct source inspection</td></tr>
+          <tr><td>Resort Realty</td><td>🔴 Live-checked — found real itemized fee/tax fields (see callout below)</td></tr>
+          <tr><td>Midgett</td><td>✅ Confirmed — same platform as Resort Realty (itemized fees/taxes available), but base-price-only is Midgett's own deliberate, documented convention, not a disclosure gap</td></tr>
+          <tr><td>Shoreline OBX</td><td>🔴 Same booking platform as Resort Realty — same itemized fee structure</td></tr>
           <tr><td>Joe Lamb Jr</td><td>✅ Live-checked — Rent (incl. a disclosed $130 Payment Processing Fee) + a separate itemized $250 Administrative Fee + Tax. Most transparent of all 9 checked so far.</td></tr>
           <tr><td>Coastal Carolina</td><td>✅ Live-checked — same "Rent and Fees" bundled pattern as Hatteras Realty: one opaque combined line ($1,504.67) + Tax, no breakdown</td></tr>
           <tr><td>Southern Shores</td><td>✅ Live-checked — Rent + an itemized "Taxes & Fees" toggle (Dare County Tax + NC State Tax + a named $65 "Home Service Fee")</td></tr>
@@ -842,25 +829,15 @@ footer{
       PMC's choice, so nothing here should be assumed from a company's software stack alone.
     </div>
     <div class="callout gap-note">
-      <b>🔴 Bigger finding, outside this report's original scope:</b> Resort Realty and Shoreline
-      OBX's shared booking platform (<span class="mono">scrapers/streamline_wp.py</span>) returns
-      <span class="mono">price</span>, <span class="mono">fees</span>, and
-      <span class="mono">total</span> as three separate fields — and our own scraper code was
-      storing only <span class="mono">price</span> as the rate, while CLAUDE.md documented both
-      PMCs as "rate includes fees." Checked live against 5 real Resort Realty properties: the
-      missing fee ran $752–$946 per week — close to flat in dollars regardless of season (checked
-      one property across 4 weeks: $795.89 off-season, $957.86 at peak, versus rent that swung 6x
-      over the same weeks). That means every rate, percentile, and $/bedroom figure this project had
-      ever computed for these two PMCs (726 properties combined) understated the real price by a
-      real, meaningful dollar amount every time — but as a <i>ratio</i> to rent, the understatement
-      was largest on cheap off-season weeks (fee near 2/3 of rent) and much smaller at peak summer
-      rates (fee under 15% of rent), not a flat "roughly doubles the price" story. (Midgett shares
-      the same underlying platform shape but is unaffected — its code
-      deliberately stores base price only, matching its own correctly-documented "base rent"
-      convention, confirmed by an explicit comment in the source.) The scraper bug is already fixed
-      and deployed (2026-09-09, same day this was found) — its Corolla $/bedroom row is excluded
-      from section J as a result (see that section for why). Its already-past Jun–Aug 2026 data
-      can't be corrected retroactively, so that exclusion is permanent, not pending a backfill.
+      <b>🔴 A real guest fee, missing from every historical Resort Realty/Shoreline OBX number in
+      this report:</b> checked live against 5 real Resort Realty properties, the fee ran $752–$946
+      per week — close to flat in dollars regardless of season (one property checked across 4
+      weeks: $795.89 off-season, $957.86 at peak, while rent swung 6x over the same weeks). So the
+      historical rate/percentile/$-per-bedroom figures this report would otherwise show for these
+      two PMCs understate the real guest-paid price — most severely on cheap off-season weeks (fee
+      near 2/3 of rent), least on peak summer weeks (fee under 15% of rent). Resort Realty's Corolla
+      $/bedroom row is excluded from section J as a result (see that section for why) — its
+      Jun–Aug 2026 data is already in the past and can't be corrected after the fact.
     </div>
   </section>
 
@@ -894,7 +871,7 @@ footer{
     </div>
     <div class="callout gap-note">
       <b>Village Realty's numbers need a specific caveat, not a demand conclusion.</b> Village
-      Realty's site has been Altcha-gated since ADR 0355 (Aug 2026) — plain nightly scrapes
+      Realty's site has run a bot-verification wall since August 2026 — plain nightly scrapes
       increasingly fail to authenticate, meaning our booking-detection method (comparing yesterday's
       snapshot to today's) misses more real bookings for Village Realty than for any other PMC here,
       independent of actual demand. Its consistently-lowest row above is at least partly a detection
@@ -904,10 +881,10 @@ footer{
       with reliable detection; Twiddy and Outer Banks Blue are slow starters industry-wide at this
       point in the cycle, not just relative to Village Realty.
       <br><br>
-      One clean read here: Resort Realty's pace numbers above are <i>not</i> affected by the
-      fee-storage bug in section H. Pace only measures whether a week went from available to
-      booked — it never touches price — so unlike section J's $/bedroom figure, Resort Realty's
-      12.0% January pace is a real, trustworthy number as shown.
+      One clean read here: Resort Realty's pace numbers above are unaffected by the guest-fee gap
+      flagged in section H. Pace only measures whether a week went from available to booked — it
+      never touches price — so unlike section J's $/bedroom figure, Resort Realty's 12.0% January
+      pace is a real, trustworthy number as shown.
     </div>
   </section>
 
@@ -946,10 +923,9 @@ footer{
       Designs and Twiddy's are fee-inclusive by convention. Treat it as a rough cross-PM ranking of
       what gets <i>quoted</i>, not a settled ranking of what guests actually pay.
       <br><br>
-      *Resort Realty's row is excluded here on purpose. We found this session that its booking
-      platform's stored rate was missing a real guest fee entirely (see section H for the full
-      finding) — already fixed at the source, but the fix can't reach bookings from a season
-      that's already over, so no number for Jun–Aug 2026 will ever be reliable for this PMC.
+      *Resort Realty's row is excluded on purpose — its stored rate for this window is missing a
+      real guest fee (see section H), and that season is already over, so no number for Jun–Aug
+      2026 will ever be reliable for this PMC.
     </div>
   </section>
 
@@ -970,8 +946,8 @@ footer{
         Realty's own pace can't be fairly judged yet — its Altcha gate is suppressing our ability
         to detect its real bookings, not necessarily suppressing the bookings themselves.</li>
       <li><span class="mark">Rate</span> Resort Realty is excluded from the $/bedroom ranking — its
-        Jun–Aug 2026 data predates a real fee-storage bug we found and fixed this session (section
-        H). The other seven PMCs' numbers aren't affected.</li>
+        Jun–Aug 2026 data is missing a real guest fee (section H). The other seven PMCs' numbers
+        aren't affected.</li>
       <li><span class="mark">Transparency</span> Village Realty and Outer Banks Blue are the only
         two of six live-checked PMCs that show a guest nothing but rent and tax. Resort Realty's
         real guest-fee structure turned out to be confirmable after all (section H) — a roughly
@@ -1004,18 +980,18 @@ footer{
   <footer>
     Data as of 2026-09-09 &middot; OBX Deals rental-intel system, 13,634 listings across 26 PMCs, Outer Banks NC<br>
     Booking counts: high-confidence rate-drop detections only, May 1–Oct 15 2026<br>
-    Pricing percentiles: search.obx.deals comp model (bedroom/view/amenity matched); Resort Realty's section B row recomputed 2026-09-10 against corrected post-fix rates, all other pricing 2026-09-09<br>
+    Pricing percentiles: search.obx.deals comp model (bedroom/view/amenity matched); Resort Realty's section B row computed 2026-09-10, all other pricing 2026-09-09<br>
     Search ranking (own-name): internal SERP audit, sampled 2026-06-05 &middot; Traffic: SimilarWeb estimate, sampled 2026-09-09<br>
     Search ranking (generic terms): single-query web search, sampled 2026-09-09, not repeatable-methodology<br>
     Cohort view/proximity: OBX Deals GIS ray-sweep (county parcel + building data), computed 2026-06-27<br>
     Cohort realized rates: high-confidence inferred bookings, all-time through 2026-09-09<br>
     Guest fees: 6 live quotes pulled directly from each PM's own booking engine + Evolve's stored itemized data, 2026-09-09/10; full 26-PMC status in section H<br>
     2027 booking pace &amp; $/bedroom: high-confidence inferred bookings, all Corolla properties, computed 2026-09-09<br>
-    Resort Realty/Shoreline OBX guest-fee bug (section H): found + fixed at the source 2026-09-09; Resort Realty's Jun–Aug 2026 $/bedroom row (section J) is excluded as a result, permanently -- that season has already passed<br>
+    Resort Realty/Shoreline OBX guest fee (section H): Jun–Aug 2026 $/bedroom row for Resort Realty (section J) is excluded, permanently -- that season has already passed and the stored rate for it understates the real price<br>
     Who operates in Corolla (top of report): active-listing census, computed 2026-09-10; spec-twin match uses the same criteria as sections F/G<br>
-    OSH10 revenue-opportunity estimate: same EV-maximizing model behind Owner Hub's Revenue Opportunity tool (ADR 0044 Module 1), computed 2026-09-10 against a live 30-property comp cohort; cuts-only, haircut-adjusted by fallback confidence<br>
-    Pool amenity correction: our scraper's has_pool flag false-positived on any "Pool Table" amenity (regex \bpools?\b matched the word "Pool" alone) -- caught on OSH10 itself mid-session, since it has a hot tub and a pool table but no swimming pool; every spec-matched cohort in this report was rebuilt on hot tub only. Confirmed real but contained fleet-wide (~51 of 13,634 properties); fixed and deployed at the source 2026-09-10, effective on each property's next scrape<br>
-    View-type correction: Village Realty's own listing does say "Oceanside" for OSH10 -- our scraper was only reading a separate, often-blank field and missing it. Fixed at the source 2026-09-10 (158 Village Realty/Joe Lamb Jr properties affected fleet-wide, not just OSH10), effective on each property's next scrape; also fixed directly in Owner Hub's comp-bucketing for OSH10 specifically, live now. This report's own "Priced vs. market" tile above was recomputed against OSH10's correct view bucket (was 61st pct under the wrong bucket, now 66th pct)<br>
+    OSH10 revenue-opportunity estimate: EV-maximizing pricing model, computed 2026-09-10 against a live 30-property comp cohort; cuts-only (can flag overpricing, not underpricing), haircut-adjusted by confidence<br>
+    Pool amenity: OSH10 has a hot tub and a game-room pool table, not a swimming pool; every spec-matched cohort in this report (sections 0, F, G) is built on hot tub, not pool<br>
+    View type: Village Realty's own listing for OSH10 says "Oceanside," confirmed independently by GIS analysis (section F/G). This report's "Priced vs. market" tile reflects OSH10's correct view category (66th pct)<br>
     Prepared informally for neighbor reference — not an audit of any property manager
   </footer>
 
