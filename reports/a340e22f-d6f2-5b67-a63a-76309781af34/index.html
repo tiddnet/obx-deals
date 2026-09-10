@@ -294,7 +294,7 @@ footer{
     <p class="subtitle">OSH10 &middot; <b>The Salty Unicorn</b> &middot; currently listed with <b>Village Realty</b></p>
     <div class="factrow">
       <span class="factchip"><strong>3BR / 2BA</strong> &middot; sleeps 6</span>
-      <span class="factchip">Pool + hot tub</span>
+      <span class="factchip">Hot tub &middot; no pool (pool table)</span>
       <span class="factchip">755 ft to beach &middot; clear ocean view corridor</span>
       <span class="factchip">4.9★ <strong>&middot; 66 reviews</strong></span>
     </div>
@@ -325,9 +325,15 @@ footer{
     <p class="lede">
       Before comparing Village Realty to any one alternative, here's the real field: every PMC in our
       26-PMC dataset with an active Corolla listing today, sorted by scale, plus whether they have a
-      property matching OSH10's own spec (3BR, pool + hot tub, clear ocean view, 300–1500 ft to the
+      property matching OSH10's own spec (3BR, hot tub, clear ocean view, 300–1500 ft to the
       ocean) anywhere in Corolla. Airbnb/RBO/Houfy excluded — those are individual owners and OTA
       aggregators, not property managers.
+      <br><br>
+      <b>Correction:</b> OSH10 does not have a pool — a "Pool" scraped from its listed "Pool Table"
+      amenity was a false positive in our own parser, caught mid-session. It has a hot tub and a
+      game-room pool table, not a swimming pool. Every spec-match in this report (here and sections
+      F/G) is now built on hot tub, not pool — see this report's footer for the underlying scraper
+      fix.
     </p>
     <div class="tablewrap">
       <table>
@@ -337,7 +343,7 @@ footer{
         <tbody>
           <tr><td>Twiddy &amp; Company</td><td class="num">709</td><td class="num">18</td><td>No</td></tr>
           <tr class="target"><td>Village Realty (current)</td><td class="num">404</td><td class="num">26</td><td><span class="pill good">Yes</span> (2 others + OSH10)</td></tr>
-          <tr><td>Brindley Beach</td><td class="num">295</td><td class="num">15</td><td><span class="pill good">Yes</span> (1)</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">295</td><td class="num">15</td><td><span class="pill good">Yes</span> (2)</td></tr>
           <tr><td>Resort Realty</td><td class="num">163</td><td class="num">13</td><td>No</td></tr>
           <tr><td>Carolina Designs Realty</td><td class="num">119</td><td class="num">0</td><td>No</td></tr>
           <tr><td>Beach Realty NC</td><td class="num">111</td><td class="num">15</td><td>No</td></tr>
@@ -349,7 +355,7 @@ footer{
           <tr><td>Seaside Vacations</td><td class="num">48</td><td class="num">2</td><td>No</td></tr>
           <tr><td>KEES Vacations</td><td class="num">39</td><td class="num">2</td><td><span class="pill good">Yes</span> (1)</td></tr>
           <tr><td>Coastal Carolina Vacations</td><td class="num">36</td><td class="num">1</td><td>No</td></tr>
-          <tr><td>Carolina Shores</td><td class="num">35</td><td class="num">6</td><td>No</td></tr>
+          <tr><td>Carolina Shores</td><td class="num">35</td><td class="num">6</td><td><span class="pill good">Yes</span> (1)</td></tr>
           <tr><td>Southern Shores Realty</td><td class="num">22</td><td class="num">3</td><td>No</td></tr>
           <tr><td>Atlantic Realty</td><td class="num">22</td><td class="num">2</td><td>No</td></tr>
           <tr><td>Evolve</td><td class="num">4</td><td class="num">0</td><td>No</td></tr>
@@ -358,21 +364,21 @@ footer{
     </div>
     <p class="lede" style="margin-top:10px">
       "Broadly comparable" = 3–4BR, 500–1000 ft to the ocean, any view — a realistic reading of
-      "a house like OSH10." "Exact spec-twin" = the literal combination of OSH10's own attributes
-      (3BR exactly, pool <i>and</i> hot tub together, GIS-CLEAR view exactly, 300–1500 ft) — a much
-      stricter bar, since it requires every attribute to line up at once, not just one.
+      "a house like OSH10." "Exact spec-twin" = the literal combination of OSH10's own real
+      attributes (3BR exactly, hot tub, GIS-CLEAR view exactly, 300–1500 ft — no pool requirement;
+      OSH10 doesn't have one) — a much stricter bar, since it requires every attribute to line up at
+      once, not just one.
     </p>
     <div class="callout gap-note">
-      <b>Most PMCs have something comparable; almost none have an exact twin — and that gap is
-      itself worth understanding.</b> 16 of 18 PMCs have real 3–4BR near-ocean inventory in Corolla,
-      several at real scale (Village Realty 26, Twiddy 18, Beach Realty NC and Brindley Beach 15
-      each, Resort Realty 13, Sun Realty 11). But almost none of that inventory carries OSH10's exact
-      pool-<i>and</i>-hot-tub-<i>and</i>-CLEAR-view combination together — only Village Realty,
-      Brindley Beach, and KEES do. That's a fact about how amenities cluster in Corolla generally,
-      not a sign that OSH10 is too unusual for most of these PMCs to handle. This report goes deepest
-      on the PMCs with real Corolla scale and/or a literal spec match: Village Realty, Resort Realty,
-      Brindley Beach, Beach Realty NC, Carolina Designs, Outer Banks Blue, Sun Realty, Twiddy, and
-      KEES.
+      <b>Most PMCs have something comparable; few have an exact twin — and that gap is itself worth
+      understanding.</b> 16 of 18 PMCs have real 3–4BR near-ocean inventory in Corolla, several at
+      real scale (Village Realty 26, Twiddy 18, Beach Realty NC and Brindley Beach 15 each, Resort
+      Realty 13, Sun Realty 11). But only four PMCs carry OSH10's exact hot-tub-and-CLEAR-view
+      combination: Village Realty (OSH10 itself + 2 others), Brindley Beach (2), Carolina Shores (1),
+      and KEES (1). That's a fact about how amenities cluster in Corolla generally, not a sign that
+      OSH10 is too unusual for most of these PMCs to handle. This report goes deepest on the PMCs
+      with real Corolla scale and/or a literal spec match: Village Realty, Resort Realty, Brindley
+      Beach, Beach Realty NC, Carolina Designs, Outer Banks Blue, Sun Realty, Twiddy, and KEES.
     </div>
   </section>
 
@@ -655,8 +661,9 @@ footer{
     <p class="lede">
       Same-street comps (sections A–C) hold location fixed but vary size and view. This flips
       it: hold size/amenities/view fixed and let location vary, across all 26 PMCs. Match
-      criteria: 3BR, pool + hot tub, GIS view classification <b>CLEAR</b>, 300–1500 ft to the
-      ocean. 39 properties qualify OBX-wide.
+      criteria: 3BR, hot tub, GIS view classification <b>CLEAR</b>, 300–1500 ft to the
+      ocean. 57 properties qualify OBX-wide (corrected mid-session — see the note at the top of this
+      report; a "pool" requirement was dropped since OSH10 itself doesn't have one).
     </p>
     <div class="callout">
       <b>OSH10's own view data, for reference:</b> GIS-computed CLEAR classification — 87.8% of
@@ -668,9 +675,10 @@ footer{
       without the human claim/photo step.
     </div>
     <p class="lede" style="margin-top:14px">
-      Cohort composition: Avon (6, incl. 4 Hatteras Realty), Hatteras Village (10, incl. 4 Surf
-      or Sound + 5 Hatteras Realty), Kill Devil Hills (8, incl. 6 Sun Realty), Corolla (7 — see
-      section G), plus Kitty Hawk, Nags Head, South Nags Head, Salvo, and Carova (1–2 each).
+      Cohort composition: Hatteras Village (14, incl. 8 Surf or Sound + 5 Hatteras Realty), Corolla
+      (10 — see section G), Kill Devil Hills (8, incl. 6 Sun Realty), Avon (6, incl. 4 Hatteras
+      Realty), Nags Head (5), Salvo (4), Kitty Hawk (4), Carova (2), South Nags Head (2), plus 1
+      each in an unclassified community and Hatteras.
     </p>
     <h3 style="font-size:13px;margin:18px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Realized rate by PMC, peak season only (Jun–Aug, high-confidence inferred bookings)</h3>
     <div class="tablewrap">
@@ -679,24 +687,30 @@ footer{
           <tr><th>PMC</th><th class="num">Bookings (n)</th><th class="num">Median</th><th class="num">Range</th></tr>
         </thead>
         <tbody>
-          <tr><td>Sun Realty</td><td class="num">14</td><td class="num">$4,950</td><td class="num">$2,950–$7,603</td></tr>
-          <tr class="target"><td>Village Realty</td><td class="num">6</td><td class="num">$2,991</td><td class="num">$2,679–$3,965</td></tr>
-          <tr><td>KEES</td><td class="num">5</td><td class="num">$2,874</td><td class="num">$1,521–$5,406</td></tr>
-          <tr><td>Surf or Sound</td><td class="num">2</td><td class="num">$2,845</td><td class="num">$2,295–$3,395</td></tr>
-          <tr><td>Hatteras Realty</td><td class="num">11</td><td class="num">$2,426</td><td class="num">$1,654–$3,346</td></tr>
-          <tr><td>Twiddy</td><td class="num">1</td><td class="num">$5,200</td><td class="num">— (single data point)</td></tr>
+          <tr><td>Coastal Carolina</td><td class="num">5</td><td class="num">$3,816</td><td class="num">$2,440–$4,570</td></tr>
+          <tr><td>Outer Banks Blue</td><td class="num">10</td><td class="num">$3,781</td><td class="num">$2,705–$4,025</td></tr>
+          <tr><td>Carolina Shores</td><td class="num">1</td><td class="num">$3,436</td><td class="num">— (single data point)</td></tr>
+          <tr class="target"><td>Village Realty</td><td class="num">5</td><td class="num">$3,217</td><td class="num">$2,505–$3,813</td></tr>
+          <tr><td>Sun Realty</td><td class="num">77</td><td class="num">$3,207</td><td class="num">$1,798–$7,200</td></tr>
+          <tr><td>Twiddy</td><td class="num">12</td><td class="num">$3,045</td><td class="num">$1,250–$5,355</td></tr>
+          <tr><td>Hatteras Realty</td><td class="num">27</td><td class="num">$2,780</td><td class="num">$1,560–$4,387</td></tr>
+          <tr><td>Surf or Sound</td><td class="num">9</td><td class="num">$2,595</td><td class="num">$1,395–$3,195</td></tr>
+          <tr><td>KEES</td><td class="num">12</td><td class="num">$2,281</td><td class="num">$1,610–$5,408</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">6</td><td class="num">$2,445</td><td class="num">$1,824–$2,914</td></tr>
         </tbody>
       </table>
     </div>
     <div class="callout">
-      <b>Sun Realty draws the clearest premium</b> for this exact spec (3BR, pool, hot tub, clear
-      sightline, close-in) among PMCs with a real sample — more than double Hatteras Realty's
-      median for the same house profile. Village Realty sits mid-pack. Read with two caveats: (1)
-      rate conventions differ by PMC — Hatteras Realty's number is fee-inclusive, Sun Realty's and
-      KEES's are not exactly the same basis either (see section H) — so this compares list
-      conventions, not guaranteed guest-paid totals; (2) Twiddy's n=1 isn't a real sample, shown
-      for completeness only. Brindley Beach, RBO, Coastal Carolina, and Houfy all have qualifying
-      properties in the cohort but zero tracked bookings yet.
+      <b>Corrected mid-session — this table changed substantially once the pool requirement was
+      dropped.</b> Sample sizes jumped across the board (Sun Realty alone went from 14 to 77
+      bookings), and four PMCs (Coastal Carolina, Outer Banks Blue, Carolina Shores, Brindley Beach)
+      are newly in the cohort. Coastal Carolina and Outer Banks Blue now draw the clearest premium
+      among PMCs with a real sample; Sun Realty holds a strong, now much better-supported position.
+      Village Realty sits solidly mid-pack. One data-quality note of our own: 3 Brindley Beach
+      bookings at $75/week were excluded as obvious scrape artifacts (no real summer week prices
+      that low) before computing its median — flagged here rather than silently dropped. Read with
+      the usual caveat: rate conventions differ by PMC (see section H), so this compares list
+      conventions, not guaranteed guest-paid totals; Carolina Shores' n=1 isn't a real sample.
     </div>
   </section>
 
@@ -706,10 +720,11 @@ footer{
       <h2>Same criteria, Corolla only</h2>
     </div>
     <p class="lede">
-      Same strict filters as section F, narrowed to Corolla — OSH10's exact-twin spec (3BR, pool
-      <i>and</i> hot tub, CLEAR view, 300–1500 ft), not the broader "comparable inventory" reading
-      from the top of this report. Only 7 properties qualify, from the same 3 PMCs flagged there as
-      exact-twin matches, named individually below.
+      Same strict filters as section F, narrowed to Corolla — OSH10's exact-twin spec (3BR, hot
+      tub, CLEAR view, 300–1500 ft), not the broader "comparable inventory" reading from the top of
+      this report. 10 properties qualify (corrected mid-session — see the note at the top of this
+      report), from the 4 PMCs flagged there as exact-twin matches plus 3 RBO/VRBO listings, named
+      individually below.
     </p>
     <div class="tablewrap">
       <table>
@@ -717,13 +732,16 @@ footer{
           <tr><th>Property</th><th>PMC</th><th class="num">Ft to ocean</th><th class="num">Clear rays</th></tr>
         </thead>
         <tbody>
-          <tr class="target"><td>OSH10: The Salty Unicorn</td><td>Village Realty</td><td class="num">755</td><td class="num">87.8%</td></tr>
-          <tr><td>MB54: Blue Crab Cottage</td><td>Village Realty</td><td class="num">713</td><td class="num">95.6%</td></tr>
-          <tr><td>WR5E: Dune Time</td><td>Village Realty</td><td class="num">833</td><td class="num">81.7%</td></tr>
-          <tr><td>Wicked Fun</td><td>KEES</td><td class="num">833</td><td class="num">81.7%</td></tr>
-          <tr><td>WL1020, Kookaburra</td><td>Brindley Beach</td><td class="num">530</td><td class="num">94.4%</td></tr>
-          <tr><td>"Private pool w/heat, hot tub, pet friendly"</td><td>RBO <i>(VRBO)</i></td><td class="num">1,314</td><td class="num">73.9%</td></tr>
+          <tr><td>WH1019, Ruggles</td><td>Carolina Shores</td><td class="num">313</td><td class="num">100.0%</td></tr>
+          <tr><td>4x2000, Sandfiddler Inn</td><td>Brindley Beach</td><td class="num">346</td><td class="num">98.9%</td></tr>
+          <tr><td>"Semi-Oceanfront, Wild Horses, Hot Tub"</td><td>RBO <i>(VRBO)</i></td><td class="num">346</td><td class="num">98.9%</td></tr>
           <tr><td>"4X4 beach, private pool open in May"</td><td>RBO <i>(VRBO)</i></td><td class="num">454</td><td class="num">98.9%</td></tr>
+          <tr><td>WL1020, Kookaburra</td><td>Brindley Beach</td><td class="num">530</td><td class="num">94.4%</td></tr>
+          <tr class="target"><td>OSH10: The Salty Unicorn</td><td>Village Realty</td><td class="num">755</td><td class="num">87.8%</td></tr>
+          <tr><td>WR5E: Dune Time</td><td>Village Realty</td><td class="num">833</td><td class="num">81.7%</td></tr>
+          <tr><td>Wicked Fun</td><td>KEES</td><td class="num">833</td><td class="num">82.8%</td></tr>
+          <tr><td>MB54: Blue Crab Cottage</td><td>Village Realty</td><td class="num">713</td><td class="num">95.6%</td></tr>
+          <tr><td>"Private pool w/heat, hot tub, pet friendly"</td><td>RBO <i>(VRBO)</i></td><td class="num">1,314</td><td class="num">73.9%</td></tr>
         </tbody>
       </table>
     </div>
@@ -734,20 +752,25 @@ footer{
           <tr><th>PMC</th><th class="num">Bookings (n)</th><th class="num">Median</th><th class="num">Range</th></tr>
         </thead>
         <tbody>
-          <tr class="target"><td>Village Realty</td><td class="num">13</td><td class="num">$2,679</td><td class="num">$1,300–$3,851</td></tr>
-          <tr><td>KEES</td><td class="num">3</td><td class="num">$2,874</td><td class="num">$1,521–$3,163</td></tr>
-          <tr><td>Brindley Beach</td><td class="num">0</td><td class="num">—</td><td class="num">no tracked bookings</td></tr>
+          <tr class="target"><td>Village Realty</td><td class="num">15</td><td class="num">$1,955</td><td class="num">$785–$3,813</td></tr>
+          <tr><td>KEES</td><td class="num">9</td><td class="num">$1,990</td><td class="num">$1,489–$2,746</td></tr>
+          <tr><td>Carolina Shores</td><td class="num">1</td><td class="num">$3,436</td><td class="num">— (single data point)</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">0</td><td class="num">—</td><td class="num">no real tracked bookings*</td></tr>
           <tr><td>RBO <i>(VRBO)</i></td><td class="num">0</td><td class="num">—</td><td class="num">no tracked bookings</td></tr>
         </tbody>
       </table>
     </div>
     <div class="callout gap-note">
-      <b>Too thin to call a winner.</b> Only 2 of the 7 Corolla-matched properties have any
-      tracked booking history at all (both Village Realty's own — one is OSH10 itself — plus one
-      KEES property). Brindley Beach's and both RBO listings' booking history is empty on our end —
-      shown as 0 above rather than omitted, so the gap is visible without reading this note.
-      The OBX-wide table above (section F) is the more reliable read on PM-level premium; this
-      table mainly confirms OSH10 isn't priced out of line with its one direct local match.
+      <b>Corrected mid-session, and thin, but readable now.</b> Village Realty's own row grows from
+      13 to 15 bookings with OSH10 correctly included (OSH10 itself has 9 all-time), pulling its
+      median down to $1,955 — a wider, more honest range than before, spanning off-peak and peak
+      weeks together. KEES is close behind at $1,990. Carolina Shores is new to this cohort but n=1
+      isn't a real sample. *Brindley Beach shows 0 real bookings, not because it's untracked but
+      because its only 5 logged bookings were the same $75/week scrape artifact flagged in section F
+      — excluded here too, shown as 0 rather than the misleading $75. RBO's 3 listings have no
+      tracked booking history at all on our end. The OBX-wide table above (section F) remains the
+      more reliable read on PM-level premium; this table mainly confirms OSH10 isn't priced out of
+      line with its direct local matches.
     </div>
   </section>
 
@@ -956,7 +979,7 @@ footer{
     </div>
     <p class="lede">
       Realized rates (high-confidence inferred bookings, peak season Jun–Aug 2026, all Corolla
-      properties with a known bedroom count — not limited to the narrow 3BR/pool/hot-tub cohort),
+      properties with a known bedroom count — not limited to the narrow 3BR/hot-tub cohort),
       divided by bedroom count and normalized to a monthly figure. This is the most
       statistically solid PM-level comparison in this report — real sample sizes (46–567 bookings
       per PMC), not a handful of thin data points.
@@ -1055,6 +1078,7 @@ footer{
     Resort Realty/Shoreline OBX guest-fee bug (section H): found + fixed at the source 2026-09-09; Resort Realty's Jun–Aug 2026 $/bedroom row (section J) is excluded as a result, permanently -- that season has already passed<br>
     Who operates in Corolla (top of report): active-listing census, computed 2026-09-10; spec-twin match uses the same criteria as sections F/G<br>
     OSH10 revenue-opportunity estimate: same EV-maximizing model behind Owner Hub's Revenue Opportunity tool (ADR 0044 Module 1), computed 2026-09-10 against a live 30-property comp cohort; cuts-only, haircut-adjusted by fallback confidence<br>
+    Pool amenity correction: our scraper's has_pool flag false-positives on any "Pool Table" amenity (regex \bpools?\b matches the word "Pool" alone) -- caught on OSH10 itself mid-session, since it has a hot tub and a pool table but no swimming pool; every spec-matched cohort in this report was rebuilt on hot tub only. Confirmed real but contained fleet-wide (~51 of 13,634 properties), not yet fixed at the source -- own follow-up, tracked separately from this report<br>
     Prepared informally for neighbor reference — not an audit of any property manager
   </footer>
 
