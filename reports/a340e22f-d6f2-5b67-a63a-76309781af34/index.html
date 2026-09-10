@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>617 Skimmer Arch Snapshot — OBX Deals</title>
+<meta name="description" content="Private PMC comparison report for 617 Skimmer Arch (OSH10), Corolla, Outer Banks -- booking pace, pricing, search visibility, and reputation across PMCs.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://obx.deals/reports/a340e22f-d6f2-5b67-a63a-76309781af34/">
+<link rel="icon" href="https://obx.deals/favicon.ico">
+</head>
+<body>
+<div style="max-width:900px;margin:0 auto;padding:14px 28px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px">
+  <a href="https://obx.deals/property/corolla/_/a340e22f-d6f2-5b67-a63a-76309781af34/" style="color:#2e6e7e;text-decoration:none">&larr; Back to OSH10's obx.deals property page</a>
+</div>
+<style>
+:root{
+  --bg:#f7f5f0;
+  --surface:#ffffff;
+  --ink:#1e2a32;
+  --ink-muted:#5c6b73;
+  --ink-faint:#8b979c;
+  --accent:#2e6e7e;
+  --accent-soft:#e4eeef;
+  --line:#dde3e1;
+  --good:#3f7d52;
+  --good-bg:#e9f3ec;
+  --warn:#b8862f;
+  --warn-bg:#faf1e0;
+  --bad:#b04a3d;
+  --bad-bg:#f8e9e6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#171d21;
+    --surface:#1f2731;
+    --ink:#eef2f2;
+    --ink-muted:#a4b0b3;
+    --ink-faint:#728086;
+    --accent:#6fb8c4;
+    --accent-soft:#243a3e;
+    --line:#33404a;
+    --good:#79c295;
+    --good-bg:#20332a;
+    --warn:#e0b263;
+    --warn-bg:#3a2f1c;
+    --bad:#e08d7e;
+    --bad-bg:#3a2521;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#171d21;
+  --surface:#1f2731;
+  --ink:#eef2f2;
+  --ink-muted:#a4b0b3;
+  --ink-faint:#728086;
+  --accent:#6fb8c4;
+  --accent-soft:#243a3e;
+  --line:#33404a;
+  --good:#79c295;
+  --good-bg:#20332a;
+  --warn:#e0b263;
+  --warn-bg:#3a2f1c;
+  --bad:#e08d7e;
+  --bad-bg:#3a2521;
+}
+
+@font-face{
+  font-family:'Fraunces';
+  src:local('Fraunces');
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Source Sans 3', system-ui, -apple-system, sans-serif;
+  line-height:1.55;
+}
+.page{
+  max-width:760px;
+  margin:0 auto;
+  padding:56px 28px 80px;
+}
+.mono{ font-family:'IBM Plex Mono', ui-monospace, Menlo, monospace; font-variant-numeric:tabular-nums; }
+
+/* ---- Header ---- */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding-bottom:22px;
+  margin-bottom:8px;
+}
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.09em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 10px;
+}
+h1{
+  font-family:'Fraunces', Georgia, serif;
+  font-weight:600;
+  font-size:clamp(28px,4.2vw,38px);
+  line-height:1.12;
+  margin:0 0 6px;
+  text-wrap:balance;
+}
+.subtitle{
+  font-size:16px;
+  color:var(--ink-muted);
+  margin:0;
+}
+.subtitle b{ color:var(--ink); font-weight:600; }
+
+.factrow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 10px;
+  margin-top:18px;
+}
+.factchip{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12.5px;
+  color:var(--ink-muted);
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:5px 10px;
+}
+.factchip strong{ color:var(--ink); font-weight:500; }
+
+/* ---- Stat tiles ---- */
+.tiles{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  margin:28px 0;
+}
+.tile{
+  background:var(--surface);
+  padding:16px 16px 14px;
+}
+.tile .num{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:26px;
+  line-height:1.1;
+}
+.tile .lbl{
+  font-size:11.5px;
+  color:var(--ink-muted);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  margin-top:4px;
+}
+
+/* ---- Sections ---- */
+section{ margin-top:44px; }
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:8px;
+  margin-bottom:16px;
+}
+.sec-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--accent);
+  background:var(--accent-soft);
+  padding:2px 7px;
+  border-radius:4px;
+  letter-spacing:0.04em;
+}
+h2{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:20px;
+  margin:0;
+}
+p{ margin:0 0 12px; color:var(--ink); }
+.lede{ color:var(--ink-muted); font-size:15px; margin-bottom:16px; }
+
+/* ---- Tables ---- */
+.tablewrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; }
+table{ width:100%; border-collapse:collapse; font-size:13.5px; min-width:520px; }
+th{
+  text-align:left;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  color:var(--ink-muted);
+  background:var(--accent-soft);
+  padding:9px 12px;
+  border-bottom:1px solid var(--line);
+}
+td{
+  padding:9px 12px;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+}
+tr:last-child td{ border-bottom:none; }
+tr.target td{ background:var(--accent-soft); font-weight:600; }
+td.num, th.num{ text-align:right; font-family:'IBM Plex Mono',monospace; }
+
+.pill{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:99px;
+  font-size:11.5px;
+  font-family:'IBM Plex Mono', monospace;
+}
+.pill.good{ background:var(--good-bg); color:var(--good); }
+.pill.warn{ background:var(--warn-bg); color:var(--warn); }
+.pill.bad{ background:var(--bad-bg); color:var(--bad); }
+.pill.neutral{ background:var(--accent-soft); color:var(--accent); }
+
+/* ---- Callouts ---- */
+.callout{
+  border-left:3px solid var(--accent);
+  background:var(--surface);
+  border-radius:0 6px 6px 0;
+  padding:12px 16px;
+  font-size:14px;
+  color:var(--ink-muted);
+  margin:14px 0;
+}
+.callout b{ color:var(--ink); }
+.gap-note{
+  border-left:3px solid var(--warn);
+}
+.gap-note b{ color:var(--warn); }
+
+.checklist{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; }
+.checklist li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-size:14.5px;
+}
+.checklist .mark{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:4px;
+  padding:1px 6px;
+  flex-shrink:0;
+  margin-top:2px;
+}
+
+.sources{
+  display:flex; flex-direction:column; gap:6px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12.5px;
+  color:var(--ink-muted);
+}
+.sources span b{ color:var(--ink); }
+
+/* ---- Bar chart ---- */
+.barchart{ display:flex; flex-direction:column; gap:10px; margin:14px 0; }
+.bar-row{ display:flex; align-items:center; gap:10px; }
+.bar-label{ flex:0 0 130px; font-size:13px; color:var(--ink); }
+.bar-track{ flex:1; background:var(--accent-soft); border-radius:5px; height:20px; position:relative; overflow:hidden; }
+.bar-fill{ position:absolute; inset:0 auto 0 0; background:var(--accent); border-radius:5px; }
+.bar-fill.target{ background:var(--warn); }
+.bar-val{ flex:0 0 66px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-muted); }
+
+footer{
+  margin-top:56px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:12px;
+  color:var(--ink-faint);
+  font-family:'IBM Plex Mono', monospace;
+  line-height:1.7;
+}
+</style>
+
+<div class="page">
+
+  <div class="masthead">
+    <p class="eyebrow">Market snapshot &middot; Ocean Sands H, Corolla NC</p>
+    <h1>617 Skimmer Arch</h1>
+    <p class="subtitle">OSH10 &middot; <b>The Salty Unicorn</b> &middot; currently listed with <b>Village Realty</b></p>
+    <div class="factrow">
+      <span class="factchip"><strong>3BR / 2BA</strong> &middot; sleeps 6</span>
+      <span class="factchip">Pool + hot tub</span>
+      <span class="factchip">755 ft to beach &middot; clear ocean view corridor</span>
+      <span class="factchip">4.9★ <strong>&middot; 66 reviews</strong></span>
+    </div>
+  </div>
+
+  <p class="lede" style="margin-top:20px;">
+    Pulled from rental-intel's own daily scrape of ~13,600 Outer Banks listings across 26 property
+    managers, compared against five other houses on the same block of Skimmer Arch/Court/Way — same
+    micro-market, different PMCs. Built for an informal look at how OSH10 is performing under Village
+    Realty versus what the neighbors are getting elsewhere. Not a substitute for reading an actual
+    owner statement.
+  </p>
+
+  <div class="tiles">
+    <div class="tile"><div class="num">5</div><div class="lbl">Bookings captured, peak 2026</div></div>
+    <div class="tile"><div class="num">4.9★</div><div class="lbl">Village Realty site rating</div></div>
+    <div class="tile"><div class="num">61st pct</div><div class="lbl">Priced vs. market (latest read)</div></div>
+    <div class="tile"><div class="num">6</div><div class="lbl">Same-street comps tracked</div></div>
+    <div class="tile"><div class="num">37%</div><div class="lbl">VR's own page ranks #1 in Google</div></div>
+    <div class="tile"><div class="num">Tier 2 vs 3</div><div class="lbl">VR vs RR reputation (NotebookLM)</div></div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">A</span>
+      <h2>Booking pace, peak 2026 season</h2>
+    </div>
+    <p class="lede">
+      "Booking" here means a week that went from available to unavailable in our daily snapshots,
+      filtered to high-confidence detections only (a looser pass counted the same booking twice
+      across snapshots and was discarded). Window: May 1 – Oct 15, 2026.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Address</th><th>PMC</th><th class="num">Beds</th><th>View</th><th class="num">Bookings</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>617 Skimmer Arch (OSH10)</td><td>Village Realty</td><td class="num">3</td><td>Interior</td><td class="num">5</td></tr>
+          <tr><td>628 Skimmer Ct (OSH01)</td><td>Village Realty</td><td class="num">4</td><td>Interior</td><td class="num">3</td></tr>
+          <tr><td>613 Skimmer Arch</td><td>Brindley Beach</td><td class="num">5</td><td>Oceanside</td><td class="num">4</td></tr>
+          <tr><td>615 Skimmer Arch</td><td>Beach Realty NC</td><td class="num">4</td><td>Oceanside</td><td class="num">3</td></tr>
+          <tr><td>611 Skimmer Arch (Sec. H)</td><td>Resort Realty</td><td class="num">5</td><td>Oceanside</td><td class="num">10</td></tr>
+          <tr><td>605 Skimmer Arch (Sec. H)</td><td>Resort Realty</td><td class="num">6</td><td>Oceanfront</td><td class="num">5</td></tr>
+          <tr><td>604 Skimmer Arch (Sec. H)</td><td>Resort Realty</td><td class="num">7</td><td>Oceanside</td><td class="num">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>Read with care:</b> OSH10 is the smallest house on this list (3BR, interior lot, no direct
+      ocean view) next to mostly 5–7BR oceanside/oceanfront homes — bigger, view-premium houses turn
+      over more often almost by default. The cleaner comparison is the other Village Realty house on
+      the block (OSH01): OSH10 out-booked it 5-to-3 in the same window. The standout is the three
+      Resort Realty houses on Sec. H two doors down, which booked 5–10 times each despite similar or
+      larger size — worth noting as a PMC-level pattern, not just a house-level one.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">B</span>
+      <h2>Pricing position vs. market</h2>
+    </div>
+    <p class="lede">
+      Every priced, available week gets a percentile against comparable OBX listings (bedroom count,
+      view tier, amenities) on our public search tool at
+      <span class="mono">search.obx.deals</span>. Below 33rd pct reads "below market," 33–66th
+      "fair," 66–90th "above market," 90th+ "premium." Shown where we have a reading; Village
+      Realty's own calendar only surfaces pricing on a handful of weeks at a time (see gap note below).
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Address</th><th>PMC</th><th class="num">Weeks priced</th><th>Typical position</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>617 Skimmer Arch (OSH10)</td><td>Village Realty</td><td class="num">5</td><td><span class="pill warn">Above market</span> / <span class="pill good">Fair</span> mixed</td></tr>
+          <tr><td>628 Skimmer Ct (OSH01)</td><td>Village Realty</td><td class="num">3</td><td><span class="pill bad">Premium</span> / <span class="pill warn">Above market</span></td></tr>
+          <tr><td>613 Skimmer Arch</td><td>Brindley Beach</td><td class="num">11</td><td><span class="pill good">Below market</span>, consistently</td></tr>
+          <tr><td>615 Skimmer Arch</td><td>Beach Realty NC</td><td class="num">5</td><td><span class="pill good">Fair</span> / <span class="pill warn">Above market</span> mixed</td></tr>
+          <tr><td>604–611 Skimmer Arch (Sec. H)</td><td>Resort Realty</td><td class="num">40+</td><td><span class="pill good">Below market</span> off-peak, <span class="pill good">Fair</span> at peak</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>The pattern that stands out:</b> both Village Realty houses on this block price toward the
+      top of the comp set when they do publish a rate — OSH01 hit the <b>93rd percentile</b> for a
+      July 2027 week. Resort Realty's three houses two doors down stay in the below-market-to-fair
+      band across dozens of weeks, in every season, including their summer peak weeks at $6–7k. That
+      reads less like "Resort Realty is cheaper" and more like a pricing team that adjusts
+      continuously to what's actually clearing, vs. a small set of rate points that don't move.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">C</span>
+      <h2>Guest ratings (per-listing, self-reported)</h2>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Address</th><th>PMC</th><th class="num">Rating</th><th class="num">Reviews</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>617 Skimmer Arch (OSH10)</td><td>Village Realty</td><td class="num">4.9</td><td class="num">66</td></tr>
+          <tr><td>628 Skimmer Ct (OSH01)</td><td>Village Realty</td><td class="num">4.8</td><td class="num">16</td></tr>
+          <tr><td>613 Skimmer Arch</td><td>Brindley Beach</td><td class="num">4.5</td><td class="num">8</td></tr>
+          <tr><td>615 Skimmer Arch</td><td>Beach Realty NC</td><td class="num">4.9</td><td class="num">20</td></tr>
+          <tr><td>604–611 Skimmer Arch (Sec. H)</td><td>Resort Realty</td><td class="num">—</td><td class="num">1 ea.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      OSH10's 4.9★ / 66 reviews is the strongest guest record on the block by review volume — that's
+      a real asset if it moves PMCs, since guest reviews on most platforms don't carry over. Resort
+      Realty's listings show almost no reviews on-site (1 placeholder each), which likely means their
+      site just doesn't surface guest reviews prominently, not that the houses are unreviewed —
+      worth a manual check on Google/Tripadvisor before reading anything into it.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">D</span>
+      <h2>Website search visibility</h2>
+    </div>
+    <p class="lede">
+      Company-level, not house-level — this is how well each PMC's own website surfaces in Google
+      relative to listing aggregators (VRBO, Booking.com, Airbnb, etc.), sampled across a random set
+      of each PMC's properties by searching each one's exact name + town. A PM whose own page loses
+      that search sends its own booking-fee-free traffic to an OTA instead.
+    </p>
+    <h3 style="font-size:13px;margin:18px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Own-name Google search (30 properties sampled per PMC, Jun 2026)</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th class="num">Found in top 10</th><th class="num">Own page ranks #1</th><th class="num">Avg. rank (when found)</th><th class="num">OTA in top 3</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>Village Realty</td><td class="num">29/30</td><td class="num">11/30 (37%)</td><td class="num">2.59</td><td class="num">21/30 (70%)</td></tr>
+          <tr><td>Resort Realty</td><td class="num">29/30</td><td class="num">22/30 (73%)</td><td class="num">1.66</td><td class="num">27/30 (90%)</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">28/30</td><td class="num">26/30 (87%)</td><td class="num">1.18</td><td class="num">13/30 (43%)</td></tr>
+          <tr><td>Beach Realty NC</td><td class="num">29/30</td><td class="num">24/30 (80%)</td><td class="num">1.31</td><td class="num">24/30 (80%)</td></tr>
+          <tr><td>Carolina Designs</td><td class="num">28/29</td><td class="num">25/29 (86%)</td><td class="num">1.18</td><td class="num">21/29 (72%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>This is the clearest gap in the whole comp set.</b> Almost every PMC here finds its
+      properties in Google about equally well (28–29 of 30) — the difference is who <i>wins the top
+      spot</i> once found. Village Realty's own page ranks #1 for only <b>37%</b> of sampled
+      properties, worst of the five by a wide margin; Brindley Beach and Carolina Designs win it
+      &gt;85% of the time. In practice that means when someone searches "OSH10 The Salty Unicorn
+      Corolla NC," there's better than even odds an OTA page (VRBO, Booking.com) outranks Village
+      Realty's own listing — sending that booking through a fee-added third party instead of direct.
+      Resort Realty isn't the strongest performer here either (73%), but it clears Village Realty by
+      roughly double.
+    </div>
+    <h3 style="font-size:13px;margin:22px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Monthly site traffic (SimilarWeb estimate, trailing 3mo through Aug 2026)</h3>
+    <div class="barchart">
+      <div class="bar-row"><div class="bar-label">Carolina Designs</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">~78.7K/mo</div></div>
+      <div class="bar-row"><div class="bar-label">Beach Realty NC</div><div class="bar-track"><div class="bar-fill" style="width:27.4%"></div></div><div class="bar-val">~21.6K/mo</div></div>
+      <div class="bar-row"><div class="bar-label">Resort Realty</div><div class="bar-track"><div class="bar-fill" style="width:27.0%"></div></div><div class="bar-val">~21.3K/mo</div></div>
+      <div class="bar-row"><div class="bar-label" style="font-weight:600">Village Realty</div><div class="bar-track"><div class="bar-fill target" style="width:17.4%"></div></div><div class="bar-val">~13.7K/mo</div></div>
+      <div class="bar-row"><div class="bar-label">Brindley Beach</div><div class="bar-track"><div class="bar-fill" style="width:10.5%"></div></div><div class="bar-val">~8.3K/mo</div></div>
+    </div>
+    <p class="lede" style="margin-top:6px">
+      Village Realty draws the second-least overall traffic of the five, behind only Brindley
+      Beach — and Brindley Beach still wins its own-name search 87% of the time despite less
+      traffic, so raw traffic and search-ranking discipline aren't the same lever. Village Realty is
+      behind on both.
+    </p>
+
+    <h3 style="font-size:13px;margin:22px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Generic head-term rankings, full result order (single-query snapshot)</h3>
+    <p class="lede">
+      Different methodology from the table above, and weaker evidence — one search each via a
+      general web-search tool, not the repeatable 30-sample-per-PMC audit. Shown in full rank order,
+      unfiltered, rather than pulled out to just the two PMCs in this report.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th class="num">#</th><th>"outer banks beach house rentals"</th><th>"outer banks vacation rentals"</th><th>"corolla nc vacation rentals"</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Twiddy</td><td>Twiddy</td><td>Sun Realty</td></tr>
+          <tr><td class="num">2</td><td>VRBO <i>(OTA)</i></td><td>Sun Realty</td><td>Seaside Vacations</td></tr>
+          <tr><td class="num">3</td><td>Outerbanks.org <i>(aggregator)</i></td><td>Vacasa</td><td>HomeToGo <i>(aggregator)</i></td></tr>
+          <tr><td class="num">4</td><td>HomeToGo <i>(aggregator)</i></td><td>Resort Realty</td><td>Beach Realty NC</td></tr>
+          <tr><td class="num">5</td><td>Southern Shores Realty</td><td>Seaside Vacations</td><td>corollaguide.com <i>(aggregator)</i></td></tr>
+          <tr><td class="num">6</td><td>Brindley Beach</td><td>Beach Realty NC</td><td>Coastal Carolina OBX</td></tr>
+          <tr><td class="num">7</td><td>Southern Shores Realty <i>(2nd page)</i></td><td>Brindley Beach</td><td class="target"><b>Village Realty</b></td></tr>
+          <tr><td class="num">8</td><td class="target"><b>Village Realty</b></td><td>KEES</td><td>—</td></tr>
+          <tr><td class="num">9</td><td>Joe Lamb Jr</td><td>Joe Lamb Jr</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      With the full field visible, the real comparison isn't just Village vs. Resort — it's that
+      <b>both are the weakest of the PMCs that appear at all</b>. Sun Realty and Seaside Vacations
+      place in 2 of 3 lists each, ahead of both Village Realty and Resort Realty every time either
+      shows up; Beach Realty NC and Brindley Beach also place more consistently than either. Neither
+      Village Realty nor Resort Realty ever breaks the top 3, and each is completely absent from two
+      of the three searches. On generic terms, brand scale (Twiddy) and broad OTA/aggregator reach
+      dominate regardless of which mid-size PMC manages the house — this particular gap looks like it
+      would persist across a Village→Resort switch, unlike the property-name search gap above.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">E</span>
+      <h2>PM-level customer reviews</h2>
+    </div>
+    <p class="lede">
+      Not this project's own data — a NotebookLM synthesis built from BBB, Trustpilot,
+      Outer Banks Coastal Life, Reddit (r/obx), and Facebook OBX travel/owner groups. Not
+      independently checked by us against those sources; treat it as a well-organized starting point
+      for your own reading, not a verified rating. Shown in full — every PMC NotebookLM placed,
+      grouped by its own four tiers — not narrowed to Village/Resort.
+    </p>
+    <p class="lede">
+      Trimmed to what a PM actually controls: response speed and communication. Physical-house
+      complaints (AC failures, appliance issues, general wear) happen to every PM's inventory
+      regardless of management quality — an AC unit fails on its own schedule, not the PM's — so
+      those are left out here even where the source cited them. Cleaning is left out too: a few bad
+      cleaning reviews turn up for every PM in a large enough sample, and a guest raving about how
+      clean a place was is rare enough that its absence isn't a signal either way. What's kept:
+      response time, communication quality, and how a PM handles a problem once one exists (refund
+      handling, dispute resolution, policy flexibility) — since those are genuinely under the PM's
+      control. Some tier labels below were originally driven partly by the now-removed
+      house-condition detail; read the tier as NotebookLM's overall call, not fully reconstructable
+      from what remains in this row alone.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th>Tier</th><th>Service &amp; communication signal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Carolina Designs Realty</td><td><span class="pill good">1 · Top-rated</span></td><td>BBB A+; Gold, Best Vacation PM Co. 2026 (OBX Coastal Life); "Best of the Beach" every year since 2013. Reddit: prompt service.</td></tr>
+          <tr><td>Coastal Carolina Vacations</td><td><span class="pill good">1 · Top-rated</span></td><td>2025 VRMA Property Management Company of the Year (national). High guest satisfaction in reviews.</td></tr>
+          <tr><td>Outer Banks Blue</td><td><span class="pill good">1 · Top-rated</span></td><td>Inc. 5000 list, 7 appearances. Guests describe a family-owned, personal level of service.</td></tr>
+          <tr><td>Cove Realty of Nags Head</td><td><span class="pill good">1 · Top-rated</span></td><td>BBB A+. Recommended as a solid, reliable choice.</td></tr>
+          <tr><td>Joe Lamb Jr. &amp; Associates</td><td><span class="pill neutral">2 · Strong</span></td><td>BBB A; 58+ years in business. Reddit: hassle-free experience, responsive local staff.</td></tr>
+          <tr><td>Surf or Sound Realty</td><td><span class="pill neutral">2 · Strong</span></td><td>4.2/5 on Google, 1,405+ five-star reviews. Consistently positive on OBX Facebook groups.</td></tr>
+          <tr class="target"><td>Village Realty OBX</td><td><span class="pill neutral">2 · Strong</span></td><td>BBB rating listed under parent PE platform. ~950 properties. Same-day issue resolution, upgrades offered when problems arise — with occasional complaints about policy enforcement.</td></tr>
+          <tr><td>Sun Realty</td><td><span class="pill neutral">2 · Strong</span></td><td>700+ properties. Well-regarded for holiday/emergency response time.</td></tr>
+          <tr><td>Twiddy &amp; Company</td><td><span class="pill warn">3 · Polarizing</span></td><td>BBB A+ (claimed profile); Trustpilot 3.6/5 across 1,300+ reviews; 1,000+ properties. Repeat guests value text-based communication — but recent reviews cite slow dispute resolution.</td></tr>
+          <tr><td>Resort Realty</td><td><span class="pill warn">3 · Polarizing</span></td><td>BBB A+. No service/communication-specific pattern in the sourced reviews once house-condition complaints are set aside.</td></tr>
+          <tr><td>Midgett Realty</td><td><span class="pill warn">3 · Polarizing</span></td><td>Dominant Hatteras Island specialist. Praised by long-time visitors; criticized for checkout billing disputes.</td></tr>
+          <tr><td>KEES Vacations</td><td><span class="pill warn">3 · Polarizing</span></td><td>BBB A-. Known for FlexStay flexible check-in days — a real scheduling-service differentiator.</td></tr>
+          <tr><td>Beach Realty</td><td><span class="pill bad">4 · Notable criticism</span></td><td>Reddit: difficult refund negotiations.</td></tr>
+          <tr><td>Hatteras Realty</td><td><span class="pill bad">4 · Notable criticism</span></td><td>No service/communication-specific pattern in the sourced reviews once house-condition complaints are set aside.</td></tr>
+          <tr><td>Booksmart Properties</td><td><span class="pill bad">4 · Notable criticism</span></td><td>No service/communication-specific pattern in the sourced reviews once house-condition complaints are set aside.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>This cuts against the search-visibility finding, not with it.</b> On reputation, Village
+      Realty (Tier 2, "Strong") outranks Resort Realty (Tier 3, "Polarizing") — the opposite ordering
+      from the Google-ranking table above, where Resort Realty roughly doubled Village Realty's
+      own-name search performance. Read together: Village Realty looks like a company that runs the
+      property well but under-invests in its own website's search competitiveness, while Resort
+      Realty's stronger search showing doesn't come with a matching service/communication reputation
+      to back it up. Neither is a clean upgrade over the other — they trade off on different things,
+      which is exactly why this is worth a direct conversation with Village Realty about their
+      SEO/tech spend before assuming a PMC switch is the fix.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">F</span>
+      <h2>Spec-matched cohort — Outer Banks-wide</h2>
+    </div>
+    <p class="lede">
+      Same-street comps (sections A–C) hold location fixed but vary size and view. This flips
+      it: hold size/amenities/view fixed and let location vary, across all 26 PMCs. Match
+      criteria: 3BR, pool + hot tub, GIS view classification <b>CLEAR</b>, 300–1500 ft to the
+      ocean. 39 properties qualify OBX-wide.
+    </p>
+    <div class="callout">
+      <b>OSH10's own view data, for reference:</b> GIS-computed CLEAR classification — 87.8% of
+      sightline rays swept from the house reach open ocean unobstructed, across 13 distinct
+      corridors, at 755 ft to the ocean (county-parcel-anchored, not the platform's fuzzed
+      coordinates). This is <i>not</i> the same as a "Verified View" badge — that's a separate,
+      owner-claimed and photo-verified program, and OSH10 hasn't been submitted to it. What's
+      shown here is the underlying GIS computation the badge program itself draws from, just
+      without the human claim/photo step.
+    </div>
+    <p class="lede" style="margin-top:14px">
+      Cohort composition: Avon (6, incl. 4 Hatteras Realty), Hatteras Village (10, incl. 4 Surf
+      or Sound + 5 Hatteras Realty), Kill Devil Hills (8, incl. 6 Sun Realty), Corolla (7 — see
+      section G), plus Kitty Hawk, Nags Head, South Nags Head, Salvo, and Carova (1–2 each).
+    </p>
+    <h3 style="font-size:13px;margin:18px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Realized rate by PMC, peak season only (Jun–Aug, high-confidence inferred bookings)</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th class="num">Bookings (n)</th><th class="num">Median</th><th class="num">Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sun Realty</td><td class="num">14</td><td class="num">$4,950</td><td class="num">$2,950–$7,603</td></tr>
+          <tr class="target"><td>Village Realty</td><td class="num">6</td><td class="num">$2,991</td><td class="num">$2,679–$3,965</td></tr>
+          <tr><td>KEES</td><td class="num">5</td><td class="num">$2,874</td><td class="num">$1,521–$5,406</td></tr>
+          <tr><td>Surf or Sound</td><td class="num">2</td><td class="num">$2,845</td><td class="num">$2,295–$3,395</td></tr>
+          <tr><td>Hatteras Realty</td><td class="num">11</td><td class="num">$2,426</td><td class="num">$1,654–$3,346</td></tr>
+          <tr><td>Twiddy</td><td class="num">1</td><td class="num">$5,200</td><td class="num">— (single data point)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>Sun Realty draws the clearest premium</b> for this exact spec (3BR, pool, hot tub, clear
+      sightline, close-in) among PMCs with a real sample — more than double Hatteras Realty's
+      median for the same house profile. Village Realty sits mid-pack. Read with two caveats: (1)
+      rate conventions differ by PMC — Hatteras Realty's number is fee-inclusive, Sun Realty's and
+      KEES's are not exactly the same basis either (see section H) — so this compares list
+      conventions, not guaranteed guest-paid totals; (2) Twiddy's n=1 isn't a real sample, shown
+      for completeness only. Brindley Beach, RBO, Coastal Carolina, and Houfy all have qualifying
+      properties in the cohort but zero tracked bookings yet.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">G</span>
+      <h2>Same criteria, Corolla only</h2>
+    </div>
+    <p class="lede">
+      Same filters, narrowed to Corolla — OSH10's actual town. Only 7 properties qualify, which
+      is itself informative: this exact spec (3BR/pool/hot tub/clear view/close-in) is genuinely
+      uncommon in Corolla specifically, most of the town's inventory being larger oceanfront
+      houses.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Property</th><th>PMC</th><th class="num">Ft to ocean</th><th class="num">Clear rays</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>OSH10: The Salty Unicorn</td><td>Village Realty</td><td class="num">755</td><td class="num">87.8%</td></tr>
+          <tr><td>MB54: Blue Crab Cottage</td><td>Village Realty</td><td class="num">713</td><td class="num">95.6%</td></tr>
+          <tr><td>WR5E: Dune Time</td><td>Village Realty</td><td class="num">833</td><td class="num">81.7%</td></tr>
+          <tr><td>Wicked Fun</td><td>KEES</td><td class="num">833</td><td class="num">81.7%</td></tr>
+          <tr><td>WL1020, Kookaburra</td><td>Brindley Beach</td><td class="num">530</td><td class="num">94.4%</td></tr>
+          <tr><td>"Private pool w/heat, hot tub, pet friendly"</td><td>RBO <i>(VRBO)</i></td><td class="num">1,314</td><td class="num">73.9%</td></tr>
+          <tr><td>"4X4 beach, private pool open in May"</td><td>RBO <i>(VRBO)</i></td><td class="num">454</td><td class="num">98.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="font-size:13px;margin:18px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Realized rate by PMC (all confirmed bookings — sample too thin for peak-only)</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th class="num">Bookings (n)</th><th class="num">Median</th><th class="num">Range</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>Village Realty</td><td class="num">13</td><td class="num">$2,679</td><td class="num">$1,300–$3,851</td></tr>
+          <tr><td>KEES</td><td class="num">3</td><td class="num">$2,874</td><td class="num">$1,521–$3,163</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">0</td><td class="num">—</td><td class="num">no tracked bookings</td></tr>
+          <tr><td>RBO <i>(VRBO)</i></td><td class="num">0</td><td class="num">—</td><td class="num">no tracked bookings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout gap-note">
+      <b>Too thin to call a winner.</b> Only 2 of the 7 Corolla-matched properties have any
+      tracked booking history at all (both Village Realty's own — one is OSH10 itself — plus one
+      KEES property). Brindley Beach's and both RBO listings' booking history is empty on our end —
+      shown as 0 above rather than omitted, so the gap is visible without reading this note.
+      The OBX-wide table above (section F) is the more reliable read on PM-level premium; this
+      table mainly confirms OSH10 isn't priced out of line with its one direct local match.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">H</span>
+      <h2>Guest-facing fees — live-sampled, not just categorized</h2>
+    </div>
+    <p class="lede">
+      No PMC in either cohort publishes itemized fees in a form we scrape continuously (Evolve is
+      the only PMC in our whole dataset that does, and it's not in this cohort). Per your
+      direction, sampled real, live quotes directly from each PM's own booking engine instead of
+      just citing the general rate convention.
+    </p>
+    <div class="textcompare" style="display:flex;gap:16px;flex-wrap:wrap;margin:14px 0">
+      <div class="tile" style="flex:1;min-width:240px;padding:16px">
+        <div style="font-weight:600;margin-bottom:8px">OSH10 itself — Village Realty<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Nov 7–14 2026</span></div>
+        <div style="font-size:13.5px;line-height:1.9">
+          Rent&nbsp; <span class="mono" style="float:right">$1,156.34</span><br>
+          Taxes (12.75%)&nbsp; <span class="mono" style="float:right">$147.43</span><br>
+          <b>Total&nbsp; <span class="mono" style="float:right">$1,303.77</span></b>
+        </div>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">No booking fee, service fee, or admin fee line at all — confirms the "rent + taxes only" convention with a real number straight from this listing.</p>
+      </div>
+      <div class="tile" style="flex:1;min-width:240px;padding:16px">
+        <div style="font-weight:600;margin-bottom:8px">Wicked Fun — KEES<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Sep 12–19 2026</span></div>
+        <div style="font-size:13.5px;line-height:1.9">
+          Rent (promo, was $1,567)&nbsp; <span class="mono" style="float:right">$977.00</span><br>
+          Administrative Fee&nbsp; <span class="mono" style="float:right">$92.82</span><br>
+          Taxes (Currituck + NC)&nbsp; <span class="mono" style="float:right">$136.41</span><br>
+          <b>Total&nbsp; <span class="mono" style="float:right">$1,206.23</span></b>
+        </div>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">A real, flat "Administrative Fee" on top of rent — ~9.5% of the discounted rent shown, separate from tax. This is the fee Village Realty's quote doesn't have.</p>
+      </div>
+      <div class="tile" style="flex:1;min-width:240px;padding:16px">
+        <div style="font-weight:600;margin-bottom:8px">4 Salty Paws 147 — Hatteras Realty<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Oct 31–Nov 7 2026</span></div>
+        <div style="font-size:13.5px;line-height:1.9">
+          "Rent and Fees"&nbsp; <span class="mono" style="float:right">$1,355.85</span><br>
+          Tax (12.75%)&nbsp; <span class="mono" style="float:right">$172.87</span><br>
+          <b>Total&nbsp; <span class="mono" style="float:right">$1,528.72</span></b>
+        </div>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">Own site's exact label is "Rent and Fees" — one combined line, no breakdown of what's rent vs. what's fee. Whatever guest-side fee HR charges is baked into that number invisibly; the only itemized line is tax.</p>
+      </div>
+      <div class="tile" style="flex:1;min-width:240px;padding:16px">
+        <div style="font-weight:600;margin-bottom:8px">FFR001 OBX Diamond — Outer Banks Blue<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Live quote, Nov 15–22 2026</span></div>
+        <div style="font-size:13.5px;line-height:1.9">
+          Rent&nbsp; <span class="mono" style="float:right">$4,487.00</span><br>
+          Taxes (12.75%)&nbsp; <span class="mono" style="float:right">$572.09</span><br>
+          <b>Total&nbsp; <span class="mono" style="float:right">$5,059.09</span></b>
+        </div>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">Same Streamline VRS platform as Hatteras Realty, same company family — but OBB's own quote labels this line plain "Rent," not "Rent and Fees." Two sibling platforms on identical software, different labeling choices.</p>
+      </div>
+      <div class="tile" style="flex:1;min-width:240px;padding:16px">
+        <div style="font-weight:600;margin-bottom:8px">Evolve (fleet-wide)<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Stored itemized data, not a live quote</span></div>
+        <div style="font-size:13.5px;line-height:1.9">
+          Service fee&nbsp; <span class="mono" style="float:right">10%, capped $750</span><br>
+          Cleaning fee&nbsp; <span class="mono" style="float:right">$90–150 sampled</span><br>
+          Damage protection&nbsp; <span class="mono" style="float:right">$22.50/night</span>
+        </div>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The one PMC in the whole 26-PMC dataset that already publishes itemized fees in scrapeable form (ADR 0063) — no live sample needed. Not in either cohort (too few Evolve listings match the spec), shown for reference.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <b>Five real samples, five different disclosure styles</b> — and 10 total PMCs now
+      live-checked (see full table below). Village Realty: nothing but rent and tax. Outer Banks
+      Blue: same, plain "Rent" + tax, on the very same software Hatteras Realty uses to bundle
+      fees invisibly into "Rent and Fees." KEES: a named, itemized Administrative Fee. Hatteras
+      Realty: fees folded into "Rent and Fees" with zero visibility into the split. Evolve: the
+      most transparent of all — a fully itemized 10%/cleaning/damage breakdown, though not shown
+      in this cohort's live sample since no Evolve property matched the spec. Checking 5 more
+      Track-platform PMCs (below) confirmed the same story holds there too: Joe Lamb Jr and
+      Atlantic Realty itemize a named admin fee on top of rent; Southern Shores itemizes taxes
+      plus a named $65 "Home Service Fee"; Coastal Carolina bundles everything into "Rent and
+      Fees" exactly like Hatteras Realty; Ocracoke Island Realty shows rent and tax only, like
+      Village Realty. Same underlying software platform never predicts fee transparency — it's a
+      per-company choice, confirmed now across two different platform families, not a platform
+      constraint.
+    </div>
+
+    <h3 style="font-size:13px;margin:22px 0 8px;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">All 26 PMCs — what we could actually check</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th>Fee visibility</th></tr>
+        </thead>
+        <tbody>
+          <tr class="target"><td>Village Realty</td><td>✅ Live-checked — rent + tax only, no fee line</td></tr>
+          <tr><td>KEES</td><td>✅ Live-checked — named "Administrative Fee," itemized</td></tr>
+          <tr><td>Hatteras Realty</td><td>✅ Live-checked — "Rent and Fees" bundled, not separable</td></tr>
+          <tr><td>Outer Banks Blue</td><td>✅ Live-checked — rent + tax only, no fee line</td></tr>
+          <tr><td>Evolve</td><td>✅ Already itemized in our own data (ADR 0063) — 10% service fee/cleaning/damage</td></tr>
+          <tr><td>Sun Realty</td><td>⚠️ Live-checked — platform returns single bottom-line price only, no breakdown</td></tr>
+          <tr><td>Brindley Beach</td><td>⚠️ Live-checked — same limitation (shared Bluetent platform)</td></tr>
+          <tr><td>Carolina Designs</td><td>⚠️ Live-checked — own REST API exposes only min/max price, no fee fields</td></tr>
+          <tr><td>Twiddy</td><td>⚠️ Live-checked — own REST API exposes only one bundled weekly rate</td></tr>
+          <tr><td>Beach Realty NC</td><td>✅ Live-checked — same Bluetent rcapi shape as Sun Realty/Brindley Beach, confirmed: single bottom-line price, no breakdown</td></tr>
+          <tr><td>Carolina Shores</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
+          <tr><td>Seaside</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
+          <tr><td>Resort Realty</td><td>🔴 Live-checked — found real itemized fee/tax fields, and found our own database isn't reading them (see callout below)</td></tr>
+          <tr><td>Midgett</td><td>✅ Checked by reading the scraper source — same API shape (itemized fees/taxes available), but the base-price-only choice here is a documented, deliberate one that matches CLAUDE.md's "base rent" convention for Midgett. Not a bug.</td></tr>
+          <tr><td>Shoreline OBX</td><td>🔴 Same code path as Resort Realty (shared scraper module) — same bug by direct source inspection</td></tr>
+          <tr><td>Joe Lamb Jr</td><td>✅ Live-checked — Rent (incl. a disclosed $130 Payment Processing Fee) + a separate itemized $250 Administrative Fee + Tax. Most transparent of all 9 checked so far.</td></tr>
+          <tr><td>Coastal Carolina</td><td>✅ Live-checked — same "Rent and Fees" bundled pattern as Hatteras Realty: one opaque combined line ($1,504.67) + Tax, no breakdown</td></tr>
+          <tr><td>Southern Shores</td><td>✅ Live-checked — Rent + an itemized "Taxes & Fees" toggle (Dare County Tax + NC State Tax + a named $65 "Home Service Fee")</td></tr>
+          <tr><td>Ocracoke Island Realty</td><td>✅ Live-checked (Altcha-gated, required the same Playwright cookie-transplant as Village Realty) — Rent + Tax only, no fee line, matching Village Realty's owner-managed convention</td></tr>
+          <tr><td>Atlantic Realty</td><td>✅ Live-checked — Rent + an itemized $175 "Admin Fee" (with an on-page tooltip explaining it) + Tax</td></tr>
+          <tr><td>Paramount</td><td>❌ Attempted — could not locate a working live-quote endpoint quickly</td></tr>
+          <tr><td>Surf or Sound</td><td>❌ Attempted — rates come from static calendar cells, no quote/fee endpoint found</td></tr>
+          <tr><td>Booksmart</td><td>N/A — publishes no rates at all; booking happens on a third-party Guesty widget we can't reach</td></tr>
+          <tr><td>Airbnb</td><td>N/A — individual owners, not a property manager</td></tr>
+          <tr><td>RBO</td><td>N/A — VRBO/Booking.com aggregator; any fee shown is the OTA's, not a property manager's</td></tr>
+          <tr><td>Houfy</td><td>N/A — self-managed direct-booking platform, not a property manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout gap-note">
+      20 of 26 PMCs are now live-checked directly — only Paramount and Surf or Sound remain
+      genuinely attempted-and-blocked, plus 3 aggregators/non-PMs and Booksmart's no-rates gap.
+      Outer Banks Blue and Hatteras Realty running identical software and still disclosing fees
+      completely differently is the clearest proof in this whole table: platform never predicts a
+      PMC's choice, so nothing here should be assumed from a company's software stack alone.
+    </div>
+    <div class="callout gap-note">
+      <b>🔴 Bigger finding, outside this report's original scope:</b> Resort Realty and Shoreline
+      OBX's shared booking platform (<span class="mono">scrapers/streamline_wp.py</span>) returns
+      <span class="mono">price</span>, <span class="mono">fees</span>, and
+      <span class="mono">total</span> as three separate fields — and our own scraper code stores
+      only <span class="mono">price</span> as the rate, while CLAUDE.md documents both PMCs as
+      "rate includes fees." Checked live against 5 real Resort Realty properties: the missing fee
+      ran $752–$946 per week, routinely more than half the stored rate and in one case larger than
+      it. That means every rate, percentile, and $/bedroom figure this project has ever computed
+      for these two PMCs (726 properties combined) understates the real price, in some cases by
+      close to 2×. (Midgett shares the same underlying platform shape but is unaffected — its code
+      deliberately stores base price only, matching its own correctly-documented "base rent"
+      convention, confirmed by an explicit comment in the source.) Flagged for its own
+      investigation and fix — not corrected in this report, since that's a data-pipeline change,
+      not a report edit.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">I</span>
+      <h2>2027 booking pace by month — Corolla PMs</h2>
+    </div>
+    <p class="lede">
+      Since the actual decision is which PM to pick for 2027, here's how much of each Corolla PM's
+      2027 calendar is booked so far, by month, as of today (Sep 9, 2026). Note the frame: this is
+      6–16 months out, so every number is naturally small — the value is in comparing PMs against
+      each other at the same point in the booking cycle, not the absolute level.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th class="num">Jan</th><th class="num">Feb</th><th class="num">Mar</th><th class="num">Apr</th><th class="num">May</th><th class="num">Jun</th><th class="num">Jul</th><th class="num">Aug</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resort Realty</td><td class="num">12.0%</td><td class="num">10.6%</td><td class="num">9.7%</td><td class="num">10.2%</td><td class="num">6.5%</td><td class="num">4.7%</td><td class="num">6.2%</td><td class="num">2.7%</td></tr>
+          <tr><td>Beach Realty NC</td><td class="num">11.2%</td><td class="num">8.9%</td><td class="num">22.2%</td><td class="num">7.7%</td><td class="num">14.1%</td><td class="num">8.1%</td><td class="num">0.8%</td><td class="num">0.4%</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">6.3%</td><td class="num">5.9%</td><td class="num">6.1%</td><td class="num">9.2%</td><td class="num">26.5%</td><td class="num">24.3%</td><td class="num">2.0%</td><td class="num">0.1%</td></tr>
+          <tr><td>Carolina Designs</td><td class="num">—</td><td class="num">—</td><td class="num">0.2%</td><td class="num">2.1%</td><td class="num">6.4%</td><td class="num">14.9%</td><td class="num">13.5%</td><td class="num">7.7%</td></tr>
+          <tr><td>Twiddy</td><td class="num">1.2%</td><td class="num">1.0%</td><td class="num">0.3%</td><td class="num">0.9%</td><td class="num">7.2%</td><td class="num">14.0%</td><td class="num">4.8%</td><td class="num">3.2%</td></tr>
+          <tr><td>Sun Realty</td><td class="num">1.8%</td><td class="num">1.4%</td><td class="num">1.8%</td><td class="num">13.5%</td><td class="num">2.5%</td><td class="num">3.9%</td><td class="num">4.6%</td><td class="num">2.5%</td></tr>
+          <tr class="target"><td>Village Realty</td><td class="num">2.3%</td><td class="num">1.8%</td><td class="num">2.3%</td><td class="num">2.5%</td><td class="num">1.0%</td><td class="num">0.0%</td><td class="num">0.1%</td><td class="num">0.0%</td></tr>
+          <tr><td>Outer Banks Blue</td><td class="num">1.1%</td><td class="num">0.9%</td><td class="num">1.9%</td><td class="num">2.6%</td><td class="num">0.9%</td><td class="num">0.6%</td><td class="num">0.2%</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout gap-note">
+      <b>Village Realty's numbers need a specific caveat, not a demand conclusion.</b> Village
+      Realty's site has been Altcha-gated since ADR 0355 (Aug 2026) — plain nightly scrapes
+      increasingly fail to authenticate, meaning our booking-detection method (comparing yesterday's
+      snapshot to today's) misses more real bookings for Village Realty than for any other PMC here,
+      independent of actual demand. Its consistently-lowest row above is at least partly a detection
+      artifact, not necessarily weak early bookings — this is exactly the kind of supply-side/
+      measurement explanation that should be checked before reading it as a demand signal. Resort
+      Realty, Beach Realty NC, and Brindley Beach show the strongest early 2027 pace among PMCs
+      with reliable detection; Twiddy and Outer Banks Blue are slow starters industry-wide at this
+      point in the cycle, not just relative to Village Realty.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">J</span>
+      <h2>$ per bedroom per month — Corolla PMs</h2>
+    </div>
+    <p class="lede">
+      Realized rates (high-confidence inferred bookings, peak season Jun–Aug 2026, all Corolla
+      properties with a known bedroom count — not limited to the narrow 3BR/pool/hot-tub cohort),
+      divided by bedroom count and normalized to a monthly figure. This is the most
+      statistically solid PM-level comparison in this report — real sample sizes (46–567 bookings
+      per PMC), not a handful of thin data points.
+    </p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>PMC</th><th class="num">Bookings (n)</th><th class="num">Median $/bed/mo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Carolina Designs</td><td class="num">46</td><td class="num">$427</td></tr>
+          <tr><td>Twiddy</td><td class="num">567</td><td class="num">$350</td></tr>
+          <tr><td>Outer Banks Blue</td><td class="num">109</td><td class="num">$252</td></tr>
+          <tr><td>Sun Realty</td><td class="num">151</td><td class="num">$220</td></tr>
+          <tr><td>Brindley Beach</td><td class="num">207</td><td class="num">$213</td></tr>
+          <tr><td>Beach Realty NC</td><td class="num">180</td><td class="num">$193</td></tr>
+          <tr class="target"><td>Village Realty</td><td class="num">473</td><td class="num">$187</td></tr>
+          <tr><td>Resort Realty</td><td class="num">152</td><td class="num">$159</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>This table isn't apples-to-apples, and section H explains why.</b> Every number here is
+      whatever each PM's own site calls "rate" — and section H showed that means different things
+      per PM: Village Realty and Outer Banks Blue's numbers are rent-only; Carolina Designs and
+      Twiddy's are fee-inclusive by convention. Worse, mid-investigation this session found that
+      Resort Realty's own stored rate is <i>missing</i> a real guest fee entirely — not included as
+      long assumed, just absent (flagged separately, not yet corrected). So low $/bedroom for a PM
+      near the bottom of this list may mean genuinely cheaper rent, or may mean its fee isn't in the
+      number at all — this table can't tell the two apart on its own. Treat it as a rough
+      cross-PM ranking of what gets <i>quoted</i>, not a settled ranking of what guests actually pay.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="sec-tag">Takeaway</span>
+      <h2>What this does and doesn't tell you</h2>
+    </div>
+    <p>
+      OSH10 isn't underperforming on the metrics we can see — it out-books its Village Realty
+      neighbor and carries the best review record on the block. If the real goal is picking a PM
+      for 2027, though, the comparison is bigger than Village vs. Resort — eight PMCs have real
+      Corolla inventory, and they split into rough groups:
+    </p>
+    <ul class="checklist">
+      <li><span class="mark">Pace</span> Resort Realty, Beach Realty NC, and Brindley Beach show
+        the strongest early 2027 booking pace among PMCs whose detection we trust. Village
+        Realty's own pace can't be fairly judged yet — its Altcha gate is suppressing our ability
+        to detect its real bookings, not necessarily suppressing the bookings themselves.</li>
+      <li><span class="mark">Rate</span> Resort Realty shows the lowest $/bedroom of the eight
+        (n=152) — but mid-session we found Resort Realty's stored rate is missing a real guest fee
+        entirely (section H), so this number is unreliable until that's fixed. Don't read anything
+        into Resort Realty's rate ranking yet.</li>
+      <li><span class="mark">Transparency</span> Village Realty and Outer Banks Blue are the only
+        two of five live-checked PMCs that show a guest nothing but rent and tax. Resort Realty's
+        real guest-fee structure turned out to be confirmable after all (section H) — and it's
+        substantial, $752–$946/week in the properties checked. Worth asking Village Realty whether
+        they'd consider itemizing more clearly, and asking Resort Realty directly what that fee
+        actually covers.</li>
+      <li><span class="mark">Reputation</span> Village Realty sits a tier above Resort Realty in
+        the NotebookLM synthesis (section E) — "Strong" vs. "Polarizing." Once house-condition
+        complaints are set aside as not PM-attributable, though, neither PMC shows a clear
+        service/communication edge over the other in the sourced reviews.</li>
+      <li><span class="mark">Search</span> Village Realty's own page wins the #1 Google spot only
+        37% of the time for its properties, worst of the block and about half Resort Realty's
+        rate — though neither PMC performs well on OBX-wide generic search terms, so this gap
+        would persist across most plausible switches, not just a Resort Realty move.</li>
+    </ul>
+    <p>
+      Pace leans toward considering a change (once Village Realty's own detection gap is accounted
+      for); rate is currently unreliable pending the fee-storage fix; reputation and search don't
+      clearly favor a Resort Realty move specifically. This isn't a contradiction to resolve in
+      advance — it's the actual shortlist of questions worth putting to Village Realty directly (why
+      the search gap, why the above-market pricing on the weeks it does quote) before assuming any
+      particular PMC on this list is the better bet for 2027.
+    </p>
+    <p class="lede" style="margin-top:4px;">
+      Before switching anything: pull OSH10's actual 2025/2026 owner statement (gross booked, not
+      list price) and compare it directly against what any prospective PM will quote as a
+      projection — projections run optimistic by nature. And weigh reputation and guest-fee
+      transparency alongside the pace/rate numbers, not after them.
+    </p>
+  </section>
+
+  <footer>
+    Data as of 2026-09-09 &middot; rental-intel internal scrape, 13,634 listings across 26 PMCs, Outer Banks NC<br>
+    Booking counts: high-confidence rate-drop detections only, May 1–Oct 15 2026<br>
+    Pricing percentiles: search.obx.deals comp model (bedroom/view/amenity matched)<br>
+    Search ranking (own-name): internal SERP audit, sampled 2026-06-05 &middot; Traffic: SimilarWeb estimate, sampled 2026-09-09<br>
+    Search ranking (generic terms): single-query web search, sampled 2026-09-09, not repeatable-methodology<br>
+    Reputation tiers: NotebookLM synthesis of BBB/Trustpilot/OBX Coastal Life/Reddit/Facebook, 2026-09-09, not independently verified<br>
+    Cohort view/proximity: rental-intel GIS ray-sweep (county parcel + building data), computed 2026-06-27<br>
+    Cohort realized rates: high-confidence inferred bookings, all-time through 2026-09-09<br>
+    Guest fees: 5 live quotes pulled directly from each PM's own booking engine + Evolve's stored itemized data, 2026-09-09; full 26-PMC status in section H<br>
+    2027 booking pace &amp; $/bedroom: high-confidence inferred bookings, all Corolla properties, computed 2026-09-09<br>
+    Prepared informally for neighbor reference — not an audit of any property manager
+  </footer>
+
+</div>
+
+</body>
+</html>
