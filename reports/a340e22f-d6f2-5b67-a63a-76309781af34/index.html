@@ -766,7 +766,7 @@ footer{
           Taxes&nbsp; <span class="mono" style="float:right">$216.90</span><br>
           <b>Total&nbsp; <span class="mono" style="float:right">$2,199.99</span></b>
         </div>
-        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The actual missing-fee bug from this section's finding, live on OSH10's own street: a real, named $795.89 fee — 67% on top of rent — that our database wasn't reading until this session's fix. Itemized as a separate "Fee" line right on Resort Realty's own quote, same as KEES's Administrative Fee.</p>
+        <p style="font-size:12.5px;color:var(--ink-muted);margin-top:10px">The actual missing-fee bug from this section's finding, live on OSH10's own street: a real, named $795.89 fee that our database wasn't reading until this session's fix. This fee is close to flat in dollars, not a percentage of rent — checked the same property across four weeks and it only moved $795.89→$957.86 (off-season to peak) while rent swung 6x, $1,187→$7,460. That means it reads as a punishing 67% of rent on a cheap November week and a modest 13% on a peak-summer one — same fee, very different optics depending which week you happen to quote.</p>
       </div>
       <div class="tile" style="flex:1;min-width:240px;padding:16px">
         <div style="font-weight:600;margin-bottom:8px">Evolve (fleet-wide)<br><span class="mono" style="font-weight:400;font-size:12px;color:var(--ink-muted)">Stored itemized data, not a live quote</span></div>
@@ -848,10 +848,14 @@ footer{
       <span class="mono">total</span> as three separate fields — and our own scraper code was
       storing only <span class="mono">price</span> as the rate, while CLAUDE.md documented both
       PMCs as "rate includes fees." Checked live against 5 real Resort Realty properties: the
-      missing fee ran $752–$946 per week, routinely more than half the stored rate and in one case
-      larger than it. That means every rate, percentile, and $/bedroom figure this project had ever
-      computed for these two PMCs (726 properties combined) understated the real price, in some
-      cases by close to 2×. (Midgett shares the same underlying platform shape but is unaffected — its code
+      missing fee ran $752–$946 per week — close to flat in dollars regardless of season (checked
+      one property across 4 weeks: $795.89 off-season, $957.86 at peak, versus rent that swung 6x
+      over the same weeks). That means every rate, percentile, and $/bedroom figure this project had
+      ever computed for these two PMCs (726 properties combined) understated the real price by a
+      real, meaningful dollar amount every time — but as a <i>ratio</i> to rent, the understatement
+      was largest on cheap off-season weeks (fee near 2/3 of rent) and much smaller at peak summer
+      rates (fee under 15% of rent), not a flat "roughly doubles the price" story. (Midgett shares
+      the same underlying platform shape but is unaffected — its code
       deliberately stores base price only, matching its own correctly-documented "base rent"
       convention, confirmed by an explicit comment in the source.) The scraper bug is already fixed
       and deployed (2026-09-09, same day this was found) — its Corolla $/bedroom row is excluded
@@ -970,10 +974,11 @@ footer{
         H). The other seven PMCs' numbers aren't affected.</li>
       <li><span class="mark">Transparency</span> Village Realty and Outer Banks Blue are the only
         two of six live-checked PMCs that show a guest nothing but rent and tax. Resort Realty's
-        real guest-fee structure turned out to be confirmable after all (section H) — and it's
-        substantial, $752–$946/week in the properties checked, $795.89 confirmed on OSH10's own
-        street. Worth asking Village Realty whether they'd consider itemizing more clearly, and
-        asking Resort Realty directly what that fee
+        real guest-fee structure turned out to be confirmable after all (section H) — a roughly
+        flat-dollar fee ($752–$946/week, $795.89 confirmed on OSH10's own street) that barely moves
+        with the season, so it reads as a big percentage on a cheap week and a small one on an
+        expensive week. Worth asking Village Realty whether they'd consider itemizing more clearly,
+        and asking Resort Realty directly what that fee
         actually covers.</li>
       <li><span class="mark">Search</span> Village Realty's own page wins the #1 Google spot only
         37% of the time for its properties, worst of the block and about half Resort Realty's
