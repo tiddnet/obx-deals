@@ -737,8 +737,9 @@ footer{
       </div>
     </div>
     <div class="callout">
-      <b>Five real samples, five different disclosure styles</b> — and 10 total PMCs now
-      live-checked (see full table below). Village Realty: nothing but rent and tax. Outer Banks
+      <b>Five real samples, five different disclosure styles</b> — 17 PMCs were live-quoted
+      directly by the end of this pass, 20 of 26 resolved one way or another (see full table
+      below). Village Realty: nothing but rent and tax. Outer Banks
       Blue: same, plain "Rent" + tax, on the very same software Hatteras Realty uses to bundle
       fees invisibly into "Rent and Fees." KEES: a named, itemized Administrative Fee. Hatteras
       Realty: fees folded into "Rent and Fees" with zero visibility into the split. Evolve: the
@@ -772,9 +773,9 @@ footer{
           <tr><td>Beach Realty NC</td><td>✅ Live-checked — same Bluetent rcapi shape as Sun Realty/Brindley Beach, confirmed: single bottom-line price, no breakdown</td></tr>
           <tr><td>Carolina Shores</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
           <tr><td>Seaside</td><td>✅ Live-checked — same, confirmed: single bottom-line price, no breakdown</td></tr>
-          <tr><td>Resort Realty</td><td>🔴 Live-checked — found real itemized fee/tax fields, and found our own database isn't reading them (see callout below)</td></tr>
+          <tr><td>Resort Realty</td><td>🔴 Live-checked — found real itemized fee/tax fields our own database wasn't reading (now fixed; historical data not backfilled — see callout below)</td></tr>
           <tr><td>Midgett</td><td>✅ Checked by reading the scraper source — same API shape (itemized fees/taxes available), but the base-price-only choice here is a documented, deliberate one that matches CLAUDE.md's "base rent" convention for Midgett. Not a bug.</td></tr>
-          <tr><td>Shoreline OBX</td><td>🔴 Same code path as Resort Realty (shared scraper module) — same bug by direct source inspection</td></tr>
+          <tr><td>Shoreline OBX</td><td>🔴 Same code path as Resort Realty (shared scraper module) — same bug, same fix, by direct source inspection</td></tr>
           <tr><td>Joe Lamb Jr</td><td>✅ Live-checked — Rent (incl. a disclosed $130 Payment Processing Fee) + a separate itemized $250 Administrative Fee + Tax. Most transparent of all 9 checked so far.</td></tr>
           <tr><td>Coastal Carolina</td><td>✅ Live-checked — same "Rent and Fees" bundled pattern as Hatteras Realty: one opaque combined line ($1,504.67) + Tax, no breakdown</td></tr>
           <tr><td>Southern Shores</td><td>✅ Live-checked — Rent + an itemized "Taxes & Fees" toggle (Dare County Tax + NC State Tax + a named $65 "Home Service Fee")</td></tr>
@@ -800,17 +801,20 @@ footer{
       <b>🔴 Bigger finding, outside this report's original scope:</b> Resort Realty and Shoreline
       OBX's shared booking platform (<span class="mono">scrapers/streamline_wp.py</span>) returns
       <span class="mono">price</span>, <span class="mono">fees</span>, and
-      <span class="mono">total</span> as three separate fields — and our own scraper code stores
-      only <span class="mono">price</span> as the rate, while CLAUDE.md documents both PMCs as
-      "rate includes fees." Checked live against 5 real Resort Realty properties: the missing fee
-      ran $752–$946 per week, routinely more than half the stored rate and in one case larger than
-      it. That means every rate, percentile, and $/bedroom figure this project has ever computed
-      for these two PMCs (726 properties combined) understates the real price, in some cases by
-      close to 2×. (Midgett shares the same underlying platform shape but is unaffected — its code
+      <span class="mono">total</span> as three separate fields — and our own scraper code was
+      storing only <span class="mono">price</span> as the rate, while CLAUDE.md documented both
+      PMCs as "rate includes fees." Checked live against 5 real Resort Realty properties: the
+      missing fee ran $752–$946 per week, routinely more than half the stored rate and in one case
+      larger than it. That means every rate, percentile, and $/bedroom figure this project had ever
+      computed for these two PMCs (726 properties combined) understated the real price, in some
+      cases by close to 2×. (Midgett shares the same underlying platform shape but is unaffected — its code
       deliberately stores base price only, matching its own correctly-documented "base rent"
-      convention, confirmed by an explicit comment in the source.) Flagged for its own
-      investigation and fix — not corrected in this report, since that's a data-pipeline change,
-      not a report edit.
+      convention, confirmed by an explicit comment in the source.) The scraper bug itself is
+      already fixed and deployed (2026-09-09, same day this was found) — but the historical rate
+      and booking data every table in this report draws from predates that fix and hasn't been
+      backfilled (a separate, not-yet-made decision), so the Resort Realty and Shoreline OBX
+      numbers in sections F, G, and J are still understated until either a backfill happens or
+      enough new bookings accumulate under the corrected pipeline.
     </div>
   </section>
 
@@ -890,11 +894,14 @@ footer{
       whatever each PM's own site calls "rate" — and section H showed that means different things
       per PM: Village Realty and Outer Banks Blue's numbers are rent-only; Carolina Designs and
       Twiddy's are fee-inclusive by convention. Worse, mid-investigation this session found that
-      Resort Realty's own stored rate is <i>missing</i> a real guest fee entirely — not included as
-      long assumed, just absent (flagged separately, not yet corrected). So low $/bedroom for a PM
-      near the bottom of this list may mean genuinely cheaper rent, or may mean its fee isn't in the
-      number at all — this table can't tell the two apart on its own. Treat it as a rough
-      cross-PM ranking of what gets <i>quoted</i>, not a settled ranking of what guests actually pay.
+      Resort Realty's own stored rate was <i>missing</i> a real guest fee entirely — not included
+      as long assumed, just absent. That's fixed in the scraper now (deployed 2026-09-09), but
+      every number in this table predates the fix — the most recent Corolla Resort Realty booking
+      behind it was recorded 2026-09-08 — so nothing here reflects the correction yet. So low
+      $/bedroom for a PM near the bottom of this list may mean genuinely cheaper rent, or may mean
+      its fee isn't in the number at all — this table can't tell the two apart on its own. Treat it
+      as a rough cross-PM ranking of what gets <i>quoted</i>, not a settled ranking of what guests
+      actually pay.
     </div>
   </section>
 
@@ -915,9 +922,10 @@ footer{
         Realty's own pace can't be fairly judged yet — its Altcha gate is suppressing our ability
         to detect its real bookings, not necessarily suppressing the bookings themselves.</li>
       <li><span class="mark">Rate</span> Resort Realty shows the lowest $/bedroom of the eight
-        (n=152) — but mid-session we found Resort Realty's stored rate is missing a real guest fee
-        entirely (section H), so this number is unreliable until that's fixed. Don't read anything
-        into Resort Realty's rate ranking yet.</li>
+        (n=152) — but mid-session we found Resort Realty's stored rate was missing a real guest fee
+        entirely (section H). The scraper's fixed now, but this table's data predates that fix and
+        hasn't been backfilled, so the number is still unreliable. Don't read anything into Resort
+        Realty's rate ranking yet.</li>
       <li><span class="mark">Transparency</span> Village Realty and Outer Banks Blue are the only
         two of five live-checked PMCs that show a guest nothing but rent and tax. Resort Realty's
         real guest-fee structure turned out to be confirmable after all (section H) — and it's
@@ -960,6 +968,7 @@ footer{
     Cohort realized rates: high-confidence inferred bookings, all-time through 2026-09-09<br>
     Guest fees: 5 live quotes pulled directly from each PM's own booking engine + Evolve's stored itemized data, 2026-09-09; full 26-PMC status in section H<br>
     2027 booking pace &amp; $/bedroom: high-confidence inferred bookings, all Corolla properties, computed 2026-09-09<br>
+    Resort Realty/Shoreline OBX guest-fee bug (section H): found + scraper fix deployed 2026-09-09; historical rate data not yet backfilled, so Resort Realty numbers throughout this report remain understated<br>
     Prepared informally for neighbor reference — not an audit of any property manager
   </footer>
 
