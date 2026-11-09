@@ -86,7 +86,7 @@
   <h1>KDN4819: Freebird</h1>
   <p class="sub">Kill Devil Hills · 3119 Seagate Ct</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/c44c8f5f-b69e-4798-b7a6-54cbbdfea4f9" alt="KDN4819: Freebird">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

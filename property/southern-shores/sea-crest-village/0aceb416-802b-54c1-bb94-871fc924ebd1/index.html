@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Obxcited — OBX Deals</title>
-<meta name="description" content="Obxcited in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Quick security check — OBX Deals</title>
+<meta name="description" content="Quick security check in Southern Shores, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/southern-shores/sea-crest-village/0aceb416-802b-54c1-bb94-871fc924ebd1/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Obxcited — OBX Deals">
-<meta property="og:description" content="Southern Shores · 7BR">
+<meta property="og:title" content="Quick security check — OBX Deals">
+<meta property="og:description" content="Southern Shores · BR">
 <meta property="og:url" content="https://obx.deals/property/southern-shores/sea-crest-village/0aceb416-802b-54c1-bb94-871fc924ebd1/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/bbd81e4a-ebb4-48b6-8de8-fa7f55102fa1">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Obxcited — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/bbd81e4a-ebb4-48b6-8de8-fa7f55102fa1">
+<meta name="twitter:title" content="Quick security check — OBX Deals">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,16 +83,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Obxcited</h1>
+  <h1>Quick security check</h1>
   <p class="sub">Southern Shores · 1 Third Ave</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/bbd81e4a-ebb4-48b6-8de8-fa7f55102fa1" alt="Obxcited">
-  <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  
+  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    <p><strong>$2,725/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2027-01-03</p>
+    
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/southern-shores/404-obxcited" data-property="0aceb416-802b-54c1-bb94-871fc924ebd1" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

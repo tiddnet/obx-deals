@@ -86,7 +86,7 @@
   <h1>Beach Comber</h1>
   <p class="sub">South Nags Head · 8533 S Old Oregon Inlet Rd</p>
   <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/21729979-e09c-4849-afff-121483c0b326" alt="Beach Comber">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.4</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

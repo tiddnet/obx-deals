@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Islander Retreat — OBX Deals</title>
-<meta name="description" content="Islander Retreat in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Quick security check — OBX Deals</title>
+<meta name="description" content="Quick security check in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/nags-head/_/7e2af1b0-f5b9-5d8c-8d9d-c694f8c93ce0/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Islander Retreat — OBX Deals">
-<meta property="og:description" content="Nags Head · 7BR">
+<meta property="og:title" content="Quick security check — OBX Deals">
+<meta property="og:description" content="Nags Head · BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/7e2af1b0-f5b9-5d8c-8d9d-c694f8c93ce0/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/99a299f6-c44c-4547-b65c-8d1c8edd353e">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Islander Retreat — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/99a299f6-c44c-4547-b65c-8d1c8edd353e">
+<meta name="twitter:title" content="Quick security check — OBX Deals">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,16 +83,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Islander Retreat</h1>
+  <h1>Quick security check</h1>
   <p class="sub">Nags Head · 3013 S Va Dare Trl</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/99a299f6-c44c-4547-b65c-8d1c8edd353e" alt="Islander Retreat">
-  <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.4</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  
+  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.4</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    <p><strong>$3,195/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2027-03-21</p>
+    
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/nags-head/468-islander-retreat" data-property="7e2af1b0-f5b9-5d8c-8d9d-c694f8c93ce0" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

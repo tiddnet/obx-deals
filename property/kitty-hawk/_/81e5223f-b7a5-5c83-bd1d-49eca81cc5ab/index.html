@@ -11,10 +11,10 @@
 <meta property="og:title" content="Easy Street — OBX Deals">
 <meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/81e5223f-b7a5-5c83-bd1d-49eca81cc5ab/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/dbe46bfa-c431-44fb-846f-b672123d11a8">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Easy Street — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/dbe46bfa-c431-44fb-846f-b672123d11a8">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Easy Street</h1>
   <p class="sub">Kitty Hawk · 5305 N Va Dare Trl</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/dbe46bfa-c431-44fb-846f-b672123d11a8" alt="Easy Street">
+  
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.3</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

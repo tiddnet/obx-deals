@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DC301: Captain&#x27;s Landing Penthouse — OBX Deals</title>
-<meta name="description" content="DC301: Captain&#x27;s Landing Penthouse in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>DC103: Captains Landing Suite 103 — OBX Deals</title>
+<meta name="description" content="DC103: Captains Landing Suite 103 in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/ocracoke/_/6b9b3502-8789-56d4-aa72-8dd57355e843/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="DC301: Captain&#x27;s Landing Penthouse — OBX Deals">
+<meta property="og:title" content="DC103: Captains Landing Suite 103 — OBX Deals">
 <meta property="og:description" content="Ocracoke · 1BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/6b9b3502-8789-56d4-aa72-8dd57355e843/">
 <meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/69f7c86a-41a4-4a8d-a765-f5b9b1d57ca5">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DC301: Captain&#x27;s Landing Penthouse — OBX Deals">
+<meta name="twitter:title" content="DC103: Captains Landing Suite 103 — OBX Deals">
 <meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/69f7c86a-41a4-4a8d-a765-f5b9b1d57ca5">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -83,9 +83,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>DC301: Captain&#x27;s Landing Penthouse</h1>
+  <h1>DC103: Captains Landing Suite 103</h1>
   <p class="sub">Ocracoke · 324 Irvin Garrish Hwy</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/69f7c86a-41a4-4a8d-a765-f5b9b1d57ca5" alt="DC301: Captain&#x27;s Landing Penthouse">
+  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/69f7c86a-41a4-4a8d-a765-f5b9b1d57ca5" alt="DC103: Captains Landing Suite 103">
   <div class="stats"><div class="stat"><div class="num">1</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

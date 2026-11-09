@@ -86,13 +86,13 @@
   <h1>M30: Martinis and Bikinis</h1>
   <p class="sub">Corolla · 875 Seabreeze</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/43480b83-2740-4f2a-9f7d-361e1fccb2b8" alt="M30: Martinis and Bikinis">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Village Realty</strong></p>
-    <p><strong>$1,749/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 0.7% in 30d)</span> — next available 2026-11-14</p>
+    
     <a class="btn" href="https://www.villagerealtyobx.com/rentals/m30-martinis-and-bikinis" data-property="9a06d542-ae6e-5217-8599-704a604f9fd4" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

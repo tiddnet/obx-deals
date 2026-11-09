@@ -86,7 +86,7 @@
   <h1>BU17: Daydream Believer</h1>
   <p class="sub">Corolla · 789 Meeting</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/fa63533e-006e-4b6e-9fc4-8f6306c0f091" alt="BU17: Daydream Believer">
-  <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">16</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">16</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

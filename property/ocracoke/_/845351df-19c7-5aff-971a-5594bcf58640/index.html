@@ -11,10 +11,10 @@
 <meta property="og:title" content="PP06: Reminiscence — OBX Deals">
 <meta property="og:description" content="Ocracoke · 3BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/845351df-19c7-5aff-971a-5594bcf58640/">
-<meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/494ffa1c-ac94-40ba-93d5-a3b682766b39">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PP06: Reminiscence — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/494ffa1c-ac94-40ba-93d5-a3b682766b39">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>PP06: Reminiscence</h1>
   <p class="sub">Ocracoke · 104 Lake Ct</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/494ffa1c-ac94-40ba-93d5-a3b682766b39" alt="PP06: Reminiscence">
+  
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">6</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

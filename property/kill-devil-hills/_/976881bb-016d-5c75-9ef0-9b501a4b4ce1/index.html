@@ -11,10 +11,10 @@
 <meta property="og:title" content="M T Pockets — OBX Deals">
 <meta property="og:description" content="Kill Devil Hills · 3BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/_/976881bb-016d-5c75-9ef0-9b501a4b4ce1/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/684ccbc9-e91d-47cd-8cea-752bf32bd7a4">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="M T Pockets — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/684ccbc9-e91d-47cd-8cea-752bf32bd7a4">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>M T Pockets</h1>
   <p class="sub">Kill Devil Hills · 448 Harbour View Dr</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/684ccbc9-e91d-47cd-8cea-752bf32bd7a4" alt="M T Pockets">
+  
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.6</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Canalfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

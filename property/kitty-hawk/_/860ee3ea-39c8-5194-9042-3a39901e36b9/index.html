@@ -11,10 +11,10 @@
 <meta property="og:title" content="Mcgee&#x27;s Sea Dream — OBX Deals">
 <meta property="og:description" content="Kitty Hawk · 5BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/860ee3ea-39c8-5194-9042-3a39901e36b9/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/8c36926f-442b-457c-b6a7-0daee6ca59ad">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mcgee&#x27;s Sea Dream — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/8c36926f-442b-457c-b6a7-0daee6ca59ad">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Mcgee&#x27;s Sea Dream</h1>
   <p class="sub">Kitty Hawk · 4006 N Va Dare Trl</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/8c36926f-442b-457c-b6a7-0daee6ca59ad" alt="Mcgee&#x27;s Sea Dream">
+  
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">12</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Semi Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

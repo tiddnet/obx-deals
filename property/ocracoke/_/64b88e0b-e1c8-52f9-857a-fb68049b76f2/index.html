@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WV19: Myrtlewood — OBX Deals</title>
-<meta name="description" content="WV19: Myrtlewood in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Quick security check — OBX Deals</title>
+<meta name="description" content="Quick security check in Ocracoke, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/ocracoke/_/64b88e0b-e1c8-52f9-857a-fb68049b76f2/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WV19: Myrtlewood — OBX Deals">
-<meta property="og:description" content="Ocracoke · 3BR">
+<meta property="og:title" content="Quick security check — OBX Deals">
+<meta property="og:description" content="Ocracoke · BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/64b88e0b-e1c8-52f9-857a-fb68049b76f2/">
-<meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/a2b79d75-ad2e-4cb0-a3ae-3145b69b1423">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WV19: Myrtlewood — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/a2b79d75-ad2e-4cb0-a3ae-3145b69b1423">
+<meta name="twitter:title" content="Quick security check — OBX Deals">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,16 +83,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>WV19: Myrtlewood</h1>
+  <h1>Quick security check</h1>
   <p class="sub">Ocracoke · 225 Middle Rd</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/a2b79d75-ad2e-4cb0-a3ae-3145b69b1423" alt="WV19: Myrtlewood">
-  <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">7</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
+  
+  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">7</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Ocracoke Island Realty</strong></p>
-    <p><strong>$5,523/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 0.9% in 30d)</span> — next available 2027-05-02</p>
+    
     <a class="btn" href="https://www.ocracokeislandrealty.com/ocracoke-island-vacation-rentals/wv19-myrtlewood" data-property="64b88e0b-e1c8-52f9-857a-fb68049b76f2" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

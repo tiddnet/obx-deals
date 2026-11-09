@@ -11,10 +11,10 @@
 <meta property="og:title" content="Close Enough — OBX Deals">
 <meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/sea-view-place/854a624d-bebe-55c6-b0bf-3d7c3ea54e75/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/19a362d5-5004-45ab-9269-8a692670d762">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Close Enough — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/19a362d5-5004-45ab-9269-8a692670d762">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,14 +85,14 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Close Enough</h1>
   <p class="sub">Kitty Hawk · 4705 Summer Ln</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/19a362d5-5004-45ab-9269-8a692670d762" alt="Close Enough">
+  
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundside</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    <p><strong>$2,255/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(flat 0.0% in 30d)</span> — next available 2026-11-08</p>
+    
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/kitty-hawk/470-close-enough" data-property="854a624d-bebe-55c6-b0bf-3d7c3ea54e75" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

@@ -92,7 +92,7 @@
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Kees</strong></p>
-    <p><strong>$3,442/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 10.8% in 30d)</span> — next available 2026-11-14</p>
+    <p><strong>$3,491/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 9.5% in 30d)</span> — next available 2026-11-14</p>
     <a class="btn" href="https://www.keesouterbanks.com/booking/K7305-wright-waves-4-bedroom-home-at-the-tides/83971" data-property="bd7ceeb0-314f-5ac2-b5cc-88b4277a07a4" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

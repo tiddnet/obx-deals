@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Water Works — OBX Deals</title>
-<meta name="description" content="Water Works in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Quick security check — OBX Deals</title>
+<meta name="description" content="Quick security check in Nags Head, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/nags-head/_/bf0175a7-d3de-5267-8f1f-f71ee6b55f3d/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Water Works — OBX Deals">
-<meta property="og:description" content="Nags Head · 5BR">
+<meta property="og:title" content="Quick security check — OBX Deals">
+<meta property="og:description" content="Nags Head · BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/bf0175a7-d3de-5267-8f1f-f71ee6b55f3d/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a5cbcb67-583c-4586-8dfe-be0eef716902">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Water Works — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a5cbcb67-583c-4586-8dfe-be0eef716902">
+<meta name="twitter:title" content="Quick security check — OBX Deals">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Water Works</h1>
+  <h1>Quick security check</h1>
   <p class="sub">Nags Head · 114 E West Hawks Nest Ct</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a5cbcb67-583c-4586-8dfe-be0eef716902" alt="Water Works">
-  <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">12</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.6</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  
+  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">12</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.6</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

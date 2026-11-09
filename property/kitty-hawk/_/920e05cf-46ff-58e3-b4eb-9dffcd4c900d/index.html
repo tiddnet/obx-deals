@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quick security check — OBX Deals</title>
-<meta name="description" content="Quick security check in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Blissful Breeze — OBX Deals</title>
+<meta name="description" content="Blissful Breeze in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kitty-hawk/_/920e05cf-46ff-58e3-b4eb-9dffcd4c900d/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Quick security check — OBX Deals">
-<meta property="og:description" content="Kitty Hawk · BR">
+<meta property="og:title" content="Blissful Breeze — OBX Deals">
+<meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/920e05cf-46ff-58e3-b4eb-9dffcd4c900d/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/fd4261b1-48a4-48a8-86d9-cb6234ad402a">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quick security check — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:title" content="Blissful Breeze — OBX Deals">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/fd4261b1-48a4-48a8-86d9-cb6234ad402a">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Quick security check</h1>
+  <h1>Blissful Breeze</h1>
   <p class="sub">Kitty Hawk · 3628 N Va Dare Trl</p>
-  
-  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">9</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div></div>
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/fd4261b1-48a4-48a8-86d9-cb6234ad402a" alt="Blissful Breeze">
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">9</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Semi Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

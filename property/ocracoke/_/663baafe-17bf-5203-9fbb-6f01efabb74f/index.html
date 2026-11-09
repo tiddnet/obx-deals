@@ -11,10 +11,10 @@
 <meta property="og:title" content="WV62: Sea You Soon! — OBX Deals">
 <meta property="og:description" content="Ocracoke · 4BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/663baafe-17bf-5203-9fbb-6f01efabb74f/">
-<meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/2433695c-1bbf-4f4f-95c3-3573fffb74c3">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WV62: Sea You Soon! — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/2433695c-1bbf-4f4f-95c3-3573fffb74c3">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>WV62: Sea You Soon!</h1>
   <p class="sub">Ocracoke · 70 Middle Rd.</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/2433695c-1bbf-4f4f-95c3-3573fffb74c3" alt="WV62: Sea You Soon!">
+  
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

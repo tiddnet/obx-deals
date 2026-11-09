@@ -92,7 +92,7 @@
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Resort Realty</strong></p>
-    <p><strong>$4,940/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 0.9% in 30d)</span> — next available 2027-01-02</p>
+    <p><strong>$4,796/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 2.1% in 30d)</span> — next available 2027-01-02</p>
     <a class="btn" href="https://www.resortrealty.com/booking/cest-sea-bon/6503" data-property="b5e7e3b4-8f2f-5e2c-b500-b70fe4dcf377" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

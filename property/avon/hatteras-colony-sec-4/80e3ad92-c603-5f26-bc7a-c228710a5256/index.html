@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Afloat on Windy Lane - #1185 — OBX Deals</title>
-<meta name="description" content="Afloat on Windy Lane - #1185 in Island Creek, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Afloat on Windy Lane - #1185 in Buxton, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/avon/hatteras-colony-sec-4/80e3ad92-c603-5f26-bc7a-c228710a5256/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Afloat on Windy Lane - #1185 — OBX Deals">
-<meta property="og:description" content="Island Creek · 5BR">
+<meta property="og:description" content="Buxton · 5BR">
 <meta property="og:url" content="https://obx.deals/property/avon/hatteras-colony-sec-4/80e3ad92-c603-5f26-bc7a-c228710a5256/">
 <meta property="og:image" content="https://www.surforsound.com/media/mpxhfop0/surf-or-sound-realty-1185-afloat-on-windy-lane-main-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -84,7 +84,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Afloat on Windy Lane - #1185</h1>
-  <p class="sub">Island Creek · 39020 Windy Ln</p>
+  <p class="sub">Buxton · 39020 Windy Ln</p>
   <img class="hero-img" src="https://www.surforsound.com/media/mpxhfop0/surf-or-sound-realty-1185-afloat-on-windy-lane-main-image.jpg" alt="Afloat on Windy Lane - #1185">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">11</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundfront</div><div class="lbl">View</div></div></div>
   
@@ -92,7 +92,7 @@
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Surf Or Sound</strong></p>
-    
+    <p><strong>$2,295/wk</strong> — next available 2026-11-14</p>
     <a class="btn" href="https://www.surforsound.com/hatteras-vacation-rental/property/1185" data-property="80e3ad92-c603-5f26-bc7a-c228710a5256" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

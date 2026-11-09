@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quick security check — OBX Deals</title>
-<meta name="description" content="Quick security check in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Refreshed — OBX Deals</title>
+<meta name="description" content="Refreshed in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kitty-hawk/_/5226ed20-7368-5d9d-b56a-f2d81e6d5f35/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Quick security check — OBX Deals">
-<meta property="og:description" content="Kitty Hawk · BR">
+<meta property="og:title" content="Refreshed — OBX Deals">
+<meta property="og:description" content="Kitty Hawk · 3BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/5226ed20-7368-5d9d-b56a-f2d81e6d5f35/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a757ec7b-6b9e-4902-85f9-206a915534df">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quick security check — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:title" content="Refreshed — OBX Deals">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a757ec7b-6b9e-4902-85f9-206a915534df">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,16 +83,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Quick security check</h1>
+  <h1>Refreshed</h1>
   <p class="sub">Kitty Hawk · 4118 N Va Dare Trl</p>
-  
-  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/a757ec7b-6b9e-4902-85f9-206a915534df" alt="Refreshed">
+  <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Semi Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    
+    <p><strong>$1,154/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 11.0% in 30d)</span> — next available 2026-11-09</p>
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/kitty-hawk/018-refreshed" data-property="5226ed20-7368-5d9d-b56a-f2d81e6d5f35" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

@@ -11,10 +11,10 @@
 <meta property="og:title" content="OC34: Escape Hatch — OBX Deals">
 <meta property="og:description" content="Ocracoke · 3BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/bea990cd-032f-5dda-8c63-1f5789d75d41/">
-<meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/7098f3ca-d6f2-48fe-9272-6d73cf7b9415">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OC34: Escape Hatch — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/7098f3ca-d6f2-48fe-9272-6d73cf7b9415">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>OC34: Escape Hatch</h1>
   <p class="sub">Ocracoke · 11 Brugh&#x27;s Ridge Rd</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/7098f3ca-d6f2-48fe-9272-6d73cf7b9415" alt="OC34: Escape Hatch">
+  
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">6</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

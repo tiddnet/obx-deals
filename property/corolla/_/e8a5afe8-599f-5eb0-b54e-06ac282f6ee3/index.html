@@ -86,7 +86,7 @@
   <h1>* M973: A Mermaid&#x27;s Tale</h1>
   <p class="sub">Corolla · 971 Harbor</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/1fa744e7-73f9-4a81-8aa0-33118b64cdc4" alt="* M973: A Mermaid&#x27;s Tale">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

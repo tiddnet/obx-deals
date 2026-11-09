@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ocean&#x27;s 12 - #1204 — OBX Deals</title>
-<meta name="description" content="Ocean&#x27;s 12 - #1204 in Hatteras Village, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Ocean&#x27;s 12 - #1204 in Buxton, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/hatteras-village/_/3d1a2d98-e352-5cbe-aa1d-5a5632a2c257/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ocean&#x27;s 12 - #1204 — OBX Deals">
-<meta property="og:description" content="Hatteras Village · 12BR">
+<meta property="og:description" content="Buxton · 12BR">
 <meta property="og:url" content="https://obx.deals/property/hatteras-village/_/3d1a2d98-e352-5cbe-aa1d-5a5632a2c257/">
 <meta property="og:image" content="https://www.surforsound.com/media/typib3wr/surf-or-sound-realty-1204-oceans-12-main-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -84,7 +84,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Ocean&#x27;s 12 - #1204</h1>
-  <p class="sub">Hatteras Village · 41500 Portside Dr</p>
+  <p class="sub">Buxton · 41500 Portside Dr</p>
   <img class="hero-img" src="https://www.surforsound.com/media/typib3wr/surf-or-sound-realty-1204-oceans-12-main-image.jpg" alt="Ocean&#x27;s 12 - #1204">
   <div class="stats"><div class="stat"><div class="num">12</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">30</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Soundfront</div><div class="lbl">View</div></div></div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

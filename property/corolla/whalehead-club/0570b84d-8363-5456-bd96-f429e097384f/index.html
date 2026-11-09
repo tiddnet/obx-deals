@@ -11,10 +11,10 @@
 <meta property="og:title" content="Dreams Do Come True — OBX Deals">
 <meta property="og:description" content="Corolla · 6BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/whalehead-club/0570b84d-8363-5456-bd96-f429e097384f/">
-<meta property="og:image" content="https://images.twiddy.com/property-images/403735?v=d783a379bdd1f59f9fad6666611e905a98e09a2ccd2ed92eadd0a93e3a2ac865&amp;w=1200&amp;quality=80">
+<meta property="og:image" content="https://images.twiddy.com/property-images/834711?v=RiCq1g==&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dreams Do Come True — OBX Deals">
-<meta name="twitter:image" content="https://images.twiddy.com/property-images/403735?v=d783a379bdd1f59f9fad6666611e905a98e09a2ccd2ed92eadd0a93e3a2ac865&amp;w=1200&amp;quality=80">
+<meta name="twitter:image" content="https://images.twiddy.com/property-images/834711?v=RiCq1g==&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Dreams Do Come True</h1>
   <p class="sub">Corolla · 997 Lighthouse</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/403735?v=d783a379bdd1f59f9fad6666611e905a98e09a2ccd2ed92eadd0a93e3a2ac865&amp;w=1200&amp;quality=80" alt="Dreams Do Come True">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/834711?v=RiCq1g==&amp;w=1200&amp;quality=80" alt="Dreams Do Come True">
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">18</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">0.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

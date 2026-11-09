@@ -86,7 +86,7 @@
   <h1>OSH10: The Salty Unicorn</h1>
   <p class="sub">Corolla · 617 Skimmer</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/1407bde7-3c24-403b-9bba-c0fa79e4caff" alt="OSH10: The Salty Unicorn">
-  <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">6</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">6</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

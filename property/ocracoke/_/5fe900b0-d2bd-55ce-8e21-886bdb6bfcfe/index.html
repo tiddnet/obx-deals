@@ -11,10 +11,10 @@
 <meta property="og:title" content="DC203: Captains Landing Suite 203 — OBX Deals">
 <meta property="og:description" content="Ocracoke · 1BR">
 <meta property="og:url" content="https://obx.deals/property/ocracoke/_/5fe900b0-d2bd-55ce-8e21-886bdb6bfcfe/">
-<meta property="og:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/22a9955b-f0a2-4f5a-9bad-5a5dce6f2854">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DC203: Captains Landing Suite 203 — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/22a9955b-f0a2-4f5a-9bad-5a5dce6f2854">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>DC203: Captains Landing Suite 203</h1>
   <p class="sub">Ocracoke · 324 Irvin Garrish Hwy</p>
-  <img class="hero-img" src="https://img.trackhs.com/1080x760/https://track-pm.s3.amazonaws.com/ocracokeislandrealty/image/22a9955b-f0a2-4f5a-9bad-5a5dce6f2854" alt="DC203: Captains Landing Suite 203">
+  
   <div class="stats"><div class="stat"><div class="num">1</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">2</div><div class="lbl">Sleeps</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

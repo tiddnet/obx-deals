@@ -11,10 +11,10 @@
 <meta property="og:title" content="Felina&#x27;s Hideaway — OBX Deals">
 <meta property="og:description" content="Nags Head · 5BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/49762c8f-bc33-5b53-9b6a-20eb523f8208/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/79e83764-e4e7-4366-973e-788f0d10bd81">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Felina&#x27;s Hideaway — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/79e83764-e4e7-4366-973e-788f0d10bd81">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Felina&#x27;s Hideaway</h1>
   <p class="sub">Nags Head · 202 E Admiral St</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/79e83764-e4e7-4366-973e-788f0d10bd81" alt="Felina&#x27;s Hideaway">
+  
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

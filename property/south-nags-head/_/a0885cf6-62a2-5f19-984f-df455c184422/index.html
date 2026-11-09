@@ -11,10 +11,10 @@
 <meta property="og:title" content="Fish Tales — OBX Deals">
 <meta property="og:description" content="South Nags Head · 5BR">
 <meta property="og:url" content="https://obx.deals/property/south-nags-head/_/a0885cf6-62a2-5f19-984f-df455c184422/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/11f64ec8-d9f5-4175-b3ee-a788a5df0ddf">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fish Tales — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/11f64ec8-d9f5-4175-b3ee-a788a5df0ddf">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Fish Tales</h1>
   <p class="sub">South Nags Head · 9013 L E Hunter St</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/11f64ec8-d9f5-4175-b3ee-a788a5df0ddf" alt="Fish Tales">
+  
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

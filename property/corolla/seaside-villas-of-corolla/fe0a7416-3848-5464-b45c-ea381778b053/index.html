@@ -86,7 +86,7 @@
   <h1>OSF12: The Hawk&#x27;s Nest</h1>
   <p class="sub">Corolla · 627 Sand Fiddler</p>
   <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/e6e1ff6d-b5ca-4595-bda0-e19d9748112d" alt="OSF12: The Hawk&#x27;s Nest">
-  <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">2</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">4</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

@@ -11,10 +11,10 @@
 <meta property="og:title" content="Island Delight — OBX Deals">
 <meta property="og:description" content="Nags Head · 5BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/513028e1-6a76-5e6c-b422-495eab050e32/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/b92d7597-fe79-44f6-981e-26da9fdc4e1a">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Island Delight — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/b92d7597-fe79-44f6-981e-26da9fdc4e1a">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Island Delight</h1>
   <p class="sub">Nags Head · 3427 S Memorial Ave</p>
-  
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/b92d7597-fe79-44f6-981e-26da9fdc4e1a" alt="Island Delight">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.4</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

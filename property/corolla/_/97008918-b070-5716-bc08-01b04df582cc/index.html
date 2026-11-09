@@ -11,10 +11,10 @@
 <meta property="og:title" content="* WH391: Scrimshaw — OBX Deals">
 <meta property="og:description" content="Corolla · 10BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/_/97008918-b070-5716-bc08-01b04df582cc/">
-<meta property="og:image" content="https://images.twiddy.com/property-images/786545?v=LGeOhA==&amp;w=1200&amp;quality=80">
+<meta property="og:image" content="https://images.twiddy.com/property-images/834864?v=pXTNNg==&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="* WH391: Scrimshaw — OBX Deals">
-<meta name="twitter:image" content="https://images.twiddy.com/property-images/786545?v=LGeOhA==&amp;w=1200&amp;quality=80">
+<meta name="twitter:image" content="https://images.twiddy.com/property-images/834864?v=pXTNNg==&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>* WH391: Scrimshaw</h1>
   <p class="sub">Corolla · 991 Whalehead</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/786545?v=LGeOhA==&amp;w=1200&amp;quality=80" alt="* WH391: Scrimshaw">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/834864?v=pXTNNg==&amp;w=1200&amp;quality=80" alt="* WH391: Scrimshaw">
   <div class="stats"><div class="stat"><div class="num">10</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">25</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

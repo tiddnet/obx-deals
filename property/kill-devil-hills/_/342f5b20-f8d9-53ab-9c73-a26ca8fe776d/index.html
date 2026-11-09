@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quick security check — OBX Deals</title>
-<meta name="description" content="Quick security check in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Greener Meadows — OBX Deals</title>
+<meta name="description" content="Greener Meadows in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kill-devil-hills/_/342f5b20-f8d9-53ab-9c73-a26ca8fe776d/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Quick security check — OBX Deals">
-<meta property="og:description" content="Kill Devil Hills · BR">
+<meta property="og:title" content="Greener Meadows — OBX Deals">
+<meta property="og:description" content="Kill Devil Hills · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/_/342f5b20-f8d9-53ab-9c73-a26ca8fe776d/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/32ae081d-fb4d-4488-a770-6884f410954b">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quick security check — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:title" content="Greener Meadows — OBX Deals">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/32ae081d-fb4d-4488-a770-6884f410954b">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,16 +83,16 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Quick security check</h1>
+  <h1>Greener Meadows</h1>
   <p class="sub">Kill Devil Hills · 1718 N Va Dare Trl</p>
-  
-  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div></div>
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/32ae081d-fb4d-4488-a770-6884f410954b" alt="Greener Meadows">
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Semi Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    
+    <p><strong>$1,094/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 3.8% in 30d)</span> — next available 2027-01-02</p>
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/kill-devil-hills/781-greener-meadows" data-property="342f5b20-f8d9-53ab-9c73-a26ca8fe776d" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

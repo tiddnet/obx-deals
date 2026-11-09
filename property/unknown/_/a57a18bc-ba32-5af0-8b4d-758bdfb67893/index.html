@@ -11,10 +11,10 @@
 <meta property="og:title" content="BeachAccess,Golf,Pool,HotTub,Resort,CurrituckClub — OBX Deals">
 <meta property="og:description" content="4BR">
 <meta property="og:url" content="https://obx.deals/property/unknown/_/a57a18bc-ba32-5af0-8b4d-758bdfb67893/">
-<meta property="og:image" content="https://www.assets.houfy.com/assets/images/properties/465539/d2915551ba08263d800636a8e82add6d.jpg">
+<meta property="og:image" content="https://www.assets.houfy.com/assets/images/properties/472369/6714eaa575d14e19c4889b3d7e9d2d05.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BeachAccess,Golf,Pool,HotTub,Resort,CurrituckClub — OBX Deals">
-<meta name="twitter:image" content="https://www.assets.houfy.com/assets/images/properties/465539/d2915551ba08263d800636a8e82add6d.jpg">
+<meta name="twitter:image" content="https://www.assets.houfy.com/assets/images/properties/472369/6714eaa575d14e19c4889b3d7e9d2d05.jpg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>BeachAccess,Golf,Pool,HotTub,Resort,CurrituckClub</h1>
   <p class="sub"></p>
-  <img class="hero-img" src="https://www.assets.houfy.com/assets/images/properties/465539/d2915551ba08263d800636a8e82add6d.jpg" alt="BeachAccess,Golf,Pool,HotTub,Resort,CurrituckClub">
+  <img class="hero-img" src="https://www.assets.houfy.com/assets/images/properties/472369/6714eaa575d14e19c4889b3d7e9d2d05.jpg" alt="BeachAccess,Golf,Pool,HotTub,Resort,CurrituckClub">
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">1</div><div class="lbl">Sleeps</div></div></div>
   
   
@@ -93,7 +93,7 @@
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Houfy</strong></p>
     
-    <a class="btn" href="https://www.houfy.com/lodging/beachaccessgolfpoolhottubresortcurrituckclub/465539" data-property="a57a18bc-ba32-5af0-8b4d-758bdfb67893" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
+    <a class="btn" href="https://www.houfy.com/lodging/beachaccessgolfpoolhottubresortcurrituckclub/472369" data-property="a57a18bc-ba32-5af0-8b4d-758bdfb67893" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

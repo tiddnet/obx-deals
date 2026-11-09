@@ -86,7 +86,7 @@
   <h1>VOH31, Dream Winds</h1>
   <p class="sub">Corolla · 1257 Sandcastle</p>
   <img class="hero-img" src="https://images.rezfusion.com?optimize=true&amp;rotate=true&amp;quality=70&amp;width=420&amp;source=https%3A//gallery.streamlinevrs.com/units-gallery/00/05/B0/image_169043317.jpeg&amp;settings=default" alt="VOH31, Dream Winds">
-  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.3</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
+  <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.36</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

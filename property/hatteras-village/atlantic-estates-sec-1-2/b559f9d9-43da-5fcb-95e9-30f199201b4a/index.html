@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seagate Station - #270 — OBX Deals</title>
-<meta name="description" content="Seagate Station - #270 in Hatteras Village, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<meta name="description" content="Seagate Station - #270 in Buxton, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/hatteras-village/atlantic-estates-sec-1-2/b559f9d9-43da-5fcb-95e9-30f199201b4a/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Seagate Station - #270 — OBX Deals">
-<meta property="og:description" content="Hatteras Village · 7BR">
+<meta property="og:description" content="Buxton · 7BR">
 <meta property="og:url" content="https://obx.deals/property/hatteras-village/atlantic-estates-sec-1-2/b559f9d9-43da-5fcb-95e9-30f199201b4a/">
 <meta property="og:image" content="https://www.surforsound.com/media/cbifzbwd/surf-or-sound-realty-270-seagate-station-exterior-10.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -84,7 +84,7 @@
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Seagate Station - #270</h1>
-  <p class="sub">Hatteras Village · 39262 Pamlico Ct</p>
+  <p class="sub">Buxton · 39262 Pamlico Ct</p>
   <img class="hero-img" src="https://www.surforsound.com/media/cbifzbwd/surf-or-sound-realty-270-seagate-station-exterior-10.jpg" alt="Seagate Station - #270">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

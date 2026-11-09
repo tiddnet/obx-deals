@@ -11,10 +11,10 @@
 <meta property="og:title" content="Our Happy Place — OBX Deals">
 <meta property="og:description" content="South Nags Head · 6BR">
 <meta property="og:url" content="https://obx.deals/property/south-nags-head/_/12806e68-d898-5d86-9e52-4a79c78ab5a1/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/9c1239c7-cde9-4e4f-8cbc-56d6e2ec0cac">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our Happy Place — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/9c1239c7-cde9-4e4f-8cbc-56d6e2ec0cac">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,14 +85,14 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Our Happy Place</h1>
   <p class="sub">South Nags Head · 9615 S Old Oregon Inlet Rd</p>
-  
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/9c1239c7-cde9-4e4f-8cbc-56d6e2ec0cac" alt="Our Happy Place">
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">13</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.2</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Joe Lamb Jr</strong></p>
-    
+    <p><strong>$2,052/wk</strong> — next available 2027-01-02</p>
     <a class="btn" href="https://www.joelambjr.com/outer-banks-rentals/south-nags-head/617-our-happy-place" data-property="12806e68-d898-5d86-9e52-4a79c78ab5a1" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

@@ -11,10 +11,10 @@
 <meta property="og:title" content="CL01: Creamsicle Cottage — OBX Deals">
 <meta property="og:description" content="Corolla · 5BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/_/ed4a5999-acea-548c-8a8a-049f4ecd68d4/">
-<meta property="og:image" content="https://images.twiddy.com/property-images/827638?v=JpH0mw==&amp;w=1200&amp;quality=80">
+<meta property="og:image" content="https://images.twiddy.com/property-images/834989?v=QbA2cw==&amp;w=1200&amp;quality=80">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CL01: Creamsicle Cottage — OBX Deals">
-<meta name="twitter:image" content="https://images.twiddy.com/property-images/827638?v=JpH0mw==&amp;w=1200&amp;quality=80">
+<meta name="twitter:image" content="https://images.twiddy.com/property-images/834989?v=QbA2cw==&amp;w=1200&amp;quality=80">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>CL01: Creamsicle Cottage</h1>
   <p class="sub">Corolla · 1109 Village</p>
-  <img class="hero-img" src="https://images.twiddy.com/property-images/827638?v=JpH0mw==&amp;w=1200&amp;quality=80" alt="CL01: Creamsicle Cottage">
+  <img class="hero-img" src="https://images.twiddy.com/property-images/834989?v=QbA2cw==&amp;w=1200&amp;quality=80" alt="CL01: Creamsicle Cottage">
   <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

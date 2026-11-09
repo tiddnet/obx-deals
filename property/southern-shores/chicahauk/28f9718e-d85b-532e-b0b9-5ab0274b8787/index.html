@@ -92,7 +92,7 @@
   <div class="cta-box primary">
     <h2 style="margin:0 0 0.4rem;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Book this property</h2>
     <p style="margin:0 0 0.3rem">Currently managed by <strong>Southern Shores</strong></p>
-    <p><strong>$3,250/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(down 0.8% in 30d)</span> — next available 2027-06-05</p>
+    <p><strong>$18,387/wk</strong> <span style="color:var(--muted);font-size:0.85rem">(up 461.2% in 30d)</span> — next available 2027-06-05</p>
     <a class="btn" href="https://www.southernshores.com/outer-banks-rentals/1352-anchor-aweigh" data-property="28f9718e-d85b-532e-b0b9-5ab0274b8787" data-track-page="canonical" onclick="obxTrack(this)" target="_blank" rel="noopener">View listing &amp; book &rarr;</a>
   </div>
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

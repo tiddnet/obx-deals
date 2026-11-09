@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backyard FUN! Pool/hot tub/putting green/fire pit! — OBX Deals</title>
-<meta name="description" content="Backyard FUN! Pool/hot tub/putting green/fire pit! in Avon, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>AOI15 - The Shark Tank — OBX Deals</title>
+<meta name="description" content="AOI15 - The Shark Tank in Avon, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://obx.deals/property/avon/_/4893de65-532a-5570-b2d9-bb6811914a2f/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Backyard FUN! Pool/hot tub/putting green/fire pit! — OBX Deals">
+<meta property="og:title" content="AOI15 - The Shark Tank — OBX Deals">
 <meta property="og:description" content="Avon · 7BR">
 <meta property="og:url" content="https://obx.deals/property/avon/_/4893de65-532a-5570-b2d9-bb6811914a2f/">
 <meta property="og:image" content="https://www.assets.houfy.com/assets/images/properties/333720/d20477c847daeb62b4560ae5c1138543.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Backyard FUN! Pool/hot tub/putting green/fire pit! — OBX Deals">
+<meta name="twitter:title" content="AOI15 - The Shark Tank — OBX Deals">
 <meta name="twitter:image" content="https://www.assets.houfy.com/assets/images/properties/333720/d20477c847daeb62b4560ae5c1138543.jpg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -83,9 +83,9 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Backyard FUN! Pool/hot tub/putting green/fire pit!</h1>
+  <h1>AOI15 - The Shark Tank</h1>
   <p class="sub">Avon · 40471 Ocean Isle Loop</p>
-  <img class="hero-img" src="https://www.assets.houfy.com/assets/images/properties/333720/d20477c847daeb62b4560ae5c1138543.jpg" alt="Backyard FUN! Pool/hot tub/putting green/fire pit!">
+  <img class="hero-img" src="https://www.assets.houfy.com/assets/images/properties/333720/d20477c847daeb62b4560ae5c1138543.jpg" alt="AOI15 - The Shark Tank">
   <div class="stats"><div class="stat"><div class="num">7</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

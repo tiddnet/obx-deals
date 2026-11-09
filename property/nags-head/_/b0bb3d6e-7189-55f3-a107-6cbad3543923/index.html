@@ -11,10 +11,10 @@
 <meta property="og:title" content="Phelps — OBX Deals">
 <meta property="og:description" content="Nags Head · 3BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/b0bb3d6e-7189-55f3-a107-6cbad3543923/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/051d64ea-4f73-4d90-a115-728ce02daab4">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Phelps — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/051d64ea-4f73-4d90-a115-728ce02daab4">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Phelps</h1>
   <p class="sub">Nags Head · 3623 S Va Dare Trl</p>
-  
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/051d64ea-4f73-4d90-a115-728ce02daab4" alt="Phelps">
   <div class="stats"><div class="stat"><div class="num">3</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanfront</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

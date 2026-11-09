@@ -11,10 +11,10 @@
 <meta property="og:title" content="Sea Haven — OBX Deals">
 <meta property="og:description" content="Kitty Hawk · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/49415b99-40cd-5e07-bc74-4cda10bf802c/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/ee093fe2-ccee-4323-bb61-c12146274e6f">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sea Haven — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/ee093fe2-ccee-4323-bb61-c12146274e6f">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Sea Haven</h1>
   <p class="sub">Kitty Hawk · 3650 N Va Dare Trl</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/ee093fe2-ccee-4323-bb61-c12146274e6f" alt="Sea Haven">
+  
   <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">9</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.6</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kitty Kottage — OBX Deals</title>
-<meta name="description" content="Kitty Kottage in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>Quick security check — OBX Deals</title>
+<meta name="description" content="Quick security check in Kitty Hawk, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kitty-hawk/_/e1104b2b-2625-55a1-9400-ec34b4891471/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kitty Kottage — OBX Deals">
-<meta property="og:description" content="Kitty Hawk · 4BR">
+<meta property="og:title" content="Quick security check — OBX Deals">
+<meta property="og:description" content="Kitty Hawk · BR">
 <meta property="og:url" content="https://obx.deals/property/kitty-hawk/_/e1104b2b-2625-55a1-9400-ec34b4891471/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/62b0b8cf-d140-4135-a044-f180edb27748">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kitty Kottage — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/62b0b8cf-d140-4135-a044-f180edb27748">
+<meta name="twitter:title" content="Quick security check — OBX Deals">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Kitty Kottage</h1>
+  <h1>Quick security check</h1>
   <p class="sub">Kitty Hawk · 4423 Lindbergh Ave</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/62b0b8cf-d140-4135-a044-f180edb27748" alt="Kitty Kottage">
-  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  
+  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.8</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

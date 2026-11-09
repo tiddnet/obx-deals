@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quick security check — OBX Deals</title>
-<meta name="description" content="Quick security check in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>The Tropics — OBX Deals</title>
+<meta name="description" content="The Tropics in Kill Devil Hills, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/kill-devil-hills/_/3ed4ee99-fed9-544c-be0d-d6655810ae95/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Quick security check — OBX Deals">
-<meta property="og:description" content="Kill Devil Hills · BR">
+<meta property="og:title" content="The Tropics — OBX Deals">
+<meta property="og:description" content="Kill Devil Hills · 4BR">
 <meta property="og:url" content="https://obx.deals/property/kill-devil-hills/_/3ed4ee99-fed9-544c-be0d-d6655810ae95/">
-<meta property="og:image" content="https://obx.deals/images/hero.png">
+<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/85ef0bf6-1be9-403d-86d5-6e00fb33d4ad">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quick security check — OBX Deals">
-<meta name="twitter:image" content="https://obx.deals/images/hero.png">
+<meta name="twitter:title" content="The Tropics — OBX Deals">
+<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/85ef0bf6-1be9-403d-86d5-6e00fb33d4ad">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -83,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Quick security check</h1>
+  <h1>The Tropics</h1>
   <p class="sub">Kill Devil Hills · 205 E Martin St</p>
-  
-  <div class="stats"><div class="stat"><div class="num">0</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div></div>
+  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/85ef0bf6-1be9-403d-86d5-6e00fb33d4ad" alt="The Tropics">
+  <div class="stats"><div class="stat"><div class="num">4</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">8</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.7</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

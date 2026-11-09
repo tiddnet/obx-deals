@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>133, I SEA the Light — OBX Deals</title>
-<meta name="description" content="133, I SEA the Light in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>CL133: Payson Place — OBX Deals</title>
+<meta name="description" content="CL133: Payson Place in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/corolla/_/97ce16d2-e74b-5665-bd35-c9c9a720a236/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="133, I SEA the Light — OBX Deals">
+<meta property="og:title" content="CL133: Payson Place — OBX Deals">
 <meta property="og:description" content="Corolla · 5BR">
 <meta property="og:url" content="https://obx.deals/property/corolla/_/97ce16d2-e74b-5665-bd35-c9c9a720a236/">
 <meta property="og:image" content="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/49a2de58-7e4d-4f42-aeb4-97e03a54f539">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="133, I SEA the Light — OBX Deals">
+<meta name="twitter:title" content="CL133: Payson Place — OBX Deals">
 <meta name="twitter:image" content="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/49a2de58-7e4d-4f42-aeb4-97e03a54f539">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -83,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>133, I SEA the Light</h1>
+  <h1>CL133: Payson Place</h1>
   <p class="sub">Corolla · 1124 Payson</p>
-  <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/49a2de58-7e4d-4f42-aeb4-97e03a54f539" alt="133, I SEA the Light">
-  <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
+  <img class="hero-img" src="https://img.trackhs.com/768x576/https://track-pm.s3.amazonaws.com/villagerealty/image/49a2de58-7e4d-4f42-aeb4-97e03a54f539" alt="CL133: Payson Place">
+  <div class="stats"><div class="stat"><div class="num">5</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">10</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.5</div><div class="lbl">Rating</div></div></div>
   
   
   <div class="cta-box primary">
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));

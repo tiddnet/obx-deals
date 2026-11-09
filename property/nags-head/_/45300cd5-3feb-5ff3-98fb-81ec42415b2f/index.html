@@ -11,10 +11,10 @@
 <meta property="og:title" content="Whalebone Beach — OBX Deals">
 <meta property="og:description" content="Nags Head · 6BR">
 <meta property="og:url" content="https://obx.deals/property/nags-head/_/45300cd5-3feb-5ff3-98fb-81ec42415b2f/">
-<meta property="og:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/13eb45cd-f659-465d-9bda-c0a7dd3b123f">
+<meta property="og:image" content="https://obx.deals/images/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Whalebone Beach — OBX Deals">
-<meta name="twitter:image" content="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/13eb45cd-f659-465d-9bda-c0a7dd3b123f">
+<meta name="twitter:image" content="https://obx.deals/images/hero.png">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
     :root {
@@ -85,7 +85,7 @@
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
   <h1>Whalebone Beach</h1>
   <p class="sub">Nags Head · 110 E Gray Eagle St</p>
-  <img class="hero-img" src="https://img.trackhs.com/https://track-pm.s3.amazonaws.com/joelamb/image/13eb45cd-f659-465d-9bda-c0a7dd3b123f" alt="Whalebone Beach">
+  
   <div class="stats"><div class="stat"><div class="num">6</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">14</div><div class="lbl">Sleeps</div></div><div class="stat"><div class="num">4.9</div><div class="lbl">Rating</div></div><div class="stat"><div class="num">Oceanside</div><div class="lbl">View</div></div></div>
   
   
@@ -125,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));
