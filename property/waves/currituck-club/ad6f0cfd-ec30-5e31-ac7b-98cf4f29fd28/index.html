@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Corolla Family house! Pool, gameroom, golf, beach! — OBX Deals</title>
-<meta name="description" content="Corolla Family house! Pool, gameroom, golf, beach! in Waves, Outer Banks — stable property profile, current listing, and rental history across property managers.">
+<title>November 1 week sale! Pool, games, golf, beach! — OBX Deals</title>
+<meta name="description" content="November 1 week sale! Pool, games, golf, beach! in Corolla, Outer Banks — stable property profile, current listing, and rental history across property managers.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://obx.deals/property/waves/currituck-club/ad6f0cfd-ec30-5e31-ac7b-98cf4f29fd28/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Corolla Family house! Pool, gameroom, golf, beach! — OBX Deals">
-<meta property="og:description" content="Waves · 8BR">
+<meta property="og:title" content="November 1 week sale! Pool, games, golf, beach! — OBX Deals">
+<meta property="og:description" content="Corolla · 8BR">
 <meta property="og:url" content="https://obx.deals/property/waves/currituck-club/ad6f0cfd-ec30-5e31-ac7b-98cf4f29fd28/">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1539177951043570693/original/30081336-bd3c-4dab-870d-31fbcda40643.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Corolla Family house! Pool, gameroom, golf, beach! — OBX Deals">
+<meta name="twitter:title" content="November 1 week sale! Pool, games, golf, beach! — OBX Deals">
 <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1539177951043570693/original/30081336-bd3c-4dab-870d-31fbcda40643.jpeg">
 <link rel="icon" href="https://obx.deals/favicon.ico">
 <style>
@@ -54,6 +54,13 @@
     .review-breakdown-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.15rem; }
     .review-breakdown-bar { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
     .review-breakdown-bar div { height: 100%; background: var(--accent); }
+    .review-trajectory { margin-bottom: 1.1rem; }
+    .review-trajectory-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 0.35rem; }
+    .review-trajectory-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.15rem; }
+    .review-trajectory-row span:first-child { width: 3rem; flex-shrink: 0; }
+    .review-trajectory-row span:last-child { width: 2.4rem; flex-shrink: 0; text-align: right; }
+    .review-tenancy-block { margin-top: 0.5rem; padding-left: 0.75rem; border-left: 2px solid var(--rule); }
+    .review-tenancy-block .review-bubble:first-of-type { border-top: none; margin-top: 0.7rem; padding-top: 0; }
     .review-bubble { border-top: 1px solid var(--rule); padding-top: 0.9rem; margin-top: 0.9rem; }
     .review-bubble:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
     .review-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
@@ -76,10 +83,10 @@
 <body>
 <div class="wrap">
   <nav class="breadcrumb"><a href="https://obx.deals/">OBX Deals</a> &middot; Property</nav>
-  <h1>Corolla Family house! Pool, gameroom, golf, beach!</h1>
-  <p class="sub">Waves</p>
-  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1539177951043570693/original/30081336-bd3c-4dab-870d-31fbcda40643.jpeg" alt="Corolla Family house! Pool, gameroom, golf, beach!">
-  <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div><div class="stat"><div class="num">5.0</div><div class="lbl">Rating</div></div></div>
+  <h1>November 1 week sale! Pool, games, golf, beach!</h1>
+  <p class="sub">Corolla</p>
+  <img class="hero-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1539177951043570693/original/30081336-bd3c-4dab-870d-31fbcda40643.jpeg" alt="November 1 week sale! Pool, games, golf, beach!">
+  <div class="stats"><div class="stat"><div class="num">8</div><div class="lbl">Bedrooms</div></div></div>
   
   
   <div class="cta-box primary">
@@ -118,6 +125,8 @@
       if (navigator.doNotTrack === '1') return;
       var pid = el.getAttribute('data-property') || '';
       navigator.sendBeacon('https://track.obx.deals/c', JSON.stringify({
+        event_type: 'click', url: el.href || el.getAttribute('href') || '',
+        page_path: location.pathname,
         property_id: pid, page: el.getAttribute('data-track-page') || 'canonical',
         visitor_id: vid, referrer: document.referrer || ''
       }));
